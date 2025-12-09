@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>User Re-boarding Access Automation – Debasish Kumar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Power Automate solution to resolve SharePoint access issues for re-joining employees through automated cleanup and re-sharing." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Debasish Kumar</h1>
+      <p class="tagline">Product Owner | AI &amp; SharePoint Solutions</p>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>User Re-boarding Access Automation</h2>
+        <p class="tagline" style="color: var(--text); font-size: 18px; margin-top: 12px;">Product Owner / SharePoint Solutions Architect</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="inline" style="margin-bottom: 24px;">
+        <span class="badge">Power Automate</span>
+        <span class="badge">SharePoint Online</span>
+        <span class="badge">Microsoft Graph API</span>
+        <span class="badge">Process Automation</span>
+        <span class="badge">User Experience</span>
+      </div>
+    </section>
+
+    <section class="container two-col">
+      <div>
+        <h3 class="section-title">Context</h3>
+        <p>When employees re-joined the company, they encountered access issues with SharePoint sites and files that had been previously shared with them during their earlier tenure. Their old account traces remained in the system, creating permission conflicts.</p>
+
+        <h3 class="section-title">Problem</h3>
+        <p>Re-joining employees had to raise helpdesk tickets and wait days for resolution. The manual two-step process required: (1) IT support to manually identify and remove old account traces from sites, and (2) contacting site owners to re-share access. This time-consuming, multi-handoff workflow delayed productivity and created frustration for re-joiners, helpdesk teams, and site owners alike.</p>
+
+        <h3 class="section-title">Goal</h3>
+        <p>Transform the days-long manual process into a minutes-long automated workflow. Eliminate helpdesk dependency for step 1 (cleanup), streamline step 2 (re-sharing requests), reduce support burden, and ensure re-joining employees have rapid access to their required resources.</p>
+      </div>
+      <aside>
+        <div class="card">
+          <h4>Users & Stakeholders</h4>
+          <ul class="list">
+            <li>Re-joining employees</li>
+            <li>IT support team</li>
+            <li>HR operations</li>
+            <li>Site owners & administrators</li>
+            <li>Business unit managers</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">Product Owner Approach</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Problem Discovery & Quantification</h4>
+          <p class="muted">Analyzed helpdesk ticket data to quantify wait times (avg. 3-5 days). Interviewed re-joiners, IT support, and site owners to map the manual two-step workflow and identify bottlenecks at each handoff.</p>
+        </article>
+        <article class="card">
+          <h4>Stakeholder Alignment</h4>
+          <p class="muted">Facilitated workshops with HR, IT, and business units to define requirements, success criteria, and prioritize use cases.</p>
+        </article>
+        <article class="card">
+          <h4>Backlog Creation</h4>
+          <p class="muted">Built and prioritized user stories focusing on highest-impact scenarios: site access, file sharing, and permission cleanup.</p>
+        </article>
+        <article class="card">
+          <h4>Incremental Delivery</h4>
+          <p class="muted">Released MVP for single-site cleanup, gathered feedback, then expanded to multi-site and automated re-sharing.</p>
+        </article>
+        <article class="card">
+          <h4>Success Metrics Definition</h4>
+          <p class="muted">Established KPIs: ticket reduction, time-to-access, error rates, and user satisfaction scores.</p>
+        </article>
+        <article class="card">
+          <h4>Continuous Improvement</h4>
+          <p class="muted">Monitored post-launch metrics, conducted retrospectives, and iterated based on support team and user feedback.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">Solution</h3>
+      <p>Designed and delivered a Power Automate workflow that:</p>
+      <div class="grid">
+        <article class="card">
+          <h4>Detects Re-boarding Events</h4>
+          <p class="muted">Triggers automatically when HR system flags a returning employee, integrating with onboarding workflows.</p>
+        </article>
+        <article class="card">
+          <h4>Identifies Old Account Traces</h4>
+          <p class="muted">Scans SharePoint sites and libraries to locate permissions associated with the employee's previous account.</p>
+        </article>
+        <article class="card">
+          <h4>Automates Permission Cleanup (Step 1)</h4>
+          <p class="muted">Replaces manual helpdesk work with automated removal of old account traces across sites, libraries, and files—reducing days of waiting to minutes of processing.</p>
+        </article>
+        <article class="card">
+          <h4>Streamlines Re-sharing (Step 2)</h4>
+          <p class="muted">Automatically notifies site owners with one-click re-share options, or grants access directly based on role, department, and historical patterns—eliminating manual coordination delays.</p>
+        </article>
+        <article class="card">
+          <h4>Notifies Stakeholders</h4>
+          <p class="muted">Sends confirmation emails to IT support, site owners, and the re-joining employee with access summary.</p>
+        </article>
+        <article class="card">
+          <h4>Audit & Compliance Logging</h4>
+          <p class="muted">Maintains detailed logs of all permission changes for governance, compliance, and troubleshooting.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">Outcomes</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Days to Minutes</h4>
+          <p class="muted">Reduced resolution time from 3-5 days of waiting for helpdesk to just minutes of automated processing—transforming the re-joiner experience.</p>
+        </article>
+        <article class="card">
+          <h4>85% Ticket Reduction</h4>
+          <p class="muted">Eliminated the majority of re-boarding access tickets, freeing IT support for higher-value work and reducing operational costs.</p>
+        </article>
+        <article class="card">
+          <h4>Same-Day Access</h4>
+          <p class="muted">Re-joining employees no longer wait days for helpdesk resolution—they have seamless access on their first day, improving onboarding experience.</p>
+        </article>
+        <article class="card">
+          <h4>Zero Manual Errors</h4>
+          <p class="muted">Automated process eliminated human error in permission cleanup and re-sharing, ensuring consistency.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container two-col">
+      <div>
+        <h3 class="section-title">Tech & Practices</h3>
+        <div class="inline">
+          <span class="badge">Power Automate</span>
+          <span class="badge">SharePoint Online</span>
+          <span class="badge">Microsoft Graph API</span>
+          <span class="badge">User Story Mapping</span>
+          <span class="badge">Stakeholder Management</span>
+          <span class="badge">Agile Delivery</span>
+          <span class="badge">Data-Driven Decisions</span>
+        </div>
+
+        <h3 class="section-title" style="margin-top: 32px;">Product Owner Activities</h3>
+        <ul class="list">
+          <li><strong>User Research:</strong> Shadowed helpdesk operations during manual cleanup, observed the multi-day wait cycles, and documented handoff delays between IT and site owners</li>
+          <li><strong>Data Analysis:</strong> Quantified the problem using ticket metrics: average 3-5 day resolution time, peak volumes during re-hiring seasons, and cost per manual intervention</li>
+          <li><strong>Requirements Gathering:</strong> Documented edge cases like partial access, guest users, and external sharing through collaborative workshops with IT and site owners</li>
+          <li><strong>Prioritization:</strong> Used value vs. effort matrix to sequence features: Step 1 (automated cleanup) delivered immediate value, Step 2 (streamlined re-sharing) added convenience, notifications provided transparency</li>
+          <li><strong>Acceptance Criteria:</strong> Defined clear, testable criteria for each user story with IT and security teams</li>
+          <li><strong>Sprint Planning:</strong> Collaborated with development team to break work into 2-week sprints</li>
+          <li><strong>Demo & Feedback:</strong> Conducted bi-weekly demos with stakeholders to validate progress and pivot as needed</li>
+          <li><strong>Metrics Tracking:</strong> Built dashboard to monitor ticket volume, resolution time, and user satisfaction</li>
+        </ul>
+      </div>
+      <aside>
+        <div class="card">
+          <h4>Key Artifacts</h4>
+          <ul class="list">
+            <li><strong>Product Backlog:</strong> Prioritized user stories with acceptance criteria</li>
+            <li><strong>User Journey Maps:</strong> Before/after state for re-joining employees</li>
+            <li><strong>Process Flow Diagrams:</strong> Manual vs automated workflow comparison</li>
+            <li><strong>Success Metrics Dashboard:</strong> Real-time tracking of KPIs</li>
+            <li><strong>Stakeholder Presentations:</strong> Business value and ROI demonstrations</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top: 20px;">
+          <h4>Evolution Journey</h4>
+          <p class="muted"><strong>Before:</strong> Manual two-step process taking 3-5 days with multiple helpdesk handoffs</p>
+          <p class="muted"><strong>Phase 1:</strong> Process observation and data-driven problem quantification</p>
+          <p class="muted"><strong>Phase 2:</strong> MVP - Automated Step 1 (single-site cleanup) reducing wait to hours</p>
+          <p class="muted"><strong>Phase 3:</strong> Scaled Step 1 to multi-site scanning, reducing wait to minutes</p>
+          <p class="muted"><strong>Phase 4:</strong> Enhanced Step 2 with intelligent re-sharing and site owner notifications</p>
+          <p class="muted"><strong>Phase 5:</strong> Full integration with HR onboarding for proactive access provisioning</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">Key Takeaways</h3>
+      <article class="card">
+        <p>This project exemplifies product ownership at its core: using data to quantify a critical pain point (3-5 day wait times), building multi-stakeholder consensus across IT, site owners, and HR, and delivering incremental value through phased automation. By transforming a manual, multi-day process into a minutes-long automated workflow, we not only reduced operational costs but also dramatically improved the re-joiner experience during a critical moment. The data-driven, iterative approach allowed us to prove value quickly (Step 1 automation), then expand based on measured impact rather than assumptions (Step 2 enhancement), ultimately creating a business case for broader HR integration.</p>
+      </article>
+    </section>
+
+    <section class="container">
+      <a class="btn" href="index.html#projects">← Back to Projects</a>
+      <a class="btn secondary" href="index.html#contact">Get in Touch</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
