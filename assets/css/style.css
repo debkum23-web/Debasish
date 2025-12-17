@@ -51,7 +51,7 @@ section:nth-child(6){animation-delay:.6s}
 .two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
 .list{padding-left:18px}
 .muted{color:var(--muted)}
-a[href^="#"]{color:var(--primary)}
+a[href^="#"]:not(.btn){color:var(--primary)}
 a[href^="mailto:"]{color:var(--accent)}
 a[href^="tel:"]{color:var(--pink)}
 .site-footer{background:rgba(30,41,59,.8);backdrop-filter:blur(10px);border-top:1px solid rgba(100,116,139,.2)}
