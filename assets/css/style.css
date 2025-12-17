@@ -21,9 +21,9 @@ body::after{width:400px;height:400px;background:var(--accent);bottom:-100px;left
 .nav a:hover{color:var(--primary)}
 .hero{background:transparent;padding:48px 0}
 .hero h2{max-width:800px;margin:0 0 16px;color:#ffffff;font-size:24px;font-weight:700}
-.btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;margin-right:10px;border:2px solid transparent;transition:all .3s ease;box-shadow:0 0 20px rgba(99,102,241,.3)}
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:12px 24px;border-radius:10px;text-decoration:none;font-weight:600;margin-right:10px;border:2px solid transparent;transition:all .3s ease;box-shadow:0 0 20px rgba(99,102,241,.3);white-space:nowrap}
 .btn:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(99,102,241,.5)}
-.btn.secondary{background:transparent;border:2px solid var(--accent);color:var(--accent);box-shadow:0 0 20px rgba(16,185,129,.2)}
+.btn.secondary{background:transparent;border:2px solid var(--accent);color:var(--accent);box-shadow:0 0 20px rgba(16,185,129,.2);padding:12px 24px}
 .btn.secondary:hover{background:rgba(16,185,129,.1);box-shadow:0 0 30px rgba(16,185,129,.4)}
 section{animation:fadeInUp .8s ease-out forwards;opacity:0}
 section:nth-child(1){animation-delay:.1s}
