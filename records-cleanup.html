@@ -130,6 +130,143 @@
         </article>
       </div>
     </section>
+    <section class="container">
+      <h3 class="section-title">Product Decisions & Trade-offs</h3>
+      <div style="background:rgba(30,41,59,.5);border:1px solid rgba(100,116,139,.3);border-radius:14px;padding:24px;max-height:600px;overflow-y:auto;">
+        <div style="display:grid;gap:28px;">
+          <!-- Problem -->
+          <div>
+            <h4 style="color:var(--primary);margin:0 0 12px;font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px;">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:rgba(99,102,241,.2);border-radius:50%;font-weight:700;color:var(--primary);">1</span>
+              Problem
+            </h4>
+            <div style="padding-left:40px;color:var(--muted);line-height:1.6;">
+              <p><strong style="color:var(--text);">Stale Records Overwhelm Decision-Making</strong></p>
+              <ul style="margin:8px 0;padding-left:20px;">
+                <li>12+ months of inactive records cluttering inventory views</li>
+                <li>Manual cleanup is ad hoc, inconsistent, and rarely prioritized</li>
+                <li>Stakeholders struggle to identify actionable items amid noise</li>
+                <li>Compliance teams face audit challenges with obsolete data</li>
+                <li>Reports inflated with historical noise, masking real trends</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Decisions -->
+          <div>
+            <h4 style="color:var(--accent);margin:0 0 12px;font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px;">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:rgba(16,185,129,.2);border-radius:50%;font-weight:700;color:var(--accent);">2</span>
+              Key Decisions
+            </h4>
+            <div style="padding-left:40px;color:var(--muted);line-height:1.6;">
+              <p><strong style="color:var(--text);">Strategic choices made during product discovery</strong></p>
+              <ul style="margin:8px 0;padding-left:20px;">
+                <li><strong>Staleness Threshold:</strong> Chose 12 months of inactivity vs. 6 months (balance between data retention and noise reduction)</li>
+                <li><strong>Owner Engagement:</strong> Required explicit approval before decommission (vs. auto-delete) for accountability</li>
+                <li><strong>Notification Cadence:</strong> Two reminders before auto-decommission after 30 days (vs. immediate) for fairness</li>
+                <li><strong>Scope:</strong> Phase 1 MVP focused on detection only; decommission automation in Phase 3 post-validation</li>
+                <li><strong>Audit Trail:</strong> Mandatory logging for compliance (vs. lightweight tracking) due to governance requirements</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Trade-offs -->
+          <div>
+            <h4 style="color:var(--amber);margin:0 0 12px;font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px;">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:rgba(245,158,11,.2);border-radius:50%;font-weight:700;color:var(--amber);">3</span>
+              Trade-offs
+            </h4>
+            <div style="padding-left:40px;color:var(--muted);line-height:1.6;">
+              <p><strong style="color:var(--text);">What we gained vs. what we gave up</strong></p>
+              <div style="display:grid;gap:12px;">
+                <div style="background:rgba(99,102,241,.1);border-left:3px solid var(--primary);padding:12px;border-radius:6px;">
+                  <p style="margin:0 0 6px;color:var(--text);font-weight:600;">Owner Approval Loop vs. Speed</p>
+                  <p style="margin:0;font-size:13px;">✓ Gained: Owner trust, accountability, zero accidental loss | ✗ Lost: Immediate cleanup (added 30-day approval window)</p>
+                </div>
+                <div style="background:rgba(16,185,129,.1);border-left:3px solid var(--accent);padding:12px;border-radius:6px;">
+                  <p style="margin:0 0 6px;color:var(--text);font-weight:600;">12-Month Threshold vs. Data Retention</p>
+                  <p style="margin:0;font-size:13px;">✓ Gained: Balanced cleanup, reduced false positives | ✗ Lost: Aggressive noise reduction (6 months would be faster)</p>
+                </div>
+                <div style="background:rgba(245,158,11,.1);border-left:3px solid var(--amber);padding:12px;border-radius:6px;">
+                  <p style="margin:0 0 6px;color:var(--text);font-weight:600;">Comprehensive Audit Trail vs. Overhead</p>
+                  <p style="margin:0;font-size:13px;">✓ Gained: Full compliance, traceability, governance | ✗ Lost: Increased storage, query complexity for reporting</p>
+                </div>
+                <div style="background:rgba(236,72,153,.1);border-left:3px solid var(--pink);padding:12px;border-radius:6px;">
+                  <p style="margin:0 0 6px;color:var(--text);font-weight:600;">Phased Rollout vs. Fast ROI</p>
+                  <p style="margin:0;font-size:13px;">✓ Gained: Risk mitigation, stakeholder buy-in, iteration | ✗ Lost: Delayed full automation benefit (6-month rollout)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Metrics -->
+          <div>
+            <h4 style="color:var(--pink);margin:0 0 12px;font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px;">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:rgba(236,72,153,.2);border-radius:50%;font-weight:700;color:var(--pink);">4</span>
+              Success Metrics
+            </h4>
+            <div style="padding-left:40px;color:var(--muted);line-height:1.6;">
+              <p><strong style="color:var(--text);">How we measure product success</strong></p>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+                <div style="background:rgba(99,102,241,.1);padding:12px;border-radius:8px;">
+                  <p style="margin:0 0 4px;color:var(--text);font-weight:600;font-size:14px;">Stale Records Removed</p>
+                  <p style="margin:0;font-size:12px;">Baseline: 8,500 inactive records | Target: 85%+ removal within 6 months</p>
+                </div>
+                <div style="background:rgba(16,185,129,.1);padding:12px;border-radius:8px;">
+                  <p style="margin:0 0 4px;color:var(--text);font-weight:600;font-size:14px;">Owner Response Rate</p>
+                  <p style="margin:0;font-size:12px;">Target: 70%+ approval within 30 days | Tracks engagement and process acceptance</p>
+                </div>
+                <div style="background:rgba(245,158,11,.1);padding:12px;border-radius:8px;">
+                  <p style="margin:0 0 4px;color:var(--text);font-weight:600;font-size:14px;">Report Accuracy Gain</p>
+                  <p style="margin:0;font-size:12px;">Measure: Data freshness score | Target: 90%+ of inventory under 12 months old</p>
+                </div>
+                <div style="background:rgba(236,72,153,.1);padding:12px;border-radius:8px;">
+                  <p style="margin:0 0 4px;color:var(--text);font-weight:600;font-size:14px;">Decision Latency</p>
+                  <p style="margin:0;font-size:12px;">Time from data query to insight | Target: 40% faster stakeholder decisions</p>
+                </div>
+                <div style="background:rgba(99,102,241,.1);padding:12px;border-radius:8px;">
+                  <p style="margin:0 0 4px;color:var(--text);font-weight:600;font-size:14px;">Compliance Audit Pass Rate</p>
+                  <p style="margin:0;font-size:12px;">Target: 100% audit trail completeness for governance teams</p>
+                </div>
+                <div style="background:rgba(16,185,129,.1);padding:12px;border-radius:8px;">
+                  <p style="margin:0 0 4px;color:var(--text);font-weight:600;font-size:14px;">Support Ticket Reduction</p>
+                  <p style="margin:0;font-size:12px;">Fewer questions about obsolete records | Target: 30% reduction in noise-related inquiries</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Risks -->
+          <div>
+            <h4 style="color:#ff6b6b;margin:0 0 12px;font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px;">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:rgba(255,107,107,.2);border-radius:50%;font-weight:700;color:#ff6b6b;">5</span>
+              Risks & Mitigations
+            </h4>
+            <div style="padding-left:40px;color:var(--muted);line-height:1.6;">
+              <p><strong style="color:var(--text);">Potential challenges and mitigation strategies</strong></p>
+              <div style="display:grid;gap:12px;">
+                <div style="background:rgba(255,107,107,.05);border-left:3px solid #ff6b6b;padding:12px;border-radius:6px;">
+                  <p style="margin:0 0 6px;color:var(--text);font-weight:600;">Risk: Owner Non-Compliance</p>
+                  <p style="margin:0;font-size:13px;"><strong>Mitigation:</strong> Two reminder notifications + auto-decommission timeout policy + quarterly governance review</p>
+                </div>
+                <div style="background:rgba(255,107,107,.05);border-left:3px solid #ff6b6b;padding:12px;border-radius:6px;">
+                  <p style="margin:0 0 6px;color:var(--text);font-weight:600;">Risk: Accidental Data Loss</p>
+                  <p style="margin:0;font-size:13px;"><strong>Mitigation:</strong> Comprehensive audit trail, soft-delete (retention period before purge), compliance review checkpoints</p>
+                </div>
+                <div style="background:rgba(255,107,107,.05);border-left:3px solid #ff6b6b;padding:12px;border-radius:6px;">
+                  <p style="margin:0 0 6px;color:var(--text);font-weight:600;">Risk: Low Adoption / Change Resistance</p>
+                  <p style="margin:0;font-size:13px;"><strong>Mitigation:</strong> Phased rollout, stakeholder communication, success stories, opt-out for special cases</p>
+                </div>
+                <div style="background:rgba(255,107,107,.05);border-left:3px solid #ff6b6b;padding:12px;border-radius:6px;">
+                  <p style="margin:0 0 6px;color:var(--text);font-weight:600;">Risk: Threshold Misalignment</p>
+                  <p style="margin:0;font-size:13px;"><strong>Mitigation:</strong> Configurable thresholds per data category, stakeholder feedback loop, periodic policy review</p>
+                </div>
+                <div style="background:rgba(255,107,107,.05);border-left:3px solid #ff6b6b;padding:12px;border-radius:6px;">
+                  <p style="margin:0 0 6px;color:var(--text);font-weight:600;">Risk: Performance Impact on Large Datasets</p>
+                  <p style="margin:0;font-size:13px;"><strong>Mitigation:</strong> Batch processing, off-peak execution, indexed queries, performance monitoring alerts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="container two-col">
       <div>
         <h3 class="section-title">Key Product Owner Responsibilities</h3>
