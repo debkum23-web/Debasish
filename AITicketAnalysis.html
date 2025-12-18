@@ -34,7 +34,6 @@
         <span class="badge">Data-Driven Decisions</span>
         <span class="badge">Feature Prioritization</span>
         <span class="badge">Incident Reduction</span>
-        <span class="badge">Governance at Scale</span>
       </div>
     </section>
 
@@ -143,7 +142,6 @@
             <p style="margin:12px 0 0;color:var(--text);font-weight:600;font-size:14px;">Validation Method</p>
             <ul style="margin:6px 0 0;padding-left:16px;color:var(--muted);font-size:12px;line-height:1.5;">
               <li>Prioritized by ticket volume + user impact</li>
-              <li>Aligned with org governance &amp; scale concerns</li>
               <li>Estimated effort vs. demand trade-offs</li>
               <li>Phased delivery: MVP → enhancements</li>
             </ul>
@@ -180,10 +178,9 @@
             <ul style="margin:0;padding-left:16px;color:var(--muted);font-size:13px;line-height:1.6;">
               <li><strong>Data-Driven Hypothesis:</strong> Replaced anecdotes with quantified user demand</li>
               <li><strong>Rapid Discovery:</strong> Scaled analysis across large datasets (1,200+ tickets)</li>
-              <li><strong>Risk Awareness:</strong> Assessed effort, governance, scale implications</li>
+              <li><strong>Risk Awareness:</strong> Assessed effort and scale implications</li>
               <li><strong>AI Judgment:</strong> Knew when to trust AI output &amp; when to validate</li>
               <li><strong>Stakeholder Alignment:</strong> Communicated AI-driven insights with confidence</li>
-              <li><strong>Governance-First Thinking:</strong> Ensured solutions aligned with scale concerns</li>
             </ul>
           </div>
         </div>
@@ -194,41 +191,43 @@
       <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:16px;">← Scroll right to see the complete AI-assisted discovery journey →</p>
     </section>
 
-    <!-- GenAI Fluency & PO Approach -->
+    <!-- GenAI-Based Ticket Understanding -->
     <section class="container two-col" style="margin-top:16px;">
       <div>
-        <h3 class="section-title">GenAI Fluency in Product Ownership</h3>
-        <p><strong>Understanding AI's Role in Decision-Making:</strong> This project demonstrated how GenAI accelerates discovery without replacing human judgment. The key was knowing what to ask the AI, how to validate outputs, and when human expertise was still essential.</p>
-        <h4 style="margin-top:16px;">How I Used AI Effectively:</h4>
+        <h3 class="section-title">GenAI-Based Ticket Understanding</h3>
+        <p>Used Copilot to derive structured insights from unstructured ticket text.</p>
+        <h4 style="margin-top:16px;">Capabilities</h4>
         <ul class="list">
-          <li><strong>Pattern Recognition:</strong> Copilot identified ticket themes faster than manual review</li>
-          <li><strong>Data Synthesis:</strong> Converted raw text into structured categories at scale</li>
-          <li><strong>Hypothesis Generation:</strong> AI suggested feature opportunities based on ticket clustering</li>
-          <li><strong>Trade-off Analysis:</strong> Explored effort vs. impact scenarios with AI assistance</li>
-          <li><strong>Governance Validation:</strong> Assessed risk &amp; scale implications for each feature</li>
+          <li>AI-driven categorization of ticket themes</li>
+          <li>Sentiment and urgency inference</li>
+          <li>Identification of feature-related vs defect-related tickets</li>
         </ul>
-        <p style="margin-top:16px; padding:12px; background:rgba(99,102,241,.1); border-left:3px solid var(--primary); border-radius:6px;"><strong>Key Insight:</strong> AI is most powerful in PO roles for rapid pattern discovery, not autonomous decision-making. The value came from using AI to scale human judgment across large datasets, then validating with domain expertise.</p>
+        <h4 style="margin-top:16px;">Sample GenAI Prompts</h4>
+        <div style="background:rgba(30,41,59,.6); border-left:3px solid var(--primary); padding:16px; border-radius:6px; margin-bottom:16px;">
+          <p style="margin:0; font-family:monospace; font-size:13px; color:var(--text);">Analyze the Description column in the Support_Tickets table and create a new Issue Category column grouping similar user problems.</p>
+        </div>
+        <div style="background:rgba(30,41,59,.6); border-left:3px solid var(--primary); padding:16px; border-radius:6px;">
+          <p style="margin:0; font-family:monospace; font-size:13px; color:var(--text);">Add a Sentiment column indicating user tone (Neutral, Frustrated, High Urgency).</p>
+        </div>
+        <p style="margin-top:16px;"><strong>Value:</strong> Reduces manual effort while improving consistency of ticket interpretation.</p>
       </div>
       <aside>
         <div class="card">
-          <h4>AI PO Capabilities Unlocked</h4>
+          <h4>Trend, Risk, and Root-Cause Analysis</h4>
+          <p class="muted">Anchoring on AI-generated columns, Copilot was used to:</p>
           <ul class="list">
-            <li><strong>Rapid Insight:</strong> 80% faster analysis cycles</li>
-            <li><strong>Data Confidence:</strong> Backlog justified with evidence, not hunches</li>
-            <li><strong>Governance Awareness:</strong> AI flagged scale &amp; compliance implications</li>
-            <li><strong>Stakeholder Alignment:</strong> Shared AI-generated insights with org</li>
-            <li><strong>Feature Validation:</strong> Prioritized with real user demand data</li>
-            <li><strong>Incident Prevention:</strong> Proactive gap detection from patterns</li>
+            <li>Track recurring issues across time periods</li>
+            <li>Identify spikes in high-severity tickets</li>
+            <li>Surface product modules with persistent friction</li>
           </ul>
-          <h4 style="margin-top:16px;">Technologies Leveraged</h4>
-          <div class="inline">
-            <span class="badge">Excel Copilot</span>
-            <span class="badge">Large Language Models</span>
-            <span class="badge">Pattern Recognition</span>
-            <span class="badge">Prompt Engineering</span>
-            <span class="badge">Data Analysis</span>
-            <span class="badge">Product Discovery</span>
+          <h4 style="margin-top:16px;">Sample GenAI Prompts</h4>
+          <div style="background:rgba(30,41,59,.6); border-left:3px solid var(--accent); padding:12px; border-radius:6px; margin-bottom:12px;">
+            <p style="margin:0; font-family:monospace; font-size:12px; color:var(--text);">Using the Issue Category column, identify trends and highlight issues that show sustained growth over time.</p>
           </div>
+          <div style="background:rgba(30,41,59,.6); border-left:3px solid var(--accent); padding:12px; border-radius:6px;">
+            <p style="margin:0; font-family:monospace; font-size:12px; color:var(--text);">Correlate high-severity tickets with specific product modules.</p>
+          </div>
+          <p style="margin-top:12px; font-size:13px;"><strong>Enterprise lens:</strong> Supports proactive risk management and post-release monitoring.</p>
         </div>
       </aside>
     </section>
@@ -288,15 +287,6 @@
             </div>
           </div>
         </div>
-        <div class="card">
-          <h4>Governance & Scale</h4>
-          <div style="margin-top: 16px;">
-            <p style="margin: 0 0 12px; font-weight: 600; color: #6366f1;">AI-Aware Decisions</p>
-            <div style="background: #2d3a4f; border-radius: 8px; padding: 8px 12px;">
-              <p class="muted" style="font-size: 12px; margin: 0;">Features assessed for org-wide governance, compliance, and scalability—not just feature engineering.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -333,20 +323,11 @@
         </article>
         <article class="card">
           <h4>🎯 Feature Prioritization</h4>
-          <p class="muted">Assessed effort vs. impact; phased delivery; governance alignment—not just "build the loudest ask."</p>
+          <p class="muted">Assessed effort vs. impact; phased delivery—not just "build the loudest ask."</p>
           <div class="inline">
             <span class="badge">Trade-off Analysis</span>
             <span class="badge">Prioritization</span>
             <span class="badge">Roadmapping</span>
-          </div>
-        </article>
-        <article class="card">
-          <h4>⚖️ Governance & Scale Thinking</h4>
-          <p class="muted">Evaluated features against compliance, organizational governance, and scalability—PO awareness of enterprise context.</p>
-          <div class="inline">
-            <span class="badge">Risk Assessment</span>
-            <span class="badge">Governance</span>
-            <span class="badge">Scale Awareness</span>
           </div>
         </article>
         <article class="card">
@@ -358,27 +339,6 @@
             <span class="badge">Impact Measurement</span>
           </div>
         </article>
-      </div>
-    </section>
-
-    <!-- Strategic Insights -->
-    <section class="container">
-      <h3 class="section-title">Strategic Insights & AI-First Product Thinking</h3>
-      <div style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 12px; padding: 24px;">
-        <div style="display: grid; gap: 20px;">
-          <div>
-            <h4 style="color: var(--primary); margin: 0 0 12px;">Why GenAI Works for PO Discovery</h4>
-            <p style="margin: 0; color: var(--text); line-height: 1.6;">GenAI shines in product discovery because it can rapidly process large unstructured datasets (tickets, feedback, logs) and surface patterns that humans would miss or take weeks to uncover. But it's not magic—it's a force multiplier for PO judgment. The power comes from combining AI's pattern recognition with human expertise in validation, governance, and decision-making.</p>
-          </div>
-          <div>
-            <h4 style="color: var(--primary); margin: 0 0 12px;">Governance & Scale Awareness in AI-Driven Decisions</h4>
-            <p style="margin: 0; color: var(--text); line-height: 1.6;">Not every high-volume request becomes a feature. This analysis showed the importance of governance-first thinking: Copy Site Pages and Re-boarding Automation were built not just because users asked for them, but because solutions were feasible at scale, compliant with org policies, and sustainable across teams. AI-first POs must balance feature demand with enterprise realities.</p>
-          </div>
-          <div>
-            <h4 style="color: var(--primary); margin: 0 0 12px;">AI Fluency as a Core PO Competency</h4>
-            <p style="margin: 0; color: var(--text); line-height: 1.6;">POs in the AI era must understand both what AI can do and what it cannot. This project demonstrated: knowing when to prompt for themes vs. raw summaries, validating AI-identified patterns, assessing effort-to-impact trade-offs, and communicating AI-driven insights with confidence. AI fluency isn't about building models—it's about wielding AI as a strategic tool for faster, better decisions.</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -402,8 +362,8 @@
     <!-- Key Takeaway -->
     <section class="container">
       <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.1)); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 12px; padding: 32px; text-align: center;">
-        <h3 style="margin: 0 0 16px; color: var(--primary);">The AI-First PO Mindset</h3>
-        <p style="margin: 0; color: var(--text); line-height: 1.8; font-size: 16px;">This project demonstrated that AI-assisted product discovery is not about replacing human judgment—it's about <strong>accelerating insight generation</strong> at scale. By combining GenAI's pattern recognition with rigorous PO discipline (discovery → validation → governance → delivery → metrics), we transformed 1,200+ raw tickets into actionable features that reduced incidents by 65% and improved user satisfaction. That's the power of an AI-fluent PO: using AI to see the full picture faster, making better decisions, and shipping outcomes that matter.</p>
+        <h3 style="margin: 0 0 16px; color: var(--primary);">Key Takeaways</h3>
+        <p style="margin: 0; color: var(--text); line-height: 1.8; font-size: 16px;">When I started analyzing those 1,200+ support tickets, I knew manual review would take weeks—and likely miss patterns buried in the noise. Excel Copilot changed that. In hours, I had structured themes, sentiment analysis, and clear feature vs. defect classifications. What stood out wasn't just the speed—it was the confidence to prioritize based on real user demand, not gut feeling. The two features we shipped (Copy Site Pages and Re-boarding Automation) weren't random ideas; they were validated by 310 and 185 user tickets respectively. That's the shift: from guessing what users need to <strong>knowing</strong> what they need, backed by data. AI didn't make the decisions—it gave me the insights to make better ones, faster.</p>
       </div>
     </section>
 
