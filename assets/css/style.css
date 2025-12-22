@@ -1,5 +1,5 @@
 
-:root{--primary:#6366f1;--accent:#10b981;--amber:#f59e0b;--pink:#ec4899;--text:#1a202c;--muted:#64748b;--bg:#eff2f7;--card:#ffffff}
+:root{--primary:#6366f1;--accent:#10b981;--amber:#f59e0b;--pink:#ec4899;--text:#1a202c;--muted:#64748b;--bg:#dfe7f5;--card:#ffffff}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);position:relative;overflow-x:hidden}
