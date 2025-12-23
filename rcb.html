@@ -11,40 +11,45 @@
       background: #1a1a2e !important;
       display: flex;
       flex-direction: column;
+      align-items: center;
       min-height: 100vh;
       padding: 20px;
+      margin: 0;
     }
     body::before,
     body::after {
       display: none !important;
     }
+    .page-wrapper {
+      background: #0f0f23;
+      border: 1px solid #404060;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 1100px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
     header.site-header {
       background: #0f0f23 !important;
-      border: 1px solid #404060 !important;
-      border-bottom: none;
-      border-radius: 12px 12px 0 0;
-      margin-bottom: 0;
+      border: none !important;
+      border-radius: 0;
+      margin: 0;
     }
     main {
       background: #0f0f23;
-      border: 1px solid #404060;
+      border: none;
       border-radius: 0;
-      border-bottom: none;
-      margin: 0 auto;
+      margin: 0;
       width: 100%;
-      max-width: 1100px;
       box-sizing: border-box;
     }
     footer.site-footer {
       background: #0f0f23 !important;
-      border: 1px solid #404060 !important;
-      border-radius: 0 0 12px 12px;
-      border-top: none;
-      margin: 0 auto;
-      width: calc(100% - 40px);
-      max-width: 1100px;
-      margin-left: 20px;
-      margin-right: 20px;
+      border: none !important;
+      border-radius: 0;
+      margin: 0;
+      width: 100%;
       box-sizing: border-box;
     }
     .site-header,
@@ -68,8 +73,9 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="container">
       <h1>Debasish Kumar</h1>
       <p class="tagline">Product Owner | Scaling from SharePoint into AI-Driven Product Strategy <span class="status-badge">Seeking AI PO Roles</span></p>
       <nav class="nav">
@@ -309,11 +315,12 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
-    </div>
-  </footer>
+    <footer class="site-footer">
+      <div class="container">
+        <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
+      </div>
+    </footer>
+  </div>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
