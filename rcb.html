@@ -21,14 +21,15 @@
     header.site-header {
       background: #0f0f23 !important;
       border: 1px solid #404060 !important;
-      border-radius: 12px;
+      border-bottom: none;
+      border-radius: 12px 12px 0 0;
       margin-bottom: 0;
     }
     main {
       background: #0f0f23;
       border: 1px solid #404060;
-      border-radius: 12px;
-      border-top: none;
+      border-radius: 0;
+      border-bottom: none;
       margin: 0 auto;
       width: 100%;
       max-width: 1100px;
@@ -37,9 +38,14 @@
     footer.site-footer {
       background: #0f0f23 !important;
       border: 1px solid #404060 !important;
-      border-radius: 12px;
+      border-radius: 0 0 12px 12px;
       border-top: none;
-      margin-top: 0;
+      margin: 0 auto;
+      width: calc(100% - 40px);
+      max-width: 1100px;
+      margin-left: 20px;
+      margin-right: 20px;
+      box-sizing: border-box;
     }
     .site-header,
     main,
