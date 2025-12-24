@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
   <meta charset="utf-8" />
   <title>User Re-boarding Access Automation – Debasish Kumar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Power Automate solution to resolve SharePoint access issues for re-joining employees through automated cleanup and re-sharing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Debasish Kumar</h1>
-      <p class="tagline">Product Owner | AI &amp; SharePoint Solutions</p>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#contact">Contact</a>
+  <header class="site-header" id="header">
+    <div class="container header-content">
+      <div class="header-left">
+        <h1>Debasish Kumar</h1>
+        <p class="tagline">Product Owner | AI & SharePoint Solutions</p>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link"><i data-lucide="home"></i>Home</a>
+        <a href="index.html#projects" class="nav-link"><i data-lucide="folder"></i>Projects</a>
+        <a href="index.html#about" class="nav-link"><i data-lucide="user"></i>About</a>
+        <a href="index.html#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
       </nav>
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
     </div>
   </header>
 
@@ -207,6 +216,45 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    const header = document.getElementById('header');
+    
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
+      });
+    }
+    
+    // Header scroll effect
+    if (header) {
+      let lastScroll = 0;
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+      });
+    }
   </script>
 </body>
 </html>
