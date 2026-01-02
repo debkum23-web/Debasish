@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8" />
+  <title>LLM-Powered SharePoint Audit Analyzer – Debasish Kumar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI-driven SharePoint audit log analysis using RAG and LLM to transform compliance and security investigation from hours to minutes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="container header-content">
+      <div class="header-left">
+        <h1>Debasish Kumar</h1>
+        <p class="tagline">Product Owner | AI & SharePoint Solutions</p>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link"><i data-lucide="home"></i>Home</a>
+        <a href="index.html#projects" class="nav-link"><i data-lucide="folder"></i>Projects</a>
+        <a href="index.html#about" class="nav-link"><i data-lucide="user"></i>About</a>
+        <a href="index.html#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
+      </nav>
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>LLM-Powered SharePoint Audit Analyzer</h2>
+        <p class="tagline" style="color: var(--text); font-size: 18px; margin-top: 12px;">Product Owner / AI Solutions Architect</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="inline" style="margin-bottom: 24px;">
+        <span class="badge">AI/LLM</span>
+        <span class="badge">RAG (Retrieval-Augmented Generation)</span>
+        <span class="badge">Vector Embeddings</span>
+        <span class="badge">SharePoint Compliance</span>
+        <span class="badge">Streamlit</span>
+        <span class="badge">Product Strategy</span>
+      </div>
+    </section>
+
+    <section class="container two-col">
+      <div>
+        <h3 class="section-title">The Problem</h3>
+        <p>An employee accidentally accessed a confidential SharePoint site and modified a file. HR and leadership needed answers immediately: who accessed the site, what was changed, when did it happen, and what was the impact? Traditionally, this investigation falls on the technical team—a process that demands deep expertise in SharePoint audit logs, JSON parsing, and technical event codes. Even for a seemingly straightforward incident, analysis takes 4-6 hours of manual log review.</p>
+        
+        <p>But here's the friction: every time a potential breach occurs, HR and leadership must wait. They can't investigate themselves because audit logs are too technical. They depend entirely on a small technical team to stop their current work and dive into logs. Incidents that should be resolved in minutes stretch into hours. Critical information doesn't reach decision-makers when they need it. The organization is left vulnerable, slow to respond, and unable to empower its leadership team to take ownership of security incidents that directly affect their business.</p>
+
+        <h3 class="section-title">The Goal</h3>
+        <p>What if HR and leadership could investigate incidents themselves? No technical expertise required. No waiting for the technical team. No JSON parsing or complex log analysis. Just straightforward questions: "Who accessed this file on Friday?" "What changes were made?" "Which accounts touched this site?" And get answers in minutes, not hours. Enable non-technical leaders to be their first line of incident response, reducing bottlenecks and accelerating organizational response to potential breaches.</p>
+      </div>
+      <aside>
+        <div class="card">
+          <h4>Users & Stakeholders</h4>
+          <ul class="list">
+            <li>HR and People Operations</li>
+            <li>Leadership and Executives</li>
+            <li>Compliance Officers</li>
+            <li>Security Operations Teams</li>
+            <li>Legal and Governance</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">How I Approached This as a Product Owner</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Start with Real Users</h4>
+          <p class="muted">I shadowed security analysts doing their actual work. Watched them hunt through logs, copy JSON snippets, switch between tools. Saw where they got stuck. Learned that they weren't struggling with anything exotic—just the same basic questions repeatedly: Who accessed this? What happened when? I turned those observations into concrete requirements.</p>
+        </article>
+        <article class="card">
+          <h4>Prove It Works First</h4>
+          <p class="muted">Before building anything, I needed to know: can AI actually understand audit logs well enough to give good answers? I prototyped the architecture—vector embeddings, semantic search, LLM generation—on test scenarios. Found it was 95% accurate. That confidence meant I could commit to the vision without overselling.</p>
+        </article>
+        <article class="card">
+          <h4>Ship What Matters First</h4>
+          <p class="muted">I prioritized ruthlessly. MVP 1: natural language chat interface. That solves the core pain (hours to minutes). Everything else—trend analysis, anomaly detection, incident correlation—goes in later, after I see how teams actually use it. Speed to value matters more than feature completeness.</p>
+        </article>
+        <article class="card">
+          <h4>Measure Everything</h4>
+          <p class="muted">I defined success metrics upfront: How fast are investigations now? How accurate are the answers? Are people actually using it? These weren't vanity metrics—they directly told me if the product was solving the problem. When metrics went up, I knew I was on the right track.</p>
+        </article>
+        <article class="card">
+          <h4>Build Guardrails for AI</h4>
+          <p class="muted">AI is powerful but imperfect. I built in confidence scoring, verification workflows for sensitive findings, and audit trails. I made sure human judgment stays in the loop for high-stakes decisions. Security teams need to trust the tool, and that means being honest about what it can and can't do.</p>
+        </article>
+        <article class="card">
+          <h4>Be Honest About Limitations</h4>
+          <p class="muted">Vector search isn't perfect—it captures meaning beautifully but might miss edge cases. Embeddings are semantic, not syntactic. I told the security team exactly that upfront. No overselling, no false confidence. Build trust through transparency, and they'll give you the benefit of the doubt when something needs iteration.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">How It Works</h3>
+      <p>The system combines three key pieces working together seamlessly:</p>
+      <div class="grid">
+        <article class="card">
+          <h4>Understand the Data</h4>
+          <p class="muted">First, we load your SharePoint audit logs from CSV and parse the nested JSON data inside. This gets messy fast—lots of technical codes and nested fields. We extract what matters: who did what, when, and where. All the metadata that helps answer questions.</p>
+        </article>
+        <article class="card">
+          <h4>Convert to Semantic Understanding</h4>
+          <p class="muted">Here's the magic: we convert each log entry into a "semantic vector"—essentially a mathematical representation of its meaning. Store these in ChromaDB, a vector database designed for fast similarity search. Now when you ask a question, we can instantly find logs that are semantically similar to what you're asking about.</p>
+        </article>
+        <article class="card">
+          <h4>AI-Powered Answers</h4>
+          <p class="muted">When you ask a question in the chat, the system finds the most relevant logs, hands them to an LLM (GPT-4), and asks it to answer your question based on that context. This is "RAG"—Retrieval-Augmented Generation. Your answer is grounded in real data, not hallucinated.</p>
+        </article>
+        <article class="card">
+          <h4>Instant Insights</h4>
+          <p class="muted">Beyond answering questions, the system automatically generates statistics: most active users, common operations, permission changes, suspicious activities. Everything you'd normally manually compile—but instant and consistent.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">What This Means for Your Organization</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Speed: From Hours to Minutes</h4>
+          <p class="muted">Security team gets a breach alert on Friday. Instead of 4-6 hours of investigation, they have answers in 5 minutes. What was blocking you before—expertise, manual effort—just disappears. That's not just efficiency. That's risk reduction.</p>
+        </article>
+        <article class="card">
+          <h4>No Expertise Required</h4>
+          <p class="muted">Your junior analyst can now answer the same questions as your SharePoint expert. No need to understand JSON, no need to know what event code 4662 means. They just ask, in English, and get answers. Suddenly your whole team is empowered.</p>
+        </article>
+        <article class="card">
+          <h4>Trust the Results</h4>
+          <p class="muted">When everyone uses the same tool, they get the same answers. No more inconsistent investigations where one team finds something another missed. And because answers are grounded in real audit data (not AI hallucination), you can actually trust the results.</p>
+        </article>
+        <article class="card">
+          <h4>Never Outgrow It</h4>
+          <p class="muted">Whether you have 10,000 logs or 10 million, the system handles it instantly. No waiting for data collection. No timeout errors. Your compliance team can investigate any incident, any time period, across your entire organization—right now.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container two-col">
+      <div>
+        <h3 class="section-title">Technical & Product Practices</h3>
+        <div class="inline">
+          <span class="badge">LLM & Generative AI</span>
+          <span class="badge">Retrieval-Augmented Generation (RAG)</span>
+          <span class="badge">Vector Embeddings & ChromaDB</span>
+          <span class="badge">OpenAI GPT-4</span>
+          <span class="badge">Secure Credential Management</span>
+          <span class="badge">User-Centric Design</span>
+        </div>
+
+        <h3 class="section-title" style="margin-top: 32px;">What I Actually Did</h3>
+        <ul class="list">
+          <li><strong>Watched People Work:</strong> Sat with security analysts while they investigated real incidents. Watched them get stuck. Watched them find workarounds. Learned more in those few hours than any document could teach me.</li>
+          <li><strong>Picked Battles Wisely:</strong> Not every feature idea matters. I mapped out what would move the needle (MVP: ask questions in English) vs. nice-to-haves (advanced analytics). Got 80% of the value with 20% of the work.</li>
+          <li><strong>Built in Safety:</strong> AI can be amazing, but it can also be confidently wrong. I designed guardrails: confidence scores on answers, human review for sensitive findings, detailed audit trails for compliance. Security teams needed to trust this, and that requires rigor.</li>
+          <li><strong>Defined Success Upfront:</strong> How do you know if this product works? I said: investigations drop from 4-6 hours to under 10 minutes. Accuracy is above 90%. Teams are using it daily. Then I built metrics to track exactly that.</li>
+          <li><strong>Talked Straight About Limits:</strong> Told security teams exactly what this system could and couldn't do. Vector search catches semantic meaning beautifully but isn't perfect. AI reasoning is generally solid but can miss edge cases. Honesty builds trust.</li>
+          <li><strong>Made It Feel Natural:</strong> The interface isn't some clunky tool. It's a chat. You ask questions like you'd ask a person. The system even explains why it pulled certain logs. Details like this matter—they make people actually use the thing.</li>
+          <li><strong>Stayed Flexible:</strong> We shipped the MVP—basic natural language queries. Then watched how teams actually used it. Added filtering when they asked for it. Added trend analysis because they needed it. The roadmap came from reality, not guesswork.</li>
+        </ul>
+      </div>
+      <aside>
+        <div class="card">
+          <h4>Key Outcomes</h4>
+          <ul class="list">
+            <li><strong>Speed:</strong> 4-6 hour investigations now 5-minute conversations</li>
+            <li><strong>Accessibility:</strong> Non-experts can investigate without SharePoint expertise</li>
+            <li><strong>Consistency:</strong> AI-driven analysis eliminates manual error</li>
+            <li><strong>Reliability:</strong> 95%+ accuracy on test investigation scenarios</li>
+            <li><strong>Scalability:</strong> Analyze millions of audit records instantly</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top: 20px;">
+          <h4>How We Got Here</h4>
+          <p class="muted"><strong>The Spark:</strong> Watched a security team spend 6 hours on a simple compliance check. Realized this was a solvable problem if we applied AI the right way.</p>
+          <p class="muted"><strong>MVP 1 (Built):</strong> A conversational interface where you ask questions in English. "Who accessed this file?" "What happened last week?" Simple, powerful, immediately useful.</p>
+          <p class="muted"><strong>MVP 2 (Built):</strong> Added dashboard summaries, trend analysis, and permission change tracking. The system now proactively surfaces patterns, not just answers questions.</p>
+          <p class="muted"><strong>Next Chapter:</strong> Incident correlation—connect events across multiple logs. Automation—trigger workflows when suspicious patterns emerge. The vision keeps growing based on what teams actually need.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">What I Learned</h3>
+      <article class="card">
+        <p>Building products in the AI era taught me something important: the fundamentals haven't changed, they've just gotten harder. You still need to truly understand your users' pain. You still need to prioritize ruthlessly. You still need to measure what matters. But now you also need to be thoughtful about when and how AI helps, and brutally honest about when it doesn't.</p>
+        <p style="margin-top: 1rem;">This project wasn't about building an impressive demo. It was about turning 4-6 hour investigations into 5-minute conversations. That only happens when you obsess over what users actually need, validate your approach before over-committing, and stay flexible enough to iterate when reality differs from your assumptions. The AI part—RAG, embeddings, LLM generation—that's the technique. The hard part is product strategy: knowing what to build, why it matters, who it serves, and how to measure if it's working.</p>
+        <p style="margin-top: 1rem;">And maybe most importantly: trust compounds when you're honest. Tell security teams exactly what this system can and can't do. Build in verification for high-stakes decisions. Explain why you made certain choices. They'll meet you halfway, give you honest feedback, and become partners in making it better. That's when products transform from nice ideas into genuinely useful tools.</p>
+      </article>
+    </section>
+
+    <section class="container">
+      <a class="btn" href="index.html#projects">← Back to Projects</a>
+      <a class="btn secondary" href="index.html#contact">Get in Touch</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    const header = document.getElementById('header');
+    
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
+      });
+    }
+    
+    // Header scroll effect
+    if (header) {
+      let lastScroll = 0;
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+      });
+    }
+  </script>
+</body>
+</html>
