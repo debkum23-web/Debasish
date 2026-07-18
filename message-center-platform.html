@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8" />
+  <title>Message Center Intelligence Platform – Debasish Kumar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="End-to-end product ownership of a Message Center intelligence platform: Microsoft API ingestion, SQL schema, custom API layer, LLM-driven search, Jira automation, and Azure AD governance — adopted firm-wide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="container header-content">
+      <div class="header-left">
+        <h1>Debasish Kumar</h1>
+        <p class="tagline">Product Owner | AI & SharePoint Solutions</p>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link"><i data-lucide="home"></i>Home</a>
+        <a href="index.html#projects" class="nav-link"><i data-lucide="folder"></i>Projects</a>
+        <a href="index.html#about" class="nav-link"><i data-lucide="user"></i>About</a>
+        <a href="index.html#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
+      </nav>
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow"><i data-lucide="star"></i>Flagship Project — Owned End-to-End</p>
+        <h2>Message Center Intelligence Platform</h2>
+        <p class="tagline" style="color: var(--text); font-size: 18px; margin-top: 12px;">Product Owner & Principal Engineer — from data model to production dashboard, now used firm-wide</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="inline" style="margin-bottom: 24px;">
+        <span class="badge">Product Ownership</span>
+        <span class="badge">LLM-Driven Search</span>
+        <span class="badge">Microsoft Graph APIs</span>
+        <span class="badge">SQL Schema Design</span>
+        <span class="badge">Angular Dashboard</span>
+        <span class="badge">Jira Automation</span>
+        <span class="badge">Azure AD Governance</span>
+      </div>
+    </section>
+
+    <section class="container two-col">
+      <div>
+        <h3 class="section-title">Context</h3>
+        <p>Microsoft 365 Message Center advisories drive real work — deprecations, security changes, compliance deadlines. Scrum masters, product owners, and leaders across the firm depend on catching the right ones in time.</p>
+
+        <h3 class="section-title" style="margin-top: 32px;">Problem</h3>
+        <p>A scheduled script sent one daily email digesting the last 24 hours — no historical view, and no way to separate a critical advisory from routine noise. Important messages got lost in the inbox; the messages that mattered most were easiest to miss.</p>
+
+        <h3 class="section-title" style="margin-top: 32px;">The Product Decision</h3>
+        <p>I decided a better email wasn't the fix. The real gaps were historical, queryable access; visual separation of what matters; and a traceable owner for every action item. That framing shaped every build decision that followed.</p>
+      </div>
+      <aside>
+        <div class="card">
+          <h4>Users & Stakeholders</h4>
+          <ul class="list">
+            <li>Scrum masters</li>
+            <li>Product owners</li>
+            <li>Platform & engineering leaders</li>
+            <li>Compliance & audit partners</li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top: 20px;">
+          <h4>Scope Owned</h4>
+          <ul class="list">
+            <li>Product vision & roadmap</li>
+            <li>Data model & SQL schema</li>
+            <li>API layer — 18 endpoints</li>
+            <li>Dashboard UX</li>
+            <li>LLM search design</li>
+            <li>Access governance</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">How It Was Built</h3>
+      <div class="grid">
+        <article class="card">
+          <h4><i data-lucide="database" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Scheduled Ingestion & Queryable Schema</h4>
+          <p class="muted">A console application pulls Message Center data from Microsoft APIs into a SQL database on a schedule. The schema was designed for historical, queryable access — not raw archiving — so every past advisory stays searchable.</p>
+        </article>
+        <article class="card">
+          <h4><i data-lucide="layout-dashboard" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> API Layer + Angular Dashboard</h4>
+          <p class="muted">A custom API layer of 18 endpoints feeds an Angular dashboard where important messages are flagged and visually separated at the top — the gap the daily email never closed.</p>
+        </article>
+        <article class="card">
+          <h4><i data-lucide="sparkles" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> LLM Search with Clarifying Follow-ups</h4>
+          <p class="muted">When filtering wasn't enough, I added natural-language search: an LLM interprets the query and asks a clarifying follow-up when intent is ambiguous. A separate search API — never the LLM — queries the database. Separation of duties by design.</p>
+        </article>
+        <article class="card">
+          <h4><i data-lucide="ticket" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> One-Click Jira Creation</h4>
+          <p class="muted">Flagged messages get one-click Jira tickets, auto-populated from message data, with the Jira number surfaced back in the UI — replacing manual copy-paste with a traceable owner for every action item.</p>
+        </article>
+        <article class="card">
+          <h4><i data-lucide="shield-check" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Identity-Governed Access</h4>
+          <p class="muted">Azure AD login with a UPN-to-permissions mapping controls dashboard visibility — access governed by identity, not a bolt-on login screen.</p>
+        </article>
+        <article class="card">
+          <h4><i data-lucide="users" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Firm-Wide Adoption</h4>
+          <p class="muted">Now adopted by scrum masters, product owners, and leaders across the firm, fully replacing the daily email digest.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">Outcomes</h3>
+      <div class="grid">
+        <article class="card">
+          <p class="impact-value">30%</p>
+          <p class="muted">Reduction in support demand as self-service intelligence replaced engineering triage.</p>
+        </article>
+        <article class="card">
+          <p class="impact-value">100%</p>
+          <p class="muted">Audit compliance maintained, with identity-governed access and traceable action items.</p>
+        </article>
+        <article class="card">
+          <p class="impact-value">Firm-wide</p>
+          <p class="muted">Adoption across scrum masters, product owners, and leadership — replacing the daily email entirely.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container two-col">
+      <div>
+        <h3 class="section-title">Product Ownership in Practice</h3>
+        <ul class="list">
+          <li><strong>Reframed the problem:</strong> rejected "improve the email" in favor of the real unmet needs — history, signal separation, and traceability.</li>
+          <li><strong>Sequenced the roadmap by user value:</strong> queryable data first, then visual triage, then NL search, then Jira traceability — each release usable on its own.</li>
+          <li><strong>Designed AI responsibly:</strong> the LLM interprets intent and asks clarifying follow-ups, but never touches the database directly — guardrails as a product requirement, not an afterthought.</li>
+          <li><strong>Made governance a feature:</strong> Azure AD identity mapping means access control is auditable by design.</li>
+          <li><strong>Closed the loop:</strong> every flagged advisory can become a tracked Jira ticket with a visible owner.</li>
+        </ul>
+      </div>
+      <aside>
+        <div class="card">
+          <h4>Tech & Practices</h4>
+          <div class="inline">
+            <span class="badge">Microsoft 365 APIs</span>
+            <span class="badge">SQL</span>
+            <span class="badge">.NET Console App</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge">Angular</span>
+            <span class="badge">LLM Orchestration</span>
+            <span class="badge">Guardrails</span>
+            <span class="badge">Azure AD</span>
+            <span class="badge">Jira API</span>
+            <span class="badge">Iterative Delivery</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">Key Takeaways</h3>
+      <article class="card">
+        <p>This platform is what AI-native product ownership looks like in practice: start from the user's real gap (signal lost in noise), design the data layer for the questions people actually ask, add an LLM only where language understanding genuinely helps — with strict separation of duties — and make every insight traceable to an owner. The result replaced a daily email nobody trusted with a system the whole firm relies on, while cutting support demand by 30% and keeping audit compliance at 100%.</p>
+      </article>
+    </section>
+
+    <section class="container">
+      <a class="btn" href="index.html#projects">← Back to Projects</a>
+      <a class="btn secondary" href="index.html#contact">Get in Touch</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    lucide.createIcons();
+
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    const header = document.getElementById('header');
+
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
+      });
+    }
+
+    if (header) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
