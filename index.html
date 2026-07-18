@@ -35,8 +35,8 @@
     <section class="hero">
       <div class="container">
         <p class="eyebrow"><i data-lucide="map-pin"></i>Bengaluru, India · Open to relocation & remote</p>
-        <h2>A product owner with an engineer's depth — shipping AI-native platforms the whole firm relies on.</h2>
-        <p class="lede">Scaling product ownership into AI-driven strategy: combining 14+ years of technical depth in automation &amp; data with emerging AI capabilities to drive customer outcomes. Four years of hands-on product ownership — backlog, roadmap, PRDs, stakeholder management — inside a large enterprise platform, and fluent in LLM-based systems, RAG, and agentic workflows. Applied, not conceptual.</p>
+        <h2>I'm a product owner who spent 14 years building the platforms I now manage.</h2>
+        <p class="lede">I moved from platform engineering into product ownership in 2022, and for the last four years I've owned the roadmap, backlog, and PRDs for a large enterprise platform. Along the way I've shipped LLM-based features that real teams use every day — search that understands plain English, automated ticket analysis, RAG over audit logs. I know this technology from building with it, not from reading about it.</p>
         <div class="hero-actions">
           <a class="btn" href="#flagship">View My Work →</a>
           <a class="btn secondary" href="#contact">Get in Touch</a>
@@ -65,12 +65,12 @@
     <!-- Flagship: Message Center Intelligence Platform -->
     <section class="container" id="flagship">
       <p class="section-kicker">Flagship Project</p>
-      <h3 class="section-title">Owned End-to-End, Adopted Firm-Wide</h3>
-      <p class="section-intro">The project that defines how I work: a real product decision, an AI layer with guardrails, and measurable adoption.</p>
+      <h3 class="section-title">The project I'd want you to ask me about</h3>
+      <p class="section-intro">If you only look at one thing here, make it this one. I owned it from the first data model to the dashboard people open every morning.</p>
       <a href="message-center-platform.html" class="featured-card" aria-label="View Message Center Intelligence Platform project">
         <span class="flag"><i data-lucide="star"></i>Flagship · Used Firm-Wide</span>
         <h4>Message Center Intelligence Platform</h4>
-        <p>Owned end-to-end — Microsoft API data ingestion, SQL schema designed for historical queryable access, a custom API layer of 18 endpoints, an Angular dashboard that visually separates critical advisories from noise, an LLM-driven search that asks clarifying follow-ups (with a separate search API — never the LLM — querying the database), one-click Jira creation, and Azure AD-governed access. Replaced a daily email digest where the messages that mattered most were easiest to miss.</p>
+        <p>Our firm tracked Microsoft 365 advisories through a daily email digest, and the critical ones kept getting buried. I replaced it with a proper platform: scheduled ingestion from Microsoft's APIs into a SQL database I designed for historical queries, an API layer of 18 endpoints, and an Angular dashboard that puts flagged messages at the top. Later I added a natural-language search where an LLM interprets the question and asks a follow-up if it's ambiguous, but a separate search API does the actual database work. Flagged messages turn into Jira tickets in one click, and Azure AD decides who sees what.</p>
         <div class="inline">
           <span class="badge">LLM Search + Guardrails</span>
           <span class="badge">18 API Endpoints</span>
@@ -89,25 +89,24 @@
     <!-- AI Product Owner Projects -->
     <section class="container" id="ai-learning">
       <p class="section-kicker">AI Product Work</p>
-      <h3 class="section-title">AI Product Owner: Real-World Projects</h3>
-      <p class="section-intro">Demonstrating AI product ownership through real-world GenAI applications that delivered measurable business outcomes:</p>
+      <h3 class="section-title">Where I've put AI to work</h3>
+      <p class="section-intro">Two projects where I used GenAI to solve an actual problem, not to have an AI project. Both shipped, both have numbers behind them.</p>
       <div class="grid">
         <a href="AITicketAnalysis.html" class="card" style="border: 1px solid rgba(99, 102, 241, 0.3);" aria-label="View GenAI-Assisted Ticket Analysis project">
-          <h4 style="color: var(--accent-hover); margin-top: 0;">⭐ GenAI-Assisted Ticket Analysis &amp; Feature Discovery</h4>
-          <p class="muted"><strong>Real-World AI Project:</strong> Analyzed 1,200+ support tickets using Excel Copilot to uncover product patterns, identify feature gaps, and discover 2 high-impact features (Copy Site Pages, Re-boarding Automation).</p>
-          <p class="muted"><strong>PO Impact:</strong> 80% reduction in manual analysis time, 65% incident reduction, decision-enabling AI fluency demonstrated across org.</p>
+          <h4 style="color: var(--accent-hover); margin-top: 0;">GenAI-Assisted Ticket Analysis &amp; Feature Discovery</h4>
+          <p class="muted">We had 18 months of support tickets — over 1,200 of them — and no real picture of what they were telling us. I used Excel Copilot to classify and theme them, which surfaced two feature gaps big enough to build: Copy Site Pages (310 tickets asking for it) and Re-boarding Automation (185 tickets).</p>
+          <p class="muted">The analysis took hours instead of the weeks a manual review would have needed. Both features shipped, and recurring incidents in those areas dropped 65%.</p>
           <div class="inline">
             <span class="badge">GenAI / Excel Copilot</span>
             <span class="badge">Product Discovery</span>
             <span class="badge">Data-Driven Decisions</span>
             <span class="badge">AI Fluency</span>
           </div>
-          <p style="margin-top: 12px; color: var(--muted); font-size: 12px;"><strong>Status:</strong> Completed with 2 features shipped | <strong>Demonstrates:</strong> Strategic AI thinking + Enterprise PO awareness</p>
         </a>
         <a href="llm-audit-analyzer.html" class="card" style="border: 1px solid rgba(99, 102, 241, 0.3);" aria-label="View LLM-Powered SharePoint Audit Analyzer project">
           <h4 style="color: var(--accent-hover); margin-top: 0;">LLM-Powered SharePoint Audit Analyzer</h4>
-          <p class="muted"><strong>Real-World AI Project:</strong> A RAG-based chat tool (vector embeddings + ChromaDB + GPT-4) that lets HR and leadership investigate SharePoint security incidents themselves — natural-language questions over raw audit logs, answers grounded in real data.</p>
-          <p class="muted"><strong>PO Impact:</strong> Investigations cut from 4-6 hours to minutes, 95% answer accuracy proven before build, AI guardrails (confidence scoring, human-in-the-loop) designed in from day one.</p>
+          <p class="muted">Every time there was a security incident, HR and leadership had to wait hours for the technical team to dig through audit logs. I built a RAG-based chat tool (vector embeddings, ChromaDB, GPT-4) so they can ask questions like "who accessed this file on Friday?" and get answers grounded in the actual logs.</p>
+          <p class="muted">Investigations went from 4-6 hours to minutes. I prototyped it first to prove 95% answer accuracy before asking anyone to trust it, and built in confidence scoring and human review for sensitive findings.</p>
           <div class="inline">
             <span class="badge">RAG / Vector Search</span>
             <span class="badge">LLM Application</span>
@@ -128,11 +127,11 @@
           <p class="role">Principal Engineer · Technical Program Owner</p>
           <p class="org">Platform Delivery &amp; AI-Native Execution</p>
           <ul>
-            <li>Own product vision, roadmap, and backlog for the enterprise SharePoint Online platform — authoring PRDs and technical specifications and partnering with the CPO and senior stakeholders to align capability with business strategy.</li>
-            <li>Lead end-to-end delivery of platform enhancements, coordinating cross-functional engineering, compliance, and operations teams for predictable releases.</li>
-            <li>Established governance and guardrails across document lifecycle, access control, and automation workflows — ensuring regulatory compliance and audit readiness.</li>
-            <li>Led cross-functional remediation of a critical audit violation, restoring compliance posture and maintaining executive trust.</li>
-            <li>Scoped and led platform advisory engagements across business units — defined problem statements, recommended automation patterns, and owned delivery, reducing redundant build effort across teams.</li>
+            <li>I own the product vision, roadmap, and backlog for our enterprise SharePoint Online platform. I write the PRDs and technical specs myself, and work directly with the CPO and senior stakeholders on where the platform goes next.</li>
+            <li>I run delivery end to end, coordinating engineering, compliance, and operations so releases land when we say they will.</li>
+            <li>I set up the governance and guardrails for document lifecycle, access control, and automation workflows — the things auditors ask about.</li>
+            <li>When a critical audit violation surfaced, I led the remediation across teams and got us back to a clean compliance posture.</li>
+            <li>I also run platform advisory engagements for other business units: define the problem, recommend an automation pattern, own the delivery. It's cut down a lot of duplicate build effort across teams.</li>
           </ul>
         </div>
         <div class="timeline-item">
@@ -140,10 +139,10 @@
           <p class="role">SharePoint Platform Lead</p>
           <p class="org">Engineering → Product Ownership transition (2022–2024)</p>
           <ul>
-            <li>Began transitioning from engineering into product ownership in 2022 — assisting the Product Owner with backlog refinement and stakeholder calls, then stepping in as backup PO; scope grew into full end-to-end ownership of the roadmap and backlog by 2024.</li>
-            <li>Identified over-reliance on engineering triage as the top driver of support load; reprioritized the roadmap toward self-service and automation — cutting support tickets by 30% and improving platform adoption.</li>
-            <li>Designed and enforced data governance and compliance frameworks, partnering with Audit and ISO teams to achieve a 100% audit pass rate.</li>
-            <li>Acted as primary stakeholder interface and offshore POC — managing requirements, delivery timelines, releases, UAT cycles, and adoption through large-scale platform migrations (MOSS 2007 → SharePoint Online).</li>
+            <li>My move into product started in 2022, almost by accident: I began helping our Product Owner with backlog refinement and stakeholder calls, then covered as backup PO. By 2024 the roadmap and backlog were fully mine.</li>
+            <li>Digging into our support load, I found the biggest driver was people leaning on engineering for things they should have been able to do themselves. I repointed the roadmap at self-service and automation, and tickets dropped 30%.</li>
+            <li>I built the data governance and compliance frameworks with our Audit and ISO teams. We passed every audit — 100% — while I was in the role.</li>
+            <li>I was also the primary stakeholder interface and offshore point of contact through some large migrations, including MOSS 2007 to SharePoint Online: requirements, timelines, releases, UAT, adoption — all of it.</li>
           </ul>
         </div>
       </div>
@@ -156,11 +155,11 @@
       <div class="grid">
         <article class="card">
           <h4>AI Product Ownership</h4>
-          <p class="muted">Transitioning product ownership into AI-first delivery: discovery, prioritization, and adoption of LLM-powered features with measurable impact.</p>
+          <p class="muted">I've been folding AI into how I do product work: finding where an LLM genuinely helps, prioritizing it against everything else, and getting people to actually use it.</p>
           <ul class="list">
-            <li>Define business outcomes, write PRDs, and manage backlogs for GenAI capabilities.</li>
-            <li>Partner with data, engineering, and design to ship AI-assisted workflows.</li>
-            <li>Drive stakeholder alignment and launch readiness for AI features.</li>
+            <li>I write the PRDs and manage the backlogs for our GenAI capabilities.</li>
+            <li>I work with data, engineering, and design teams to ship AI-assisted workflows.</li>
+            <li>I handle the stakeholder alignment and launch readiness that AI features need.</li>
           </ul>
           <div class="inline" style="margin-top: 8px;">
             <span class="badge">AI Strategy</span>
@@ -170,11 +169,11 @@
         </article>
         <article class="card">
           <h4>SharePoint &amp; Power Platform Leadership</h4>
-          <p class="muted">14+ years leading automation and governance across SharePoint Online and Power Platform ecosystems.</p>
+          <p class="muted">I've spent 14+ years on SharePoint Online and the Power Platform — long enough to have opinions about what works.</p>
           <ul class="list">
-            <li>Built governance dashboards and standards that reduced capacity risks by 50%.</li>
-            <li>Designed Power Automate flows and approval journeys to streamline access and cleanup.</li>
-            <li>Mentored teams on platform guardrails, compliance, and reuse of components.</li>
+            <li>Built governance dashboards and standards that cut capacity risks in half.</li>
+            <li>Designed Power Automate flows and approval journeys for access requests and cleanup.</li>
+            <li>Mentored teams on platform guardrails, compliance, and reusing components instead of rebuilding them.</li>
           </ul>
           <div class="inline" style="margin-top: 8px;">
             <span class="badge">SharePoint Online</span>
@@ -184,11 +183,11 @@
         </article>
         <article class="card">
           <h4>Data &amp; Automation Outcomes</h4>
-          <p class="muted">Data-driven problem solving with automation to cut manual effort and improve quality.</p>
+          <p class="muted">My default move when something is slow or messy: measure it, then automate it.</p>
           <ul class="list">
-            <li>Applied analytics to discover feature gaps and prioritize roadmap items.</li>
-            <li>Reduced manual reporting by 30% via consolidated dashboards and alerts.</li>
-            <li>Eliminated stale records and sped resolution cycles from days to minutes.</li>
+            <li>Used ticket analytics to find feature gaps worth building and to order the roadmap.</li>
+            <li>Cut manual reporting by 30% with consolidated dashboards and alerts.</li>
+            <li>Cleared out stale records and took resolution cycles from days to minutes.</li>
           </ul>
           <div class="inline" style="margin-top: 8px;">
             <span class="badge">Data Insights</span>
@@ -199,7 +198,7 @@
       </div>
       <div class="card" style="margin-top: 16px;">
         <h4>Career Snapshot</h4>
-        <p class="muted" style="margin-bottom: 8px;">Bringing product thinking to enterprise platforms with a bias for measurable outcomes:</p>
+        <p class="muted" style="margin-bottom: 8px;">The threads that run through everything above:</p>
         <div class="inline" style="gap: 12px; flex-wrap: wrap;">
           <span class="badge">Enterprise Automation</span>
           <span class="badge">AI-Augmented Workflows</span>
@@ -315,7 +314,7 @@
     <!-- Measurable impact -->
     <section class="container" id="impact">
       <p class="section-kicker">Results</p>
-      <h3 class="section-title">Measurable Impact</h3>
+      <h3 class="section-title">The numbers I stand behind</h3>
       <div class="grid">
         <div class="card">
           <h4>Manual Reporting Effort</h4>
@@ -358,7 +357,7 @@
       <div>
         <p class="section-kicker">Profile</p>
         <h3 class="section-title">About</h3>
-        <p>I am Debasish Kumar, a technology leader with 14+ years across SharePoint, Power Platform, and data-driven automation. I am transitioning into <strong>AI-focused product ownership</strong>, combining deep technical expertise in process automation with emerging AI capabilities (LLMs, RAG, Agents) to build intelligent, customer-centric products. My core strength: discovering user problems, aligning stakeholders, and shipping outcomes—now through the lens of AI-augmented solutions. Known for bridging engineering and business — and earning engineering trust that most PM candidates can't.</p>
+        <p>I'm Debasish. I've spent 14+ years working on SharePoint, the Power Platform, and automation, and the last four moving into <strong>product ownership</strong> — these days with a heavy AI focus (LLMs, RAG, agents). What I'm best at is finding the real problem underneath what users are asking for, getting stakeholders to agree on it, and then shipping something that fixes it. And because I spent so long as an engineer, engineering teams tend to trust me in a way they don't always trust product people. That trust is probably the most useful thing I bring.</p>
         <div class="inline">
           <span class="badge">AI Product Strategy</span>
           <span class="badge">Product Ownership</span>

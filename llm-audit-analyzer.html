@@ -113,7 +113,7 @@
         </article>
         <article class="card">
           <h4>Convert to Semantic Understanding</h4>
-          <p class="muted">Here's the magic: we convert each log entry into a "semantic vector"—essentially a mathematical representation of its meaning. Store these in ChromaDB, a vector database designed for fast similarity search. Now when you ask a question, we can instantly find logs that are semantically similar to what you're asking about.</p>
+          <p class="muted">Each log entry gets converted into a semantic vector — a mathematical representation of what it means — and stored in ChromaDB, a database built for fast similarity search. When you ask a question, the system finds the log entries closest in meaning to what you asked, even if you didn't use the exact words in the log.</p>
         </article>
         <article class="card">
           <h4>AI-Powered Answers</h4>
@@ -131,11 +131,11 @@
       <div class="grid">
         <article class="card">
           <h4>Speed: From Hours to Minutes</h4>
-          <p class="muted">Security team gets a breach alert on Friday. Instead of 4-6 hours of investigation, they have answers in 5 minutes. What was blocking you before—expertise, manual effort—just disappears. That's not just efficiency. That's risk reduction.</p>
+          <p class="muted">A breach alert comes in on Friday afternoon. Instead of a 4-6 hour investigation eating someone's evening, there are answers in about 5 minutes. The window where you don't know what happened — which is the risky part — shrinks to almost nothing.</p>
         </article>
         <article class="card">
           <h4>No Expertise Required</h4>
-          <p class="muted">Your junior analyst can now answer the same questions as your SharePoint expert. No need to understand JSON, no need to know what event code 4662 means. They just ask, in English, and get answers. Suddenly your whole team is empowered.</p>
+          <p class="muted">A junior analyst can answer the same questions as your SharePoint expert. Nobody needs to parse JSON or know what event code 4662 means — they ask in plain English and get an answer.</p>
         </article>
         <article class="card">
           <h4>Trust the Results</h4>
@@ -198,7 +198,7 @@
       <article class="card">
         <p>Building products in the AI era taught me something important: the fundamentals haven't changed, they've just gotten harder. You still need to truly understand your users' pain. You still need to prioritize ruthlessly. You still need to measure what matters. But now you also need to be thoughtful about when and how AI helps, and brutally honest about when it doesn't.</p>
         <p style="margin-top: 1rem;">This project wasn't about building an impressive demo. It was about turning 4-6 hour investigations into 5-minute conversations. That only happens when you obsess over what users actually need, validate your approach before over-committing, and stay flexible enough to iterate when reality differs from your assumptions. The AI part—RAG, embeddings, LLM generation—that's the technique. The hard part is product strategy: knowing what to build, why it matters, who it serves, and how to measure if it's working.</p>
-        <p style="margin-top: 1rem;">And maybe most importantly: trust compounds when you're honest. Tell security teams exactly what this system can and can't do. Build in verification for high-stakes decisions. Explain why you made certain choices. They'll meet you halfway, give you honest feedback, and become partners in making it better. That's when products transform from nice ideas into genuinely useful tools.</p>
+        <p style="margin-top: 1rem;">The other thing I'd carry forward: being upfront about limitations paid off more than any feature did. I told the security team exactly where vector search falls short and built verification into the high-stakes paths. Because of that, when something did need iteration they came to me with feedback instead of quietly abandoning the tool. That's the difference between a tool people are told to use and one they keep using.</p>
       </article>
     </section>
 

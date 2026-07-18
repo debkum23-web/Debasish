@@ -54,13 +54,13 @@
     <section class="container two-col">
       <div>
         <h3 class="section-title">Context</h3>
-        <p>Microsoft 365 Message Center advisories drive real work — deprecations, security changes, compliance deadlines. Scrum masters, product owners, and leaders across the firm depend on catching the right ones in time.</p>
+        <p>Microsoft 365 Message Center advisories create real work: deprecations, security changes, compliance deadlines. Scrum masters, product owners, and leaders across our firm all need to catch the right ones in time.</p>
 
         <h3 class="section-title" style="margin-top: 32px;">Problem</h3>
-        <p>A scheduled script sent one daily email digesting the last 24 hours — no historical view, and no way to separate a critical advisory from routine noise. Important messages got lost in the inbox; the messages that mattered most were easiest to miss.</p>
+        <p>What we had was a scheduled script that sent one email a day summarizing the last 24 hours. There was no history, and a critical advisory looked exactly like routine noise. People missed things. The messages that mattered most were the easiest to lose in an inbox.</p>
 
         <h3 class="section-title" style="margin-top: 32px;">The Product Decision</h3>
-        <p>I decided a better email wasn't the fix. The real gaps were historical, queryable access; visual separation of what matters; and a traceable owner for every action item. That framing shaped every build decision that followed.</p>
+        <p>The obvious ask was "make the email better." I didn't think that was the fix. When I talked to the people reading it, the actual gaps were different: they couldn't look anything up after the fact, they couldn't tell at a glance what was urgent, and nothing connected an advisory to a person responsible for acting on it. Those three gaps became the spec.</p>
       </div>
       <aside>
         <div class="card">
@@ -91,27 +91,27 @@
       <div class="grid">
         <article class="card">
           <h4><i data-lucide="database" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Scheduled Ingestion & Queryable Schema</h4>
-          <p class="muted">A console application pulls Message Center data from Microsoft APIs into a SQL database on a schedule. The schema was designed for historical, queryable access — not raw archiving — so every past advisory stays searchable.</p>
+          <p class="muted">A console app pulls Message Center data from Microsoft's APIs into SQL on a schedule. I designed the schema around the questions people actually ask ("when did this change?", "what else affected this service?") rather than just archiving raw payloads, so every past advisory stays searchable.</p>
         </article>
         <article class="card">
           <h4><i data-lucide="layout-dashboard" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> API Layer + Angular Dashboard</h4>
-          <p class="muted">A custom API layer of 18 endpoints feeds an Angular dashboard where important messages are flagged and visually separated at the top — the gap the daily email never closed.</p>
+          <p class="muted">I built an API layer — 18 endpoints — feeding an Angular dashboard. Flagged messages sit at the top, visually separated from everything else. That one design choice fixed the thing the daily email never could.</p>
         </article>
         <article class="card">
           <h4><i data-lucide="sparkles" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> LLM Search with Clarifying Follow-ups</h4>
-          <p class="muted">When filtering wasn't enough, I added natural-language search: an LLM interprets the query and asks a clarifying follow-up when intent is ambiguous. A separate search API — never the LLM — queries the database. Separation of duties by design.</p>
+          <p class="muted">Once people had history, filters stopped being enough. So I added natural-language search: an LLM interprets the question, and if it's ambiguous it asks a follow-up instead of guessing. The LLM never touches the database — a separate search API runs the actual query. I wanted that separation from the start.</p>
         </article>
         <article class="card">
           <h4><i data-lucide="ticket" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> One-Click Jira Creation</h4>
-          <p class="muted">Flagged messages get one-click Jira tickets, auto-populated from message data, with the Jira number surfaced back in the UI — replacing manual copy-paste with a traceable owner for every action item.</p>
+          <p class="muted">Any flagged message can become a Jira ticket in one click, pre-filled from the message data, with the ticket number shown back in the dashboard. Before this, tracking an advisory meant copy-pasting into Jira by hand — or more often, not tracking it at all.</p>
         </article>
         <article class="card">
           <h4><i data-lucide="shield-check" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Identity-Governed Access</h4>
-          <p class="muted">Azure AD login with a UPN-to-permissions mapping controls dashboard visibility — access governed by identity, not a bolt-on login screen.</p>
+          <p class="muted">Login goes through Azure AD, and a UPN-to-permissions mapping decides what each person sees. I didn't want a bolt-on login screen; access control had to come from identity so audits could verify it.</p>
         </article>
         <article class="card">
           <h4><i data-lucide="users" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Firm-Wide Adoption</h4>
-          <p class="muted">Now adopted by scrum masters, product owners, and leaders across the firm, fully replacing the daily email digest.</p>
+          <p class="muted">Scrum masters, product owners, and leaders across the firm use it now. The daily email is gone, and nobody has asked for it back.</p>
         </article>
       </div>
     </section>
@@ -136,13 +136,13 @@
 
     <section class="container two-col">
       <div>
-        <h3 class="section-title">Product Ownership in Practice</h3>
+        <h3 class="section-title">What I'd Point To as Product Work</h3>
         <ul class="list">
-          <li><strong>Reframed the problem:</strong> rejected "improve the email" in favor of the real unmet needs — history, signal separation, and traceability.</li>
-          <li><strong>Sequenced the roadmap by user value:</strong> queryable data first, then visual triage, then NL search, then Jira traceability — each release usable on its own.</li>
-          <li><strong>Designed AI responsibly:</strong> the LLM interprets intent and asks clarifying follow-ups, but never touches the database directly — guardrails as a product requirement, not an afterthought.</li>
-          <li><strong>Made governance a feature:</strong> Azure AD identity mapping means access control is auditable by design.</li>
-          <li><strong>Closed the loop:</strong> every flagged advisory can become a tracked Jira ticket with a visible owner.</li>
+          <li>Saying no to the stated request. Everyone wanted a better email; the job was to figure out why the email could never work and build for that instead.</li>
+          <li>Sequencing by usefulness. Queryable data shipped first, then visual triage, then the NL search, then Jira integration. Each release stood on its own — if the project had stopped at any point, people would still have had something better than before.</li>
+          <li>Deciding early that the LLM would never query the database. That guardrail was in the first design, and it made every later conversation with security and compliance easier.</li>
+          <li>Treating governance as a feature rather than a checkbox. Identity-based access meant auditors could verify who saw what without asking us.</li>
+          <li>Closing the loop from "advisory noticed" to "ticket with an owner." That's the part that changed behavior, not just visibility.</li>
         </ul>
       </div>
       <aside>
@@ -167,7 +167,7 @@
     <section class="container">
       <h3 class="section-title">Key Takeaways</h3>
       <article class="card">
-        <p>This platform is what AI-native product ownership looks like in practice: start from the user's real gap (signal lost in noise), design the data layer for the questions people actually ask, add an LLM only where language understanding genuinely helps — with strict separation of duties — and make every insight traceable to an owner. The result replaced a daily email nobody trusted with a system the whole firm relies on, while cutting support demand by 30% and keeping audit compliance at 100%.</p>
+        <p>The biggest lesson from this project wasn't technical. It was that the request people bring you ("fix the email") is usually a symptom, and the real product work is naming the actual gaps and building for those. The AI part came last, and only where it earned its place — language understanding for search, with a hard wall between the LLM and the data. What we ended up with replaced an email nobody trusted with a system the whole firm relies on, cut support demand by 30%, and kept us at 100% on audits. I'm more proud of the fact that nobody wants the old email back than of any single feature in it.</p>
       </article>
     </section>
 
