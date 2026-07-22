@@ -2,12 +2,17 @@
 <html lang="en" style="scroll-behavior: smooth;">
 <head>
   <meta charset="utf-8" />
-  <title>Debasish Kumar – Product Owner | AI & SharePoint Solutions</title>
+  <script>(function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <title>Debasish Kumar – Principal Engineer → AI Technical Program Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Debasish Kumar — product owner with 14+ years of platform engineering depth. AI-powered product work, SharePoint solutions, and Power Platform projects." />
+  <meta name="description" content="Portfolio of Debasish Kumar — Principal Engineer with 14+ years of platform engineering depth, moving into AI Technical Program Management. AI-powered product work, SharePoint solutions, and Power Platform projects." />
+  <meta property="og:title" content="Debasish Kumar – Principal Engineer → AI Technical Program Manager" />
+  <meta property="og:description" content="14+ years of platform engineering, 4 years owning the roadmap for a large enterprise platform — now aiming at AI Technical Program Management. LLM-based features shipped and used firm-wide." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -16,7 +21,7 @@
     <div class="container header-content">
       <div class="header-left">
         <h1>Debasish Kumar</h1>
-        <p class="tagline">Product Owner | AI & SharePoint Solutions <span class="status-badge"><i data-lucide="circle" class="pulse-icon"></i>Seeking AI PO Roles</span></p>
+        <p class="tagline">Principal Engineer → AI Technical Program Manager <span class="status-badge"><i data-lucide="circle" class="pulse-icon"></i>Open to AI TPM Roles</span></p>
       </div>
       <nav class="nav" id="nav">
         <a href="#flagship" class="nav-link"><i data-lucide="star"></i>Flagship</a>
@@ -26,6 +31,10 @@
         <a href="#about" class="nav-link"><i data-lucide="user"></i>About</a>
         <a href="#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
       </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun"></i>
+      </button>
       <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
         <i data-lucide="menu"></i>
       </button>
@@ -35,8 +44,8 @@
     <section class="hero">
       <div class="container">
         <p class="eyebrow"><i data-lucide="map-pin"></i>Bengaluru, India · Open to relocation & remote</p>
-        <h2>I'm a product owner who spent 14 years building the platforms I now manage.</h2>
-        <p class="lede">I moved from platform engineering into product ownership in 2022, and for the last four years I've owned the roadmap, backlog, and PRDs for a large enterprise platform. Along the way I've shipped LLM-based features that real teams use every day — search that understands plain English, automated ticket analysis, RAG over audit logs. I know this technology from building with it, not from reading about it.</p>
+        <h2>I'm a Principal Engineer moving into AI Technical Program Management.</h2>
+        <p class="lede">Fourteen years in platform engineering taught me how the technology actually works. The last four — owning the roadmap, backlog, and PRDs for a large enterprise platform — taught me how to run the program around it: stakeholders, delivery, compliance, all of it. I'm now aiming that combination at AI TPM roles. I've already shipped LLM-based features that real teams use every day — search that understands plain English, automated ticket analysis, RAG over audit logs — so this isn't a technology I'm learning from the outside.</p>
         <div class="hero-actions">
           <a class="btn" href="#flagship">View My Work →</a>
           <a class="btn secondary" href="#contact">Get in Touch</a>
@@ -88,7 +97,7 @@
 
     <!-- AI Product Owner Projects -->
     <section class="container" id="ai-learning">
-      <p class="section-kicker">AI Product Work</p>
+      <p class="section-kicker">AI Program Work</p>
       <h3 class="section-title">Where I've put AI to work</h3>
       <p class="section-intro">Two projects where I used GenAI to solve an actual problem, not to have an AI project. Both shipped, both have numbers behind them.</p>
       <div class="grid">
@@ -423,38 +432,6 @@
       <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
     </div>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Initialize Lucide icons
-    lucide.createIcons();
-
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const nav = document.getElementById('nav');
-    const header = document.getElementById('header');
-
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      menuToggle.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        menuToggle.classList.remove('active');
-      });
-    });
-
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  </script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

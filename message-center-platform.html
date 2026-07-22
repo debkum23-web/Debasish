@@ -5,9 +5,11 @@
   <title>Message Center Intelligence Platform – Debasish Kumar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="End-to-end product ownership of a Message Center intelligence platform: Microsoft API ingestion, SQL schema, custom API layer, LLM-driven search, Jira automation, and Azure AD governance — adopted firm-wide." />
+  <script>(function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -15,8 +17,8 @@
   <header class="site-header" id="header">
     <div class="container header-content">
       <div class="header-left">
-        <h1>Debasish Kumar</h1>
-        <p class="tagline">Product Owner | AI & SharePoint Solutions</p>
+        <h1><a href="index.html">Debasish Kumar</a></h1>
+        <p class="tagline">Principal Engineer → AI Technical Program Manager</p>
       </div>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav-link"><i data-lucide="home"></i>Home</a>
@@ -24,6 +26,10 @@
         <a href="index.html#about" class="nav-link"><i data-lucide="user"></i>About</a>
         <a href="index.html#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
       </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun"></i>
+      </button>
       <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
         <i data-lucide="menu"></i>
       </button>
@@ -88,6 +94,67 @@
 
     <section class="container">
       <h3 class="section-title">How It Was Built</h3>
+      <div class="diagram-card">
+        <p class="diagram-label">Architecture — from API polling to a ticket with an owner</p>
+        <svg viewBox="0 0 920 260" role="img" aria-label="Architecture diagram: Microsoft 365 APIs feed scheduled ingestion into a SQL database, which powers an API layer and a read-only search API; the API layer drives the Angular dashboard, gated by Azure AD, and flagged messages become Jira tickets. A separate LLM interprets natural-language questions and calls the read-only search API, never the database directly.">
+          <defs>
+            <marker id="arrow-mc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" class="flow-arrowhead"/>
+            </marker>
+          </defs>
+
+          <rect class="node-box" x="20" y="20" width="140" height="60" rx="8"/>
+          <text class="node-text" x="90" y="46" text-anchor="middle">Microsoft 365 APIs</text>
+          <text class="node-subtext" x="90" y="62" text-anchor="middle">Message Center source</text>
+
+          <rect class="node-box" x="190" y="20" width="140" height="60" rx="8"/>
+          <text class="node-text" x="260" y="46" text-anchor="middle">Scheduled Ingestion</text>
+          <text class="node-subtext" x="260" y="62" text-anchor="middle">.NET console app</text>
+
+          <rect class="node-box" x="360" y="20" width="130" height="60" rx="8"/>
+          <text class="node-text" x="425" y="46" text-anchor="middle">SQL Database</text>
+          <text class="node-subtext" x="425" y="62" text-anchor="middle">schema built for history</text>
+
+          <rect class="node-box accent" x="520" y="20" width="150" height="60" rx="8"/>
+          <text class="node-text" x="595" y="46" text-anchor="middle">API Layer</text>
+          <text class="node-subtext" x="595" y="62" text-anchor="middle">18 REST endpoints</text>
+
+          <rect class="node-box accent" x="700" y="20" width="200" height="60" rx="8"/>
+          <text class="node-text" x="800" y="46" text-anchor="middle">Angular Dashboard</text>
+          <text class="node-subtext" x="800" y="62" text-anchor="middle">flags surfaced first</text>
+
+          <rect class="node-box" x="20" y="170" width="140" height="60" rx="8"/>
+          <text class="node-text" x="90" y="196" text-anchor="middle">Azure AD</text>
+          <text class="node-subtext" x="90" y="212" text-anchor="middle">UPN → permissions</text>
+
+          <rect class="node-box" x="360" y="170" width="130" height="60" rx="8"/>
+          <text class="node-text" x="425" y="196" text-anchor="middle">LLM (NL Search)</text>
+          <text class="node-subtext" x="425" y="212" text-anchor="middle">asks a follow-up if unclear</text>
+
+          <rect class="node-box accent" x="520" y="170" width="150" height="60" rx="8"/>
+          <text class="node-text" x="595" y="196" text-anchor="middle">Search API</text>
+          <text class="node-subtext" x="595" y="212" text-anchor="middle">read-only query execution</text>
+
+          <rect class="node-box accent" x="700" y="170" width="200" height="60" rx="8"/>
+          <text class="node-text" x="800" y="196" text-anchor="middle">Jira Ticket</text>
+          <text class="node-subtext" x="800" y="212" text-anchor="middle">one-click, pre-filled</text>
+
+          <line class="flow-line" x1="160" y1="50" x2="188" y2="50" marker-end="url(#arrow-mc)"/>
+          <line class="flow-line" x1="330" y1="50" x2="358" y2="50" marker-end="url(#arrow-mc)"/>
+          <line class="flow-line" x1="490" y1="50" x2="518" y2="50" marker-end="url(#arrow-mc)"/>
+          <line class="flow-line" x1="670" y1="50" x2="698" y2="50" marker-end="url(#arrow-mc)"/>
+          <line class="flow-line" x1="800" y1="80" x2="800" y2="168" marker-end="url(#arrow-mc)"/>
+
+          <path class="flow-line" d="M90,170 V145 H800 V82" marker-end="url(#arrow-mc)"/>
+          <text class="node-subtext" x="445" y="140" text-anchor="middle">auth gate — governs who sees what</text>
+
+          <line class="flow-line" x1="490" y1="200" x2="518" y2="200" marker-end="url(#arrow-mc)"/>
+          <text class="node-subtext" x="505" y="160" text-anchor="middle">guardrail</text>
+
+          <path class="flow-line" d="M595,170 V120 H425 V82" marker-end="url(#arrow-mc)"/>
+          <text class="node-subtext" x="510" y="115" text-anchor="middle">read-only — LLM never touches the database directly</text>
+        </svg>
+      </div>
       <div class="grid">
         <article class="card">
           <h4><i data-lucide="database" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Scheduled Ingestion & Queryable Schema</h4>
@@ -113,6 +180,44 @@
           <h4><i data-lucide="users" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Firm-Wide Adoption</h4>
           <p class="muted">Scrum masters, product owners, and leaders across the firm use it now. The daily email is gone, and nobody has asked for it back.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <p class="section-kicker">Illustrative Mockup</p>
+      <h3 class="section-title">What the dashboard puts at the top</h3>
+      <p class="section-intro">Not a screenshot — the underlying data is internal — but this is the layout decision that mattered: flagged advisories separated from routine ones, at a glance.</p>
+      <div class="mock-browser">
+        <div class="mock-chrome">
+          <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+          <span class="mock-url">message-center.internal/dashboard</span>
+        </div>
+        <div class="mock-body">
+          <div class="mock-row flagged">
+            <span class="mock-dot-flag"></span>
+            <span class="mock-line short"></span>
+            <span class="mock-line"></span>
+            <span class="mock-pill">Flagged</span>
+          </div>
+          <div class="mock-row flagged">
+            <span class="mock-dot-flag"></span>
+            <span class="mock-line short"></span>
+            <span class="mock-line"></span>
+            <span class="mock-pill">Jira #4821</span>
+          </div>
+          <div class="mock-row">
+            <span class="mock-dot-flag ok"></span>
+            <span class="mock-line short"></span>
+            <span class="mock-line"></span>
+            <span class="mock-pill">Routine</span>
+          </div>
+          <div class="mock-row">
+            <span class="mock-dot-flag ok"></span>
+            <span class="mock-line short"></span>
+            <span class="mock-line"></span>
+            <span class="mock-pill">Routine</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -183,36 +288,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    lucide.createIcons();
-
-    const menuToggle = document.getElementById('menuToggle');
-    const nav = document.getElementById('nav');
-    const header = document.getElementById('header');
-
-    if (menuToggle && nav) {
-      menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-      });
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('active');
-          menuToggle.classList.remove('active');
-        });
-      });
-    }
-
-    if (header) {
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      });
-    }
-  </script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

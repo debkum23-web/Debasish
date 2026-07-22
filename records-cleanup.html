@@ -5,9 +5,11 @@
   <title>Records Cleanup Automation – Debasish Kumar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Automation to identify stale records, engage owners, and decommission obsolete inventory entries to improve data quality." />
+  <script>(function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -15,8 +17,8 @@
   <header class="site-header" id="header">
     <div class="container header-content">
       <div class="header-left">
-        <h1>Debasish Kumar</h1>
-        <p class="tagline">Product Owner | AI & SharePoint Solutions</p>
+        <h1><a href="index.html">Debasish Kumar</a></h1>
+        <p class="tagline">Principal Engineer → AI Technical Program Manager</p>
       </div>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav-link"><i data-lucide="home"></i>Home</a>
@@ -24,6 +26,10 @@
         <a href="index.html#about" class="nav-link"><i data-lucide="user"></i>About</a>
         <a href="index.html#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
       </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun"></i>
+      </button>
       <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
         <i data-lucide="menu"></i>
       </button>
@@ -73,7 +79,7 @@
       <h3 class="section-title">Product Owner Journey: Discovery → Decision → Implementation → Impact</h3>
       <div style="position:relative;margin-bottom:24px;">
         <!-- Left Arrow -->
-        <button style="position:absolute;left:-50px;top:50%;transform:translateY(-50%);background:var(--primary);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:20px;z-index:10;display:flex;align-items:center;justify-content:center;transition:all .3s ease;box-shadow:0 0 20px rgba(99,102,241,.3);" onclick="document.getElementById('poJourney').scrollBy({left:-400,behavior:'smooth'})" title="Scroll Left">‹</button>
+        <button style="position:absolute;left:-50px;top:50%;transform:translateY(-50%);background:var(--carousel-arrow-bg);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:20px;z-index:10;display:flex;align-items:center;justify-content:center;transition:all .3s ease;box-shadow:0 0 20px rgba(99,102,241,.3);" onclick="document.getElementById('poJourney').scrollBy({left:-400,behavior:'smooth'})" title="Scroll Left">‹</button>
         
         <!-- Horizontal Scrollable Container -->
         <div id="poJourney" style="display:flex;gap:20px;overflow-x:auto;scroll-behavior:smooth;padding:20px 0;scrollbar-width:none;-ms-overflow-style:none;">
@@ -199,7 +205,7 @@
         </div>
         
         <!-- Right Arrow -->
-        <button style="position:absolute;right:-50px;top:50%;transform:translateY(-50%);background:var(--primary);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:20px;z-index:10;display:flex;align-items:center;justify-content:center;transition:all .3s ease;box-shadow:0 0 20px rgba(99,102,241,.3);" onclick="document.getElementById('poJourney').scrollBy({left:400,behavior:'smooth'})" title="Scroll Right">›</button>
+        <button style="position:absolute;right:-50px;top:50%;transform:translateY(-50%);background:var(--carousel-arrow-bg);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:20px;z-index:10;display:flex;align-items:center;justify-content:center;transition:all .3s ease;box-shadow:0 0 20px rgba(99,102,241,.3);" onclick="document.getElementById('poJourney').scrollBy({left:400,behavior:'smooth'})" title="Scroll Right">›</button>
       </div>
       <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:16px;">← Scroll right to see the complete product owner journey →</p>
     </section>
@@ -249,47 +255,6 @@
       <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
     </div>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // Initialize Lucide icons
-    lucide.createIcons();
-    
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const nav = document.getElementById('nav');
-    const header = document.getElementById('header');
-    
-    if (menuToggle && nav) {
-      menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-      });
-      
-      // Close mobile menu when clicking on a link
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('active');
-          menuToggle.classList.remove('active');
-        });
-      });
-    }
-    
-    // Header scroll effect
-    if (header) {
-      let lastScroll = 0;
-      window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-        
-        lastScroll = currentScroll;
-      });
-    }
-  </script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
