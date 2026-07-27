@@ -45,7 +45,7 @@
       <div class="container">
         <p class="eyebrow"><i data-lucide="map-pin"></i>Bengaluru, India · Open to relocation & remote</p>
         <h2>I'm a Principal Engineer moving into AI Technical Program Management.</h2>
-        <p class="lede">Fourteen years in platform engineering taught me how the technology actually works. The last four — owning the roadmap, backlog, and PRDs for a large enterprise platform — taught me how to run the program around it: stakeholders, delivery, compliance, all of it. I'm now aiming that combination at AI TPM roles. I've already shipped LLM-based features that real teams use every day — search that understands plain English, automated ticket analysis, RAG over audit logs — so this isn't a technology I'm learning from the outside.</p>
+        <p class="lede">Fourteen years in platform engineering taught me how the technology actually works. The last four — owning the roadmap, backlog, and PRDs for a large enterprise platform — taught me how to run the program around it: stakeholders, delivery, compliance, all of it. I'm now aiming that combination at AI TPM roles. I've already shipped LLM-based features that real teams use every day — search that understands plain English, automated ticket analysis — and I'm now building an agent that turns user change requests into PRDs and Jira epics. This isn't a technology I'm learning from the outside.</p>
         <div class="hero-actions">
           <a class="btn" href="#flagship">View My Work →</a>
           <a class="btn secondary" href="#contact">Get in Touch</a>
@@ -56,8 +56,8 @@
             <div class="label">Platform engineering &amp; delivery</div>
           </div>
           <div class="stat-tile">
-            <div class="value">4 yrs</div>
-            <div class="label">Hands-on product ownership</div>
+            <div class="value">3</div>
+            <div class="label">AI products — two live, one in build</div>
           </div>
           <div class="stat-tile">
             <div class="value">30%</div>
@@ -77,7 +77,10 @@
       <h3 class="section-title">The project I'd want you to ask me about</h3>
       <p class="section-intro">If you only look at one thing here, make it this one. I owned it from the first data model to the dashboard people open every morning.</p>
       <a href="message-center-platform.html" class="featured-card" aria-label="View Message Center Intelligence Platform project">
-        <span class="flag"><i data-lucide="star"></i>Flagship · Used Firm-Wide</span>
+        <div class="proj-tags" style="margin-bottom:16px;">
+          <span class="flag" style="margin-bottom:0;"><i data-lucide="star"></i>Flagship · Used Firm-Wide</span>
+          <span class="proj-tag ai"><i data-lucide="sparkles"></i>AI Product</span>
+        </div>
         <h4>Message Center Intelligence Platform</h4>
         <p>Our firm tracked Microsoft 365 advisories through a daily email digest, and the critical ones kept getting buried. I replaced it with a proper platform: scheduled ingestion from Microsoft's APIs into a SQL database I designed for historical queries, an API layer of 18 endpoints, and an Angular dashboard that puts flagged messages at the top. Later I added a natural-language search where an LLM interprets the question and asks a follow-up if it's ambiguous, but a separate search API does the actual database work. Flagged messages turn into Jira tickets in one click, and Azure AD decides who sees what.</p>
         <div class="inline">
@@ -99,9 +102,10 @@
     <section class="container" id="ai-learning">
       <p class="section-kicker">AI Program Work</p>
       <h3 class="section-title">Where I've put AI to work</h3>
-      <p class="section-intro">Two projects where I used GenAI to solve an actual problem, not to have an AI project. Both shipped, both have numbers behind them.</p>
+      <p class="section-intro">Projects where I used GenAI to solve an actual problem, not to have an AI project. The shipped ones have numbers behind them; the one in build is marked as such.</p>
       <div class="grid">
         <a href="AITicketAnalysis.html" class="card" style="border: 1px solid rgba(99, 102, 241, 0.3);" aria-label="View GenAI-Assisted Ticket Analysis project">
+          <div class="proj-tags"><span class="proj-tag ai"><i data-lucide="sparkles"></i>AI · Shipped</span></div>
           <h4 style="color: var(--accent-hover); margin-top: 0;">GenAI-Assisted Ticket Analysis &amp; Feature Discovery</h4>
           <p class="muted">We had 18 months of support tickets — over 1,200 of them — and no real picture of what they were telling us. I used Excel Copilot to classify and theme them, which surfaced two feature gaps big enough to build: Copy Site Pages (310 tickets asking for it) and Re-boarding Automation (185 tickets).</p>
           <p class="muted">The analysis took hours instead of the weeks a manual review would have needed. Both features shipped, and recurring incidents in those areas dropped 65%.</p>
@@ -112,17 +116,43 @@
             <span class="badge">AI Fluency</span>
           </div>
         </a>
-        <a href="llm-audit-analyzer.html" class="card" style="border: 1px solid rgba(99, 102, 241, 0.3);" aria-label="View LLM-Powered SharePoint Audit Analyzer project">
-          <h4 style="color: var(--accent-hover); margin-top: 0;">LLM-Powered SharePoint Audit Analyzer</h4>
-          <p class="muted">Every time there was a security incident, HR and leadership had to wait hours for the technical team to dig through audit logs. I built a RAG-based chat tool (vector embeddings, ChromaDB, GPT-4) so they can ask questions like "who accessed this file on Friday?" and get answers grounded in the actual logs.</p>
-          <p class="muted">Investigations went from 4-6 hours to minutes. I prototyped it first to prove 95% answer accuracy before asking anyone to trust it, and built in confidence scoring and human review for sensitive findings.</p>
+        <article class="card" style="border: 1px dashed rgba(59, 130, 246, 0.45);">
+          <div class="proj-tags"><span class="proj-tag build"><i data-lucide="hammer"></i>AI · In Build</span></div>
+          <h4 style="color: var(--accent-hover); margin-top: 0;">Jira Agent: Change Request → PRD → Epics</h4>
+          <p class="muted">The one I'm building now. Users describe a change request in plain language; the agent asks the follow-up questions a BA would, then drafts the PRD and creates the epics, stories, and subtasks in Jira — everything linked and traceable.</p>
+          <p class="muted">Same working rule as my other AI products: the agent drafts, a human approves. Nothing lands in Jira without someone signing off on it.</p>
           <div class="inline">
-            <span class="badge">RAG / Vector Search</span>
-            <span class="badge">LLM Application</span>
-            <span class="badge">Audit &amp; Compliance</span>
-            <span class="badge">Responsible AI</span>
+            <span class="badge">Agentic Workflow</span>
+            <span class="badge">Jira API</span>
+            <span class="badge">PRD Automation</span>
+            <span class="badge">Human-in-the-Loop</span>
           </div>
-        </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Working rules for AI -->
+    <section class="container" id="ai-principles">
+      <p class="section-kicker">Working Rules</p>
+      <h3 class="section-title">How I build with AI</h3>
+      <p class="section-intro">Four rules I've picked up from shipping this stuff, each learned on a real project rather than from a blog post.</p>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr));">
+        <article class="card">
+          <h4>The LLM never touches the data directly</h4>
+          <p class="muted">In the Message Center platform, the LLM interprets the question but a separate search API runs the query. That wall was in the first design, and it's why security and compliance conversations went smoothly.</p>
+        </article>
+        <article class="card">
+          <h4>Ask, don't guess</h4>
+          <p class="muted">When a search query is ambiguous, the agent asks a clarifying follow-up instead of returning its best guess. A wrong answer costs more trust than a follow-up question costs time.</p>
+        </article>
+        <article class="card">
+          <h4>AI finds the signal, people make the call</h4>
+          <p class="muted">Copilot classified 1,200 tickets in hours — but which two features to build, and in what order, was human judgment applied to what it surfaced. I keep that boundary deliberate.</p>
+        </article>
+        <article class="card">
+          <h4>Ship into an existing workflow</h4>
+          <p class="muted">Every AI product I've shipped replaced something people already did — a daily email, a manual review. Nobody had to adopt a new habit, which is most of why adoption happened at all.</p>
+        </article>
       </div>
     </section>
 
@@ -221,10 +251,12 @@
 
     <!-- Featured projects (merged with former Highlights section — all data retained) -->
     <section class="container" id="projects">
-      <p class="section-kicker">Portfolio</p>
-      <h3 class="section-title">Featured Projects</h3>
+      <p class="section-kicker">Platform Track Record</p>
+      <h3 class="section-title">The non-AI work that built the discipline</h3>
+      <p class="section-intro">Enterprise platform and automation projects — no LLMs involved. This is where the shipping habits behind the AI work come from.</p>
       <div class="grid">
         <a href="RMSDashboard.html" class="card" aria-label="View SharePoint Governance Insight Dashboard project details">
+          <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span></div>
           <h4>SharePoint Governance Insight Dashboard</h4>
           <p class="muted">Power BI dashboard for governance, storage planning, and operational decisions across business units.</p>
           <p><strong>Impact:</strong> 30% reduction in manual reporting, 50% fewer capacity risks.</p>
@@ -233,6 +265,7 @@
           </div>
         </a>
         <a href="records-cleanup.html" class="card" aria-label="View Records Cleanup Automation project details">
+          <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span></div>
           <h4>Records Cleanup Automation</h4>
           <p class="muted">Automation to detect stale records, engage owners for approval, and decommission obsolete inventory entries — reducing inventory noise.</p>
           <p><strong>Impact:</strong> Improved data quality by removing stale noise; faster stakeholder decisions.</p>
@@ -241,8 +274,9 @@
           </div>
         </a>
         <a href="UserReboardingAutomation.html" class="card" aria-label="View User Re-boarding Access Automation project details">
+          <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span><span class="proj-tag ai"><i data-lucide="sparkles"></i>AI-Discovered</span></div>
           <h4>User Re-boarding Access Automation</h4>
-          <p class="muted">Power Automate workflow to resolve SharePoint access issues for re-joining employees through automated cleanup.</p>
+          <p class="muted">Power Automate workflow to resolve SharePoint access issues for re-joining employees through automated cleanup. This one exists because the GenAI ticket analysis surfaced 185 tickets asking for it.</p>
           <p><strong>Impact:</strong> Reduced resolution from 3-5 days to minutes, 85% ticket reduction.</p>
           <div class="inline">
             <span class="badge">Power Automate</span><span class="badge">SharePoint Online</span><span class="badge">Process Automation</span>
@@ -257,6 +291,17 @@
       <h3 class="section-title">Skills</h3>
       <div class="grid">
         <article class="card skill-group">
+          <h5><i data-lucide="sparkles"></i>AI &amp; Platform Foundations</h5>
+          <div class="inline" style="margin-top: 0;">
+            <span class="badge">LLM-Based Systems</span>
+            <span class="badge">Prompt-Driven Workflows</span>
+            <span class="badge">Agentic Architecture (Orchestration, Tools, RAG, Guardrails)</span>
+            <span class="badge">Automation Platforms</span>
+            <span class="badge">Intelligent Workflows</span>
+            <span class="badge">Data Governance</span>
+          </div>
+        </article>
+        <article class="card skill-group">
           <h5><i data-lucide="clipboard-list"></i>Product Management &amp; Delivery</h5>
           <div class="inline" style="margin-top: 0;">
             <span class="badge">Product Ownership</span>
@@ -269,17 +314,6 @@
             <span class="badge">Release Management</span>
             <span class="badge">UAT Coordination</span>
             <span class="badge">Agile/Scrum (Jira, Confluence)</span>
-          </div>
-        </article>
-        <article class="card skill-group">
-          <h5><i data-lucide="sparkles"></i>AI &amp; Platform Foundations</h5>
-          <div class="inline" style="margin-top: 0;">
-            <span class="badge">LLM-Based Systems</span>
-            <span class="badge">Prompt-Driven Workflows</span>
-            <span class="badge">Agentic Architecture (Orchestration, Tools, RAG, Guardrails)</span>
-            <span class="badge">Automation Platforms</span>
-            <span class="badge">Intelligent Workflows</span>
-            <span class="badge">Data Governance</span>
           </div>
         </article>
         <article class="card skill-group">
