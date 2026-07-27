@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8" />
+  <title>Unified Leadership Dashboard – Debasish Kumar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A consulting request from firm leadership turned into a unified dashboard: meetings, documents, press, and internal updates from five platforms in one view, rolled out to all L1 leaders firm-wide." />
+  <script>(function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="container header-content">
+      <div class="header-left">
+        <h1><a href="index.html">Debasish Kumar</a></h1>
+        <p class="tagline">Principal Engineer → AI Technical Program Manager</p>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link"><i data-lucide="home"></i>Home</a>
+        <a href="index.html#projects" class="nav-link"><i data-lucide="folder"></i>Projects</a>
+        <a href="index.html#about" class="nav-link"><i data-lucide="user"></i>About</a>
+        <a href="index.html#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun"></i>
+      </button>
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow"><i data-lucide="layout-dashboard"></i>Executive Delivery — Consulting Request to Firm-Wide Rollout</p>
+        <h2>Unified Leadership Dashboard</h2>
+        <p class="tagline" style="color: var(--text); font-size: 18px; margin-top: 12px;">One view of the day for every L1 leader — built from a consulting request, scaled by design</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="inline" style="margin-bottom: 24px;">
+        <span class="badge">Internal Consulting</span>
+        <span class="badge">API Integrations</span>
+        <span class="badge">Executive Stakeholders</span>
+        <span class="badge">Config-Driven Scaling</span>
+        <span class="badge">Firm-Wide Rollout</span>
+      </div>
+    </section>
+
+    <section class="container two-col">
+      <div>
+        <h3 class="section-title">How It Started</h3>
+        <p>This one came to me as a consulting request from firm leadership. L1 leaders and their assistants were toggling across five disconnected platforms — Outlook, OneDrive, internal portals, external press feeds — just to piece together a single day's priorities. Nobody had asked for a product; they'd asked for help.</p>
+
+        <h3 class="section-title" style="margin-top: 32px;">The Problem Underneath</h3>
+        <p>Each platform did its own job fine. The cost was the assembly: every morning, someone senior (or their assistant) was manually stitching together meetings, documents, press coverage, and internal updates from five places. The information existed; the single view of it didn't.</p>
+
+        <h3 class="section-title" style="margin-top: 32px;">What I Built</h3>
+        <p>A unified leadership dashboard that pulls meetings, key documents, press releases, and internal updates into one view, via API connections across all five sources. The leader opens one page and sees their day.</p>
+      </div>
+      <aside>
+        <div class="card">
+          <h4>Users &amp; Stakeholders</h4>
+          <ul class="list">
+            <li>L1 leaders</li>
+            <li>Executive assistants</li>
+            <li>Firm leadership (sponsors)</li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top: 20px;">
+          <h4>Sources Unified</h4>
+          <ul class="list">
+            <li>Outlook (meetings)</li>
+            <li>OneDrive (key documents)</li>
+            <li>Internal portals</li>
+            <li>External press feeds</li>
+            <li>Internal updates</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">The Decision That Made It Scale</h3>
+      <div class="grid">
+        <article class="card">
+          <h4><i data-lucide="plug" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> API Connections, Not Copies</h4>
+          <p class="muted">Each source stays the system of record. The dashboard connects over APIs and assembles the view live — no duplicate data stores to govern, no sync jobs to babysit.</p>
+        </article>
+        <article class="card">
+          <h4><i data-lucide="settings" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Config-Driven Onboarding</h4>
+          <p class="muted">The part I pushed hardest for: a config-driven scaling pattern, which I proposed and got signed off. Adding a new leader is configuration, not a rebuild of five integrations. That decision is why the rollout could go firm-wide.</p>
+        </article>
+        <article class="card">
+          <h4><i data-lucide="users" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Adopted at the Top</h4>
+          <p class="muted">The executive team adopted it first, then it rolled out across all L1 leaders firm-wide. Executive tools live or die on the first week's impression — this one stuck.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">Key Takeaways</h3>
+      <article class="card">
+        <p>Two things I took from this project. First, consulting requests are product discovery in disguise — "can you help us with this?" from leadership was really a problem statement nobody had framed yet. Second, the scaling decision mattered more than the dashboard itself. A one-off build for the executive team would have been a nice demo; the config-driven pattern is what turned it into infrastructure the firm can keep extending without me in the loop. That's the difference between delivering a build and delivering a capability.</p>
+      </article>
+    </section>
+
+    <section class="container">
+      <a class="btn" href="index.html#projects">← Back to Projects</a>
+      <a class="btn secondary" href="index.html#contact">Get in Touch</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
+    </div>
+  </footer>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
