@@ -24,10 +24,9 @@
         <p class="tagline">Principal Engineer → AI Technical Program Manager <span class="status-badge"><i data-lucide="circle" class="pulse-icon"></i>Open to AI TPM Roles</span></p>
       </div>
       <nav class="nav" id="nav">
-        <a href="#flagship" class="nav-link"><i data-lucide="star"></i>Flagship</a>
-        <a href="#ai-learning" class="nav-link"><i data-lucide="sparkles"></i>AI Projects</a>
-        <a href="#experience" class="nav-link"><i data-lucide="briefcase"></i>Experience</a>
-        <a href="#projects" class="nav-link"><i data-lucide="folder"></i>Projects</a>
+        <a href="#work" class="nav-link"><i data-lucide="briefcase"></i>Office Work</a>
+        <a href="#capstone" class="nav-link"><i data-lucide="rocket"></i>Capstone</a>
+        <a href="#experience" class="nav-link"><i data-lucide="calendar"></i>Experience</a>
         <a href="#about" class="nav-link"><i data-lucide="user"></i>About</a>
         <a href="#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
       </nav>
@@ -45,10 +44,10 @@
       <div class="container">
         <p class="eyebrow"><i data-lucide="map-pin"></i>Bengaluru, India · Open to relocation & remote</p>
         <h2>I'm a Principal Engineer moving into AI Technical Program Management.</h2>
-        <p class="lede">Fourteen years in platform engineering taught me how the technology actually works. The last four — owning the roadmap, backlog, and PRDs for a large enterprise platform — taught me how to run the program around it: stakeholders, delivery, compliance, all of it. I'm now aiming that combination at AI TPM roles. I've already shipped LLM-based features that real teams use every day — search that understands plain English, automated ticket analysis — and I'm now building an agent that turns user change requests into PRDs and Jira epics. This isn't a technology I'm learning from the outside.</p>
+        <p class="lede">Fourteen years in platform engineering taught me how the technology actually works; the last four — owning the roadmap, backlog, and PRDs for a large enterprise platform — taught me how to run the program around it. Everything below is split two ways: what I've shipped at the office, and the capstone I built on my own time to prove I can do it from scratch.</p>
         <div class="hero-actions">
-          <a class="btn" href="#flagship">View My Work →</a>
-          <a class="btn secondary" href="#contact">Get in Touch</a>
+          <a class="btn" href="#work">Office Work →</a>
+          <a class="btn secondary" href="#capstone">Personal Capstone →</a>
         </div>
         <div class="stat-strip">
           <div class="stat-tile">
@@ -71,12 +70,20 @@
       </div>
     </section>
 
-    <!-- Flagship: Message Center Intelligence Platform -->
-    <section class="container" id="flagship">
-      <p class="section-kicker">Flagship Project</p>
-      <h3 class="section-title">The project I'd want you to ask me about</h3>
-      <p class="section-intro">If you only look at one thing here, make it this one. I owned it from the first data model to the dashboard people open every morning.</p>
-      <a href="message-center-platform.html" class="featured-card" aria-label="View Message Center Intelligence Platform project">
+    <!-- Office vs Personal work -->
+    <section class="container" id="work">
+      <p class="section-kicker">The Work</p>
+      <h3 class="section-title">What I've built</h3>
+      <p class="section-intro">Two buckets, one toggle. Office is what I've shipped inside the firm. The capstone is what I built alone, end to end, to sharpen the product side.</p>
+      <div class="work-tabs" role="tablist">
+        <button type="button" class="work-tab active" data-view="office" role="tab" aria-selected="true"><i data-lucide="briefcase"></i>Office Work</button>
+        <button type="button" class="work-tab" data-view="personal" role="tab" aria-selected="false"><i data-lucide="rocket"></i>Personal Capstone</button>
+      </div>
+
+      <div class="work-view active" id="view-office">
+        <div class="work-block" id="flagship">
+          <h4 class="block-label">Flagship — Owned End to End</h4>
+          <a href="message-center-platform.html" class="featured-card" aria-label="View Message Center Intelligence Platform project">
         <div class="proj-tags" style="margin-bottom:16px;">
           <span class="flag" style="margin-bottom:0;"><i data-lucide="star"></i>Flagship · Used Firm-Wide</span>
           <span class="proj-tag ai"><i data-lucide="sparkles"></i>AI Product</span>
@@ -96,14 +103,11 @@
           <div><div class="value">Firm-wide</div><div class="label">Adoption by SMs, POs &amp; leaders</div></div>
         </div>
       </a>
-    </section>
+        </div>
 
-    <!-- AI Product Owner Projects -->
-    <section class="container" id="ai-learning">
-      <p class="section-kicker">AI Program Work</p>
-      <h3 class="section-title">Where I've put AI to work</h3>
-      <p class="section-intro">Projects where I used GenAI to solve an actual problem, not to have an AI project. The shipped ones have numbers behind them; the one in build is marked as such.</p>
-      <div class="grid">
+        <div class="work-block" id="ai-learning">
+          <h4 class="block-label">AI Program Work</h4>
+          <div class="grid">
         <a href="AITicketAnalysis.html" class="card" style="border: 1px solid rgba(99, 102, 241, 0.3);" aria-label="View GenAI-Assisted Ticket Analysis project">
           <div class="proj-tags"><span class="proj-tag ai"><i data-lucide="sparkles"></i>AI · Shipped</span></div>
           <h4 style="color: var(--accent-hover); margin-top: 0;">GenAI-Assisted Ticket Analysis &amp; Feature Discovery</h4>
@@ -128,40 +132,12 @@
             <span class="badge">Human-in-the-Loop</span>
           </div>
         </article>
-      </div>
-    </section>
+          </div>
+        </div>
 
-    <!-- Working rules for AI -->
-    <section class="container" id="ai-principles">
-      <p class="section-kicker">Working Rules</p>
-      <h3 class="section-title">How I build with AI</h3>
-      <p class="section-intro">Four rules I've picked up from shipping this stuff, each learned on a real project rather than from a blog post.</p>
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr));">
-        <article class="card">
-          <h4>The LLM never touches the data directly</h4>
-          <p class="muted">In the Message Center platform, the LLM interprets the question but a separate search API runs the query. That wall was in the first design, and it's why security and compliance conversations went smoothly.</p>
-        </article>
-        <article class="card">
-          <h4>Ask, don't guess</h4>
-          <p class="muted">When a search query is ambiguous, the agent asks a clarifying follow-up instead of returning its best guess. A wrong answer costs more trust than a follow-up question costs time.</p>
-        </article>
-        <article class="card">
-          <h4>AI finds the signal, people make the call</h4>
-          <p class="muted">Copilot classified 1,200 tickets in hours — but which two features to build, and in what order, was human judgment applied to what it surfaced. I keep that boundary deliberate.</p>
-        </article>
-        <article class="card">
-          <h4>Ship into an existing workflow</h4>
-          <p class="muted">Every AI product I've shipped replaced something people already did — a daily email, a manual review. Nobody had to adopt a new habit, which is most of why adoption happened at all.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Firm-wide programs (from resume) -->
-    <section class="container" id="programs">
-      <p class="section-kicker">Running Now</p>
-      <h3 class="section-title">Programs I run in parallel</h3>
-      <p class="section-intro">Alongside the platform roadmap, I currently run several firm-wide programs at once — plus the consulting requests other business units bring me. The point isn't the count; it's that each one is set up to scale rather than end as a one-off build.</p>
-      <div class="grid">
+        <div class="work-block" id="programs">
+          <h4 class="block-label">Firm-Wide Programs — Running in Parallel with the Roadmap</h4>
+          <div class="grid">
         <article class="card">
           <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="shield-alert"></i>Program · Active</span></div>
           <h4>Data Oversharing Remediation</h4>
@@ -185,6 +161,101 @@
           <div class="inline">
             <span class="badge">Governance Framework</span><span class="badge">Audit Readiness</span>
           </div>
+        </article>
+          </div>
+        </div>
+
+        <div class="work-block" id="projects">
+          <h4 class="block-label">Platform Delivery — the Non-AI Track Record</h4>
+          <div class="grid">
+            <a href="LeadershipDashboard.html" class="card" aria-label="View Unified Leadership Dashboard project details">
+              <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span><span class="proj-tag platform" style="color:var(--accent-hover);border-color:rgba(59,130,246,0.35);"><i data-lucide="crown"></i>Executive</span></div>
+              <h4>Unified Leadership Dashboard</h4>
+              <p class="muted">L1 leaders were toggling across five platforms to assemble their day. One dashboard over API connections to all five sources — adopted by the executive team, rolled out firm-wide, scaled by config.</p>
+              <div class="inline">
+                <span class="badge">API Integrations</span><span class="badge">Config-Driven Scaling</span>
+              </div>
+            </a>
+            <a href="RMSDashboard.html" class="card" aria-label="View SharePoint Governance Insight Dashboard project details">
+              <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span></div>
+              <h4>SharePoint Governance Insight Dashboard</h4>
+              <p class="muted">Power BI dashboard for governance, storage planning, and operational decisions. 30% less manual reporting, 50% fewer capacity risks.</p>
+              <div class="inline">
+                <span class="badge">Power BI</span><span class="badge">Governance</span>
+              </div>
+            </a>
+            <a href="records-cleanup.html" class="card" aria-label="View Records Cleanup Automation project details">
+              <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span></div>
+              <h4>Records Cleanup Automation</h4>
+              <p class="muted">Detects stale records, gets owner approval, decommissions the noise — so the inventory only shows what people can act on.</p>
+              <div class="inline">
+                <span class="badge">Data Quality</span><span class="badge">Process Automation</span>
+              </div>
+            </a>
+            <a href="UserReboardingAutomation.html" class="card" aria-label="View User Re-boarding Access Automation project details">
+              <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span><span class="proj-tag ai"><i data-lucide="sparkles"></i>AI-Discovered</span></div>
+              <h4>User Re-boarding Access Automation</h4>
+              <p class="muted">Access fixes for re-joiners went from 3-5 days to minutes; 85% fewer tickets. Exists because the GenAI ticket analysis surfaced 185 requests for it.</p>
+              <div class="inline">
+                <span class="badge">Power Automate</span><span class="badge">Process Automation</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-view" id="view-personal">
+        <div class="work-block">
+          <h4 class="block-label">Capstone — Built End to End on My Own Time</h4>
+          <a href="schema-first-extraction.html" class="featured-card personal" aria-label="View the Schema-First Extraction capstone project">
+            <div class="proj-tags" style="margin-bottom:16px;">
+              <span class="flag" style="margin-bottom:0;"><i data-lucide="rocket"></i>Personal Capstone · v1 Complete</span>
+              <span class="proj-tag ai"><i data-lucide="sparkles"></i>AI Product</span>
+            </div>
+            <h4>Schema-First Extraction: Contract Intelligence Feed</h4>
+            <p>Legal and Sourcing teams have contract documents but no searchable view of the terms that drive renewals and risk review. I built a document intelligence prototype that turns unstructured contracts into records with confidence scores, rationale, nullable values, and review flags — designed schema-first, starting from the decisions users make rather than everything a contract contains, and evaluated honestly against CUAD ground truth.</p>
+            <div class="inline">
+              <span class="badge">Schema-First Design</span>
+              <span class="badge">Gemini Structured Output</span>
+              <span class="badge">Confidence &amp; Review Routing</span>
+              <span class="badge">CUAD Evaluation</span>
+            </div>
+            <div class="featured-stats">
+              <div><div class="value">76.67%</div><div class="label">Auto-pass at 0.70 confidence</div></div>
+              <div><div class="value">100%</div><div class="label">Precision — zero invented clauses</div></div>
+              <div><div class="value">96.55%</div><div class="label">F1 on evaluated presence signals</div></div>
+            </div>
+          </a>
+          <p class="muted" style="margin-top:18px;font-size:14px;">Why it exists: the office work shows I can run AI programs inside an enterprise. This shows I can define, build, and honestly evaluate an AI product from a blank page — schema, extraction, QC, evaluation, dashboard, all of it. <a href="https://github.com/debkum23-web/schema-first-extraction" target="_blank" rel="noopener" style="color:var(--accent-hover);">Code on GitHub</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thought process -->
+    <section class="container" id="po-thinking">
+      <p class="section-kicker">Thought Process</p>
+      <h3 class="section-title">How I think as a product owner</h3>
+      <p class="section-intro">The same rules show up in the office work and the capstone — that's how you can tell they're real.</p>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:18px;">
+        <article class="card">
+          <h4>Start from the decision, not the request</h4>
+          <p class="muted">Leadership asked for a better email; the real spec was history, urgency, and ownership. The capstone schema began the same way — from the questions Legal and Sourcing ask, not from everything a contract contains.</p>
+        </article>
+        <article class="card">
+          <h4>The LLM never touches the data directly</h4>
+          <p class="muted">In the Message Center platform, the LLM interprets the question but a separate search API runs the query. That wall was in the first design, and it's why security and compliance conversations went smoothly.</p>
+        </article>
+        <article class="card">
+          <h4>Ask, don't guess</h4>
+          <p class="muted">An ambiguous search query gets a clarifying follow-up, not a best guess. In the capstone, ambiguous contract language gets a null with a rationale, not an invented value. Same rule, two products.</p>
+        </article>
+        <article class="card">
+          <h4>AI finds the signal, people make the call</h4>
+          <p class="muted">Copilot classified 1,200 tickets in hours — but which features to build was human judgment. The capstone routes 23% of its results to human review by design. I keep that boundary deliberate.</p>
+        </article>
+        <article class="card">
+          <h4>Ship into an existing workflow</h4>
+          <p class="muted">Every AI product I've shipped replaced something people already did — a daily email, a manual review. Nobody had to adopt a new habit, which is most of why adoption happened at all.</p>
         </article>
       </div>
     </section>
@@ -222,225 +293,58 @@
       </div>
     </section>
 
-    <!-- Professional background -->
-    <section class="container" id="background">
-      <p class="section-kicker">What I Bring</p>
-      <h3 class="section-title">Professional Background</h3>
-      <div class="grid">
-        <article class="card">
-          <h4>AI Product Ownership</h4>
-          <p class="muted">I've been folding AI into how I do product work: finding where an LLM genuinely helps, prioritizing it against everything else, and getting people to actually use it.</p>
-          <ul class="list">
-            <li>I write the PRDs and manage the backlogs for our GenAI capabilities.</li>
-            <li>I work with data, engineering, and design teams to ship AI-assisted workflows.</li>
-            <li>I handle the stakeholder alignment and launch readiness that AI features need.</li>
-          </ul>
-          <div class="inline" style="margin-top: 8px;">
-            <span class="badge">AI Strategy</span>
-            <span class="badge">Backlog Ownership</span>
-            <span class="badge">Change Management</span>
-          </div>
-        </article>
-        <article class="card">
-          <h4>SharePoint &amp; Power Platform Leadership</h4>
-          <p class="muted">I've spent 14+ years on SharePoint Online and the Power Platform — long enough to have opinions about what works.</p>
-          <ul class="list">
-            <li>Built governance dashboards and standards that cut capacity risks in half.</li>
-            <li>Designed Power Automate flows and approval journeys for access requests and cleanup.</li>
-            <li>Mentored teams on platform guardrails, compliance, and reusing components instead of rebuilding them.</li>
-          </ul>
-          <div class="inline" style="margin-top: 8px;">
-            <span class="badge">SharePoint Online</span>
-            <span class="badge">Power Automate</span>
-            <span class="badge">Governance</span>
-          </div>
-        </article>
-        <article class="card">
-          <h4>Data &amp; Automation Outcomes</h4>
-          <p class="muted">My default move when something is slow or messy: measure it, then automate it.</p>
-          <ul class="list">
-            <li>Used ticket analytics to find feature gaps worth building and to order the roadmap.</li>
-            <li>Cut manual reporting by 30% with consolidated dashboards and alerts.</li>
-            <li>Cleared out stale records and took resolution cycles from days to minutes.</li>
-          </ul>
-          <div class="inline" style="margin-top: 8px;">
-            <span class="badge">Data Insights</span>
-            <span class="badge">Process Automation</span>
-            <span class="badge">Operational Excellence</span>
-          </div>
-        </article>
-      </div>
-      <div class="card" style="margin-top: 16px;">
-        <h4>Career Snapshot</h4>
-        <p class="muted" style="margin-bottom: 8px;">The threads that run through everything above:</p>
-        <div class="inline" style="gap: 12px; flex-wrap: wrap;">
-          <span class="badge">Enterprise Automation</span>
-          <span class="badge">AI-Augmented Workflows</span>
-          <span class="badge">Stakeholder Alignment</span>
-          <span class="badge">Risk &amp; Compliance</span>
-          <span class="badge">Outcome-Focused Roadmaps</span>
-          <span class="badge">Cross-Functional Leadership</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured projects (merged with former Highlights section — all data retained) -->
-    <section class="container" id="projects">
-      <p class="section-kicker">Platform Track Record</p>
-      <h3 class="section-title">The non-AI work that built the discipline</h3>
-      <p class="section-intro">Enterprise platform and automation projects — no LLMs involved. This is where the shipping habits behind the AI work come from.</p>
-      <div class="grid">
-        <a href="LeadershipDashboard.html" class="card" aria-label="View Unified Leadership Dashboard project details">
-          <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span><span class="proj-tag platform" style="color:var(--accent-hover);border-color:rgba(59,130,246,0.35);"><i data-lucide="crown"></i>Executive</span></div>
-          <h4>Unified Leadership Dashboard</h4>
-          <p class="muted">Firm leadership asked for help: L1 leaders were toggling across five platforms — Outlook, OneDrive, internal portals, press feeds — to assemble a single day's priorities. I built one dashboard over API connections to all five sources.</p>
-          <p><strong>Impact:</strong> Adopted by the executive team, rolled out to all L1 leaders firm-wide; config-driven pattern means new leaders onboard without new integrations.</p>
-          <div class="inline">
-            <span class="badge">API Integrations</span><span class="badge">Executive Stakeholders</span><span class="badge">Config-Driven Scaling</span>
-          </div>
-        </a>
-        <a href="RMSDashboard.html" class="card" aria-label="View SharePoint Governance Insight Dashboard project details">
-          <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span></div>
-          <h4>SharePoint Governance Insight Dashboard</h4>
-          <p class="muted">Power BI dashboard for governance, storage planning, and operational decisions across business units.</p>
-          <p><strong>Impact:</strong> 30% reduction in manual reporting, 50% fewer capacity risks.</p>
-          <div class="inline">
-            <span class="badge">Power BI</span><span class="badge">SharePoint Online</span><span class="badge">Governance</span>
-          </div>
-        </a>
-        <a href="records-cleanup.html" class="card" aria-label="View Records Cleanup Automation project details">
-          <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span></div>
-          <h4>Records Cleanup Automation</h4>
-          <p class="muted">Automation to detect stale records, engage owners for approval, and decommission obsolete inventory entries — reducing inventory noise.</p>
-          <p><strong>Impact:</strong> Improved data quality by removing stale noise; faster stakeholder decisions.</p>
-          <div class="inline">
-            <span class="badge">Data Quality</span><span class="badge">Process Automation</span><span class="badge">Stakeholder Management</span>
-          </div>
-        </a>
-        <a href="UserReboardingAutomation.html" class="card" aria-label="View User Re-boarding Access Automation project details">
-          <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span><span class="proj-tag ai"><i data-lucide="sparkles"></i>AI-Discovered</span></div>
-          <h4>User Re-boarding Access Automation</h4>
-          <p class="muted">Power Automate workflow to resolve SharePoint access issues for re-joining employees through automated cleanup. This one exists because the GenAI ticket analysis surfaced 185 tickets asking for it.</p>
-          <p><strong>Impact:</strong> Reduced resolution from 3-5 days to minutes, 85% ticket reduction.</p>
-          <div class="inline">
-            <span class="badge">Power Automate</span><span class="badge">SharePoint Online</span><span class="badge">Process Automation</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- Skills (from resume) -->
+    <!-- Skills, condensed (from resume) -->
     <section class="container" id="skills">
       <p class="section-kicker">Toolkit</p>
-      <h3 class="section-title">Skills</h3>
-      <div class="grid">
-        <article class="card skill-group">
+      <h3 class="section-title">Skills at a glance</h3>
+      <div class="card">
+        <div class="skill-group" style="margin-bottom: 20px;">
           <h5><i data-lucide="sparkles"></i>AI &amp; Platform Foundations</h5>
           <div class="inline" style="margin-top: 0;">
             <span class="badge">LLM-Based Systems</span>
             <span class="badge">Prompt-Driven Workflows</span>
             <span class="badge">Agentic Architecture (Orchestration, Tools, RAG, Guardrails)</span>
-            <span class="badge">Automation Platforms</span>
             <span class="badge">Intelligent Workflows</span>
             <span class="badge">Data Governance</span>
           </div>
-        </article>
-        <article class="card skill-group">
-          <h5><i data-lucide="clipboard-list"></i>Product Management &amp; Delivery</h5>
+        </div>
+        <div class="skill-group" style="margin-bottom: 20px;">
+          <h5><i data-lucide="clipboard-list"></i>Product &amp; Program</h5>
           <div class="inline" style="margin-top: 0;">
             <span class="badge">Product Ownership</span>
-            <span class="badge">Platform Product Management</span>
             <span class="badge">Portfolio Management</span>
             <span class="badge">Multi-Program Leadership</span>
-            <span class="badge">Requirements Gathering</span>
-            <span class="badge">Roadmap Planning</span>
             <span class="badge">PRD Writing</span>
-            <span class="badge">User Stories</span>
             <span class="badge">Backlog Management</span>
             <span class="badge">Prioritization (WSJF, MoSCoW)</span>
-            <span class="badge">Release Management</span>
-            <span class="badge">UAT Coordination</span>
+            <span class="badge">Release Management &amp; UAT</span>
             <span class="badge">Agile/Scrum (Jira, Confluence)</span>
+            <span class="badge">Internal Consulting &amp; Delivery Scaling</span>
           </div>
-        </article>
-        <article class="card skill-group">
-          <h5><i data-lucide="server"></i>Technical &amp; Platform Expertise</h5>
+        </div>
+        <div class="skill-group" style="margin-bottom: 20px;">
+          <h5><i data-lucide="server"></i>Technical &amp; Platform</h5>
           <div class="inline" style="margin-top: 0;">
-            <span class="badge">Microsoft 365 Platform</span>
-            <span class="badge">SharePoint Online</span>
-            <span class="badge">Power Apps</span>
-            <span class="badge">Power Automate</span>
+            <span class="badge">Microsoft 365 / SharePoint Online</span>
+            <span class="badge">Power Apps &amp; Power Automate</span>
             <span class="badge">Platform Architecture</span>
             <span class="badge">API-Driven Integrations</span>
             <span class="badge">SQL</span>
             <span class="badge">Azure AD (Identity &amp; Access)</span>
             <span class="badge">Security &amp; Compliance</span>
-            <span class="badge">Data &amp; Information Governance</span>
             <span class="badge">Records &amp; Retention Management</span>
           </div>
-        </article>
-        <article class="card skill-group">
-          <h5><i data-lucide="users"></i>Stakeholder &amp; Program Management</h5>
+        </div>
+        <div class="skill-group">
+          <h5><i data-lucide="users"></i>Leadership &amp; Outcomes</h5>
           <div class="inline" style="margin-top: 0;">
             <span class="badge">Cross-Functional Leadership</span>
             <span class="badge">Executive Communication</span>
             <span class="badge">Change Management</span>
-            <span class="badge">Program Delivery</span>
             <span class="badge">Risk &amp; Dependency Management</span>
-            <span class="badge">Internal Consulting &amp; Delivery Scaling</span>
-          </div>
-        </article>
-        <article class="card skill-group">
-          <h5><i data-lucide="trending-up"></i>Metrics &amp; Outcomes</h5>
-          <div class="inline" style="margin-top: 0;">
             <span class="badge">Adoption Metrics</span>
-            <span class="badge">Support Reduction</span>
-            <span class="badge">Cycle Time</span>
-            <span class="badge">Audit Readiness</span>
-            <span class="badge">Compliance KPIs</span>
-            <span class="badge">Platform Reliability</span>
+            <span class="badge">Audit Readiness &amp; Compliance KPIs</span>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Measurable impact -->
-    <section class="container" id="impact">
-      <p class="section-kicker">Results</p>
-      <h3 class="section-title">The numbers I stand behind</h3>
-      <div class="grid">
-        <div class="card">
-          <h4>Manual Reporting Effort</h4>
-          <p class="impact-value">30% Cut</p>
-          <div class="meter"><div class="fill" style="width: 30%;"></div></div>
-          <p class="impact-note">Governance dashboard automation and data consolidation.</p>
-        </div>
-        <div class="card">
-          <h4>Support Tickets Reduced</h4>
-          <p class="impact-value">85% Drop</p>
-          <div class="meter"><div class="fill" style="width: 85%;"></div></div>
-          <p class="impact-note">Re-boarding access automation reduced helpdesk dependency.</p>
-        </div>
-        <div class="card">
-          <h4>Capacity Risks Mitigated</h4>
-          <p class="impact-value">50% Lower</p>
-          <div class="meter"><div class="fill" style="width: 50%;"></div></div>
-          <p class="impact-note">Proactive governance visibility and risk detection.</p>
-        </div>
-        <div class="card">
-          <h4>Resolution Time</h4>
-          <p class="impact-value">3-5 Days → Minutes</p>
-          <p class="impact-note">Re-joiner access now processes in minutes instead of days through full automation.</p>
-        </div>
-        <div class="card">
-          <h4>Data Quality Improvement</h4>
-          <p class="impact-value">Stale Records Eliminated</p>
-          <p class="impact-note">12+ month inactive records decommissioned, reducing inventory noise for better decision-making.</p>
-        </div>
-        <div class="card">
-          <h4>Real-Time Monitoring</h4>
-          <p class="impact-value">Near Real-Time</p>
-          <p class="impact-note">Business units now monitor libraries in near real-time for proactive governance.</p>
         </div>
       </div>
     </section>
@@ -517,5 +421,37 @@
     </div>
   </footer>
   <script src="assets/js/site.js"></script>
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('.work-tab');
+      var views = document.querySelectorAll('.work-view');
+      function activate(view) {
+        tabs.forEach(function (t) {
+          var on = t.getAttribute('data-view') === view;
+          t.classList.toggle('active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        views.forEach(function (v) {
+          v.classList.toggle('active', v.id === 'view-' + view);
+        });
+      }
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          activate(t.getAttribute('data-view'));
+        });
+      });
+      function handleHash() {
+        if (location.hash === '#capstone') {
+          activate('personal');
+          var w = document.getElementById('work');
+          if (w) w.scrollIntoView();
+        } else if (location.hash === '#work' || location.hash === '#projects' || location.hash === '#flagship') {
+          activate('office');
+        }
+      }
+      window.addEventListener('hashchange', handleHash);
+      handleHash();
+    })();
+  </script>
 </body>
 </html>

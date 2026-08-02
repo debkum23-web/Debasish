@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8" />
+  <title>Schema-First Extraction: Contract Intelligence Feed – Debasish Kumar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal capstone: a schema-first document intelligence prototype that turns unstructured contracts into reviewable, evidence-backed records — with confidence scores, review routing, and honest CUAD-bounded evaluation." />
+  <script>(function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="container header-content">
+      <div class="header-left">
+        <h1><a href="index.html">Debasish Kumar</a></h1>
+        <p class="tagline">Principal Engineer → AI Technical Program Manager</p>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link"><i data-lucide="home"></i>Home</a>
+        <a href="index.html#work" class="nav-link"><i data-lucide="folder"></i>Work</a>
+        <a href="index.html#about" class="nav-link"><i data-lucide="user"></i>About</a>
+        <a href="index.html#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun"></i>
+      </button>
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow"><i data-lucide="rocket"></i>Personal Capstone — Built on My Own Time</p>
+        <h2>Schema-First Extraction: Contract Intelligence Feed</h2>
+        <p class="tagline" style="color: var(--text); font-size: 18px; margin-top: 12px;">Unstructured contracts in, reviewable evidence-backed records out — with uncertainty made visible instead of hidden</p>
+        <div class="hero-actions" style="margin-top: 24px;">
+          <a class="btn" href="https://github.com/debkum23-web/schema-first-extraction" target="_blank" rel="noopener"><i data-lucide="github" style="width:17px;height:17px;"></i>View the Code on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="inline" style="margin-bottom: 24px;">
+        <span class="badge">Schema-First Design</span>
+        <span class="badge">Gemini Structured Output (Pydantic)</span>
+        <span class="badge">CUAD Dataset Evaluation</span>
+        <span class="badge">Confidence &amp; Review Routing</span>
+        <span class="badge">JSONL Persistence</span>
+        <span class="badge">Read-Only Dashboard</span>
+      </div>
+    </section>
+
+    <section class="container two-col">
+      <div>
+        <h3 class="section-title">Why I Built This</h3>
+        <p>My office work proves I can run AI programs inside an enterprise. This project is me proving something different: that I can define, build, and honestly evaluate an AI product from scratch — every decision mine, including the uncomfortable ones about what the numbers really support.</p>
+
+        <h3 class="section-title" style="margin-top: 32px;">The Problem</h3>
+        <p>Legal and Sourcing teams have the contract documents, but not a searchable view of what's inside them. Renewal deadlines get found manually. Liability terms can't be compared across a portfolio. And the sneaky one: when AI extraction doesn't show its uncertainty, a low-confidence guess looks exactly like a solid answer — and a missing clause looks the same as a clause the model failed to read.</p>
+
+        <h3 class="section-title" style="margin-top: 32px;">The Product Decision</h3>
+        <p>I wrote this rule down before writing any code, and it drove everything after:</p>
+        <div class="card" style="border-left: 3px solid var(--accent); margin-top: 12px;">
+          <p style="font-style: italic; margin: 0;">"Start with the decisions users need to make, define the smallest reliable data contract that supports those decisions, and expand only when real usage and evaluation justify it."</p>
+        </div>
+        <p style="margin-top: 16px;">So the goal was never to capture every sentence of every contract. It was a small set of high-value signals — renewals, liability, jurisdiction, indemnification — made visible at portfolio scale, with uncertainty explicit enough that a human knows what to trust and what to review.</p>
+      </div>
+      <aside>
+        <div class="card">
+          <h4>Users &amp; Decisions Served</h4>
+          <ul class="list">
+            <li>Legal — risk review, liability comparison</li>
+            <li>Sourcing — renewal monitoring, notice periods</li>
+            <li>Both — jurisdiction analysis, review routing</li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top: 20px;">
+          <h4>Stack</h4>
+          <ul class="list">
+            <li>Gemini API with Pydantic-typed structured JSON output</li>
+            <li>CUAD contract dataset for ingestion and evaluation</li>
+            <li>Configurable confidence threshold (0.70) for QC routing</li>
+            <li>JSONL persistence with resumable processing</li>
+            <li>Read-only dashboard: search, filters, renewal &amp; jurisdiction views</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">How I Designed the Schema</h3>
+      <p class="section-intro">The schema is the product here. I treated writing it the way I'd treat writing a PRD — meaning first, code later.</p>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr));">
+        <article class="card">
+          <h4>1. Start from user decisions, not contract concepts</h4>
+          <p class="muted">I didn't list everything that appears in a contract. I listed the questions Legal and Sourcing actually ask — which contracts renew soon? which liability terms need review? — and only fields that support one of those questions made it in.</p>
+        </article>
+        <article class="card">
+          <h4>2. Three filters for every field</h4>
+          <p class="muted">Business value (would it change an action?), extraction feasibility (can varied contract language produce it consistently?), and evaluation feasibility (can I actually check whether it's right?). A field had to pass all three.</p>
+        </article>
+        <article class="card">
+          <h4>3. Define meaning before writing code</h4>
+          <p class="muted">Every field got a written definition: what it means, what a correct value looks like, what must not be inferred, and when null is the right answer. Example: termination_date means a fixed contractual end date — not a signature date, not a notice date. If the contract only grants termination rights, the value is null.</p>
+        </article>
+        <article class="card">
+          <h4>4. Make uncertainty a first-class output</h4>
+          <p class="muted">The model is never forced to invent an answer. Clearly present → true. Clearly absent → false. Missing or ambiguous → null, with confidence and rationale attached either way. A missing value should never silently become a false one.</p>
+        </article>
+      </div>
+      <div style="margin-top: 28px;">
+        <h4 style="margin-bottom: 4px;">Every field returns the same shape</h4>
+        <p class="muted" style="margin-bottom: 0;">The model returns value, confidence, and rationale; a separate QC layer computes needs_review against the threshold. Four concepts, kept apart on purpose:</p>
+        <div class="code-block">{
+  "value": "normalized value or null",
+  "confidence": 0.82,
+  "rationale": "One sentence grounded in the contract text.",
+  "needs_review": false
+}</div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">What the v1 Run Actually Showed</h3>
+      <p class="section-intro">These are fixture-scale results — 5 contracts, 12 fields each, 60 field results — not production benchmarks. I'd rather report a small honest number than a big vague one.</p>
+      <div class="grid">
+        <article class="card">
+          <p class="impact-value">76.67%</p>
+          <p class="muted">Auto-pass rate: 46 of 60 field results cleared the 0.70 confidence threshold.</p>
+        </article>
+        <article class="card">
+          <p class="impact-value">23.33%</p>
+          <p class="muted">Routed to human review — which is the design working, not failing. The system refused to pass everything as trustworthy.</p>
+        </article>
+        <article class="card">
+          <p class="impact-value">100% / 93.33%</p>
+          <p class="muted">Precision / recall on the 35 CUAD-labeled clause-presence decisions (F1 96.55%). Zero false positives — it never invented a clause.</p>
+        </article>
+      </div>
+      <div class="two-col" style="margin-top: 28px;">
+        <div class="card">
+          <h4>Where it was strong</h4>
+          <p class="muted">Governing law, jurisdiction, and assignment restriction: 100% auto-pass and perfect precision/recall on the fixture. Indemnification and confidentiality close behind at 80% auto-pass with perfect evaluation scores.</p>
+        </div>
+        <div class="card">
+          <h4>Where it was honest about being weak</h4>
+          <p class="muted">Auto-renewal (60% auto-pass, one real case returned null because renewal language conflicted between the order form and an exhibit) and liability cap (40% auto-pass, one case returned unclear when multiple exclusions didn't fit the single-object schema). Ambiguous language is a real failure mode — the product response is review routing, not fake confidence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">Tradeoffs I Made on Purpose</h3>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr));">
+        <article class="card">
+          <h4>Trustworthy over comprehensive</h4>
+          <p class="muted">A small set of clearly defined fields beats a large set of vague ones. Liability caps got deliberately simplified to one normalized object — complex cases get flagged for review instead of forced into a misleadingly precise value.</p>
+        </article>
+        <article class="card">
+          <h4>Reviewability over false automation</h4>
+          <p class="muted">Confidence, rationale, nulls, and review flags exist so an AI answer is never treated as automatically correct. The goal is reducing manual effort, not eliminating judgment.</p>
+        </article>
+        <article class="card">
+          <h4>Honest evaluation boundary</h4>
+          <p class="muted">CUAD supports clause-presence evaluation, not exact dates or amounts — so I only claimed metrics where ground truth exists. No artificial accuracy scores for fields the dataset can't verify.</p>
+        </article>
+        <article class="card">
+          <h4>Static dashboard over backend</h4>
+          <p class="muted">Read-only dashboard, CLI extraction, checked-in demo fixture. Proving the decision workflow didn't need auth, storage, and APIs — so v1 doesn't have them.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container two-col">
+      <div>
+        <h3 class="section-title">What I Learned as the Product Owner</h3>
+        <ul class="list">
+          <li>A single aggregate accuracy number would have hidden the gap between reliable fields and review-heavy ones. Field-level metrics aren't optional.</li>
+          <li>High precision with a few missed positives beats confidently inventing clauses — but a missed auto-renewal is still an operational risk when the workflow is deadline-driven. I had to sit with that tension rather than pick a comfortable side.</li>
+          <li>The confidence threshold is a routing control, not an accuracy guarantee. A result can pass and still deserve domain review.</li>
+          <li>Five contracts can't support production claims, and saying so out loud is part of the job. The next step is a larger, independently reviewed sample — not a bigger marketing number.</li>
+        </ul>
+      </div>
+      <aside>
+        <div class="card">
+          <h4>What's Next</h4>
+          <p class="muted"><strong>V2 — two scoped experiments, not broad iteration:</strong> a conflict-resolution rule for auto-renewal (with a conflict_detected flag, because two sections disagreeing is a finding, not a gap), and a test of whether liability caps need an array-shaped schema rather than a better prompt. Each has a decision rule and a 20-contract sample before trusting any delta.</p>
+          <p class="muted" style="margin-top: 12px;"><strong>MVP2 — source-agnostic platform:</strong> separate ingestion from domain schemas, add document-type routing, and validate HR audit as the first non-legal workflow — keeping confidence, rationale, and review routing as the cross-domain trust layer.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container">
+      <h3 class="section-title">The Short Version</h3>
+      <article class="card">
+        <p>I defined the schema from the decisions Legal and Sourcing need to make, not from everything a contract contains. Every field has a meaning, a type, a null rule, and a line it must not cross on inference. The evaluation says something narrower than "the model understands contracts" — it says the tested presence signals are strong, ambiguous renewal and liability language genuinely isn't, and the review workflow catches what the model can't carry. That narrower claim is the one I can defend, which is exactly why I'm making it.</p>
+      </article>
+    </section>
+
+    <section class="container">
+      <a class="btn" href="https://github.com/debkum23-web/schema-first-extraction" target="_blank" rel="noopener"><i data-lucide="github" style="width:17px;height:17px;"></i>View on GitHub</a>
+      <a class="btn secondary" href="index.html#work">← Back to My Work</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
+    </div>
+  </footer>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -159,6 +159,28 @@ a.card{text-decoration:none;color:inherit;display:block}
 .proj-tag.ai{background:var(--accent);color:#fff;border:1px solid var(--accent)}
 .proj-tag.platform{background:transparent;color:var(--muted);border:1px solid var(--border)}
 .proj-tag.build{background:transparent;color:var(--accent-hover);border:1px dashed var(--accent)}
+.proj-tag.personal{background:var(--good);color:#fff;border:1px solid var(--good)}
+
+/* Office vs Personal work tabs */
+.work-tabs{display:inline-flex;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:5px;gap:4px;margin:4px 0 28px;box-shadow:var(--shadow)}
+.work-tab{display:inline-flex;align-items:center;gap:8px;border:none;background:transparent;color:var(--text-light);font-family:var(--font-body);font-weight:600;font-size:14.5px;padding:10px 22px;border-radius:9px;cursor:pointer;transition:all 0.2s ease}
+.work-tab i{width:16px;height:16px}
+.work-tab:hover{color:var(--accent-hover)}
+.work-tab.active{background:var(--accent);color:#fff}
+.work-tab.active:hover{color:#fff}
+.work-view{display:none}
+.work-view.active{display:block;animation:fadeInUp 0.45s ease-out}
+.work-block{margin-top:32px}
+.work-block:first-child{margin-top:0}
+.work-block h4.block-label{font-size:13px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+
+/* Personal capstone flavor */
+.featured-card.personal{border-color:rgba(16,185,129,0.4);background:linear-gradient(150deg,var(--card) 0%,rgba(16,185,129,0.08) 100%)}
+.featured-card.personal:hover{border-color:var(--good);box-shadow:0 18px 40px -10px rgb(16 185 129 / 0.20)}
+.featured-card.personal .flag{color:var(--good);background:rgba(16,185,129,0.10);border-color:rgba(16,185,129,0.3)}
+
+/* Code block (capstone schema examples) */
+.code-block{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px 18px;font-family:ui-monospace,'Cascadia Code',Consolas,monospace;font-size:13px;line-height:1.65;color:var(--text);overflow-x:auto;white-space:pre;margin:14px 0}
 .two-col{display:grid;grid-template-columns:1.5fr 1fr;gap:32px}
 .list{padding-left:20px;color:var(--text-light)}
 .list li{margin-bottom:9px}
