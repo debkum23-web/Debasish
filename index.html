@@ -25,7 +25,7 @@
       </div>
       <nav class="nav" id="nav">
         <a href="#work" class="nav-link"><i data-lucide="briefcase"></i>Office Work</a>
-        <a href="#capstone" class="nav-link"><i data-lucide="rocket"></i>Capstone</a>
+        <a href="#capstone" class="nav-link"><i data-lucide="rocket"></i>Personal Projects</a>
         <a href="#experience" class="nav-link"><i data-lucide="calendar"></i>Experience</a>
         <a href="#about" class="nav-link"><i data-lucide="user"></i>About</a>
         <a href="#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
@@ -44,10 +44,10 @@
       <div class="container">
         <p class="eyebrow"><i data-lucide="map-pin"></i>Bengaluru, India · Open to relocation & remote</p>
         <h2>I'm a Principal Engineer moving into AI Technical Program Management.</h2>
-        <p class="lede">Fourteen years in platform engineering taught me how the technology actually works; the last four — owning the roadmap, backlog, and PRDs for a large enterprise platform — taught me how to run the program around it. Everything below is split two ways: what I've shipped at the office, and the capstone I built on my own time to prove I can do it from scratch.</p>
+        <p class="lede">Fourteen years in platform engineering taught me how the technology actually works; the last four — owning the roadmap, backlog, and PRDs for a large enterprise platform — taught me how to run the program around it. Everything below is split two ways: what I've shipped at the office, and the personal projects I built on my own time to prove I can do it from scratch.</p>
         <div class="hero-actions">
           <a class="btn" href="#work">Office Work →</a>
-          <a class="btn secondary" href="#capstone">Personal Capstone →</a>
+          <a class="btn secondary" href="#capstone">Personal Projects →</a>
         </div>
         <div class="stat-strip">
           <div class="stat-tile">
@@ -74,10 +74,10 @@
     <section class="container" id="work">
       <p class="section-kicker">The Work</p>
       <h3 class="section-title">What I've built</h3>
-      <p class="section-intro">Two buckets, one toggle. Office is what I've shipped inside the firm. The capstone is what I built alone, end to end, to sharpen the product side.</p>
+      <p class="section-intro">Two buckets, one toggle. Office is what I've shipped inside the firm. The personal projects are what I built alone, end to end, to sharpen the product side.</p>
       <div class="work-tabs" role="tablist">
         <button type="button" class="work-tab active" data-view="office" role="tab" aria-selected="true"><i data-lucide="briefcase"></i>Office Work</button>
-        <button type="button" class="work-tab" data-view="personal" role="tab" aria-selected="false"><i data-lucide="rocket"></i>Personal Capstone</button>
+        <button type="button" class="work-tab" data-view="personal" role="tab" aria-selected="false"><i data-lucide="rocket"></i>Personal Projects</button>
       </div>
 
       <div class="work-view active" id="view-office">
@@ -206,7 +206,8 @@
 
       <div class="work-view" id="view-personal">
         <div class="work-block">
-          <h4 class="block-label">Capstone — Built End to End on My Own Time</h4>
+          <h4 class="block-label">Personal Projects — Built End to End on My Own Time</h4>
+          <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(340px,1fr));">
           <a href="schema-first-extraction.html" class="featured-card personal" aria-label="View the Schema-First Extraction capstone project">
             <div class="proj-tags" style="margin-bottom:16px;">
               <span class="flag" style="margin-bottom:0;"><i data-lucide="rocket"></i>Personal Capstone · v1 Complete</span>
@@ -226,7 +227,27 @@
               <div><div class="value">96.55%</div><div class="label">F1 on evaluated presence signals</div></div>
             </div>
           </a>
-          <p class="muted" style="margin-top:18px;font-size:14px;">Why it exists: the office work shows I can run AI programs inside an enterprise. This shows I can define, build, and honestly evaluate an AI product from a blank page — schema, extraction, QC, evaluation, dashboard, all of it. <a href="https://github.com/debkum23-web/schema-first-extraction" target="_blank" rel="noopener" style="color:var(--accent-hover);">Code on GitHub</a>.</p>
+          <a href="hireradar.html" class="featured-card personal" aria-label="View the HireRadar personal project">
+            <div class="proj-tags" style="margin-bottom:16px;">
+              <span class="flag" style="margin-bottom:0;"><i data-lucide="radar"></i>Personal Project · Phase 1 Live</span>
+              <span class="proj-tag ai"><i data-lucide="sparkles"></i>AI Product</span>
+            </div>
+            <h4>HireRadar: A Job-Search Pipeline That Remembers</h4>
+            <p>My own job search was the product problem: four boards, inconsistent AI-PM titles, no tracking. I built a pipeline that searches four sources, scores roles semantically against my parsed resume, and makes one Gemini call that reads my application history — including why I rejected companies — before deciding what deserves a Telegram alert. The best decision in it: I built the full agentic orchestration loop, tested it, and set it aside for a leaner design that makes the same decisions at a fraction of the API cost.</p>
+            <div class="inline">
+              <span class="badge">Memory-Aware Pipeline</span>
+              <span class="badge">Semantic Scoring</span>
+              <span class="badge">Gemini Decision Layer</span>
+              <span class="badge">Honest "Agentic" Framing</span>
+            </div>
+            <div class="featured-stats">
+              <div><div class="value">4</div><div class="label">Job sources, deduped &amp; scored</div></div>
+              <div><div class="value">1</div><div class="label">Gemini decision call/run — down from 5-8</div></div>
+              <div><div class="value">Daily</div><div class="label">My own driver since June 2026</div></div>
+            </div>
+          </a>
+          </div>
+          <p class="muted" style="margin-top:18px;font-size:14px;">Why these exist: the office work shows I can run AI programs inside an enterprise. These show I can define, build, and honestly evaluate AI products from a blank page — schema, extraction, evaluation, memory, decision layers, all of it. Code for both is public: <a href="https://github.com/debkum23-web/schema-first-extraction" target="_blank" rel="noopener" style="color:var(--accent-hover);">schema-first-extraction</a> · <a href="https://github.com/debkum23-web/Agent-JObSearch" target="_blank" rel="noopener" style="color:var(--accent-hover);">Agent-JObSearch</a>.</p>
         </div>
       </div>
     </section>
