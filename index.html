@@ -46,6 +46,11 @@
         <p class="eyebrow"><i data-lucide="map-pin"></i>Bengaluru, India · Open to relocation & remote</p>
         <h2>I help enterprise SaaS teams ship AI copilots people actually use.</h2>
         <p class="lede">Fourteen years as a Principal Engineer, the last four owning the roadmap, backlog, and PRDs for an enterprise platform used firm-wide — now working as an AI-multiplier PM: using AI to compress the distance between an ambiguous ask and a shipped, adopted feature. That engineering depth is the edge — it earns trust in the room instantly and lets me prototype the case myself instead of waiting on a team. Everything below is split two ways: what I've shipped at the office, and the personal AI products I built on my own time to prove I can do it from a blank page.</p>
+        <div class="inline" style="margin:0 0 32px;">
+          <span class="badge">LLM Deployed to Production — Message Center Platform</span>
+          <span class="badge">AI-Assisted Analysis — 1,200+ Tickets Triaged</span>
+          <span class="badge">Building Agentic AI — Jira Agent</span>
+        </div>
         <div class="stat-strip">
           <div class="stat-tile">
             <div class="value">14+ yrs</div>
@@ -83,7 +88,7 @@
           <a href="message-center-platform.html" class="featured-card" aria-label="View Message Center Intelligence Platform project">
         <div class="proj-tags" style="margin-bottom:16px;">
           <span class="flag" style="margin-bottom:0;"><i data-lucide="star"></i>Flagship · Used Firm-Wide</span>
-          <span class="proj-tag ai"><i data-lucide="sparkles"></i>AI Product</span>
+          <span class="proj-tag ai"><i data-lucide="sparkles"></i>LLM Deployed to Production</span>
         </div>
         <h4>Message Center Intelligence Platform</h4>
         <p>Our firm tracked Microsoft 365 advisories through a daily email digest, and the critical ones kept getting buried. I replaced it with a proper platform: scheduled ingestion from Microsoft's APIs into a SQL database I designed for historical queries, an API layer of 18 endpoints, and an Angular dashboard that puts flagged messages at the top. Later I added a natural-language search where an LLM interprets the question and asks a follow-up if it's ambiguous, but a separate search API does the actual database work. Flagged messages turn into Jira tickets in one click, and Azure AD decides who sees what.</p>
@@ -106,7 +111,7 @@
           <h4 class="block-label">AI Program Work</h4>
           <div class="grid">
         <a href="AITicketAnalysis.html" class="card" style="border: 1px solid rgba(99, 102, 241, 0.3);" aria-label="View GenAI-Assisted Ticket Analysis project">
-          <div class="proj-tags"><span class="proj-tag ai"><i data-lucide="sparkles"></i>AI · Shipped</span></div>
+          <div class="proj-tags"><span class="proj-tag ai"><i data-lucide="sparkles"></i>AI-Assisted Analysis · Shipped</span></div>
           <h4 style="color: var(--accent-hover); margin-top: 0;">GenAI-Assisted Ticket Analysis &amp; Feature Discovery</h4>
           <p class="muted">We had 18 months of support tickets — over 1,200 of them — and no real picture of what they were telling us. I used Excel Copilot to classify and theme them, which surfaced two feature gaps big enough to build: Copy Site Pages (310 tickets asking for it) and Re-boarding Automation (185 tickets).</p>
           <p class="muted">The analysis took hours instead of the weeks a manual review would have needed. Both features shipped, and recurring incidents in those areas dropped 65%.</p>
@@ -118,7 +123,7 @@
           </div>
         </a>
         <article class="card" style="border: 1px dashed rgba(59, 130, 246, 0.45);">
-          <div class="proj-tags"><span class="proj-tag build"><i data-lucide="hammer"></i>AI · In Build</span></div>
+          <div class="proj-tags"><span class="proj-tag build"><i data-lucide="hammer"></i>Agentic AI · In Build</span></div>
           <h4 style="color: var(--accent-hover); margin-top: 0;">Jira Agent: Change Request → PRD → Epics</h4>
           <p class="muted">The one I'm building now. Users describe a change request in plain language; the agent asks the follow-up questions a BA would, then drafts the PRD and creates the epics, stories, and subtasks in Jira — everything linked and traceable.</p>
           <p class="muted">Same working rule as my other AI products: the agent drafts, a human approves. Nothing lands in Jira without someone signing off on it.</p>
