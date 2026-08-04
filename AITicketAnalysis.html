@@ -22,7 +22,7 @@
       </div>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav-link"><i data-lucide="home"></i>Home</a>
-        <a href="index.html#projects" class="nav-link"><i data-lucide="folder"></i>Projects</a>
+        <a href="index.html#work" class="nav-link"><i data-lucide="folder"></i>Projects</a>
         <a href="index.html#about" class="nav-link"><i data-lucide="user"></i>About</a>
         <a href="index.html#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
       </nav>
@@ -61,14 +61,11 @@
       </div>
       <aside>
         <div class="card">
-          <h4>Impact at a Glance</h4>
+          <h4>At a Glance</h4>
           <ul class="list">
-            <li><strong>80% reduction</strong> in manual ticket review time</li>
-            <li><strong>2 new features</strong> discovered and shipped</li>
-            <li><strong>Incident reduction:</strong> 65% fewer recurring issues</li>
-            <li><strong>Analysis turnaround:</strong> weeks → hours</li>
-            <li><strong>Data-driven backlog:</strong> justified with user evidence</li>
-            <li><strong>GenAI fluency demonstrated</strong> across org</li>
+            <li>1,200+ tickets, 18 months of backlog</li>
+            <li>12 theme clusters identified</li>
+            <li>2 features validated by ticket volume, not opinion</li>
           </ul>
         </div>
       </aside>
@@ -108,292 +105,77 @@
       </div>
     </section>
 
-    <!-- The Journey: 6-Stage AI PO Process -->
-    <section class="container">
-      <h3 class="section-title">The AI-Assisted Product Discovery Journey</h3>
-      <div style="position:relative;margin-bottom:24px;">
-        <!-- Left Arrow -->
-        <button style="position:absolute;left:-50px;top:50%;transform:translateY(-50%);background:var(--carousel-arrow-bg);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:20px;z-index:10;display:flex;align-items:center;justify-content:center;transition:all .3s ease;box-shadow:0 0 20px rgba(99,102,241,.3);" onclick="document.getElementById('aiJourney').scrollBy({left:-400,behavior:'smooth'})" title="Scroll Left">‹</button>
-        
-        <!-- Horizontal Scrollable Container -->
-        <div id="aiJourney" style="display:flex;gap:20px;overflow-x:auto;scroll-behavior:smooth;padding:20px 0;scrollbar-width:none;-ms-overflow-style:none;">
-          <style>
-            #aiJourney::-webkit-scrollbar { display: none; }
-          </style>
-          
-          <!-- Stage 1: Problem Identification -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(99,102,241,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#93c5fd;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(99,102,241,.2);border-radius:50%;font-weight:700;color:#93c5fd;font-size:14px;">1</span>
-              Problem Identification
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">The Business Challenge</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:13px;line-height:1.6;">
-              <li>18+ months of unstructured support tickets (1,200+)</li>
-              <li>No systematic understanding of recurring issues</li>
-              <li>Feature requests mixed with defect reports</li>
-              <li>Manual analysis required weeks; roadmap driven by anecdotes</li>
-              <li>High incident recurrence; unclear root causes</li>
-              <li>Business unable to quantify product gaps</li>
-            </ul>
-            <p style="margin:12px 0 0;color:#ffffff;font-weight:600;font-size:14px;">The Opportunity</p>
-            <p style="margin:6px 0 0;color:#cbd5e1;font-size:13px;">Use GenAI to rapidly extract patterns from raw data, enabling faster hypothesis validation and evidence-based backlog prioritization.</p>
-          </div>
-          
-          <!-- Stage 2: Data Preparation & AI Strategy -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(16,185,129,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#6ee7b7;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(16,185,129,.2);border-radius:50%;font-weight:700;color:#6ee7b7;font-size:14px;">2</span>
-              Data Preparation &amp; AI Strategy
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">The Approach</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:13px;line-height:1.6;">
-              <li><strong style="color:#ffffff;">Data Source:</strong> 1,200+ support tickets in Excel (18 months)</li>
-              <li><strong style="color:#ffffff;">AI Tool:</strong> Excel Copilot for rapid pattern analysis</li>
-              <li><strong style="color:#ffffff;">Method:</strong> Conversational AI prompts to classify & theme</li>
-              <li><strong style="color:#ffffff;">Scope:</strong> Feature requests, defects, enhancements, UX feedback</li>
-              <li><strong style="color:#ffffff;">Outcome Target:</strong> Structured taxonomy + trend analysis</li>
-            </ul>
-            <p style="margin:12px 0 0;color:#ffffff;font-weight:600;font-size:14px;">Key Decision</p>
-            <p style="margin:6px 0 0;color:#cbd5e1;font-size:13px;">Leverage AI for taxonomy generation &amp; trend detection; use human judgment for validation &amp; prioritization.</p>
-          </div>
-          
-          <!-- Stage 3: AI Analysis & Pattern Discovery -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(245,158,11,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#fcd34d;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(245,158,11,.2);border-radius:50%;font-weight:700;color:#fcd34d;font-size:14px;">3</span>
-              AI Analysis &amp; Pattern Discovery
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">GenAI Insights Extracted</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:13px;line-height:1.6;">
-              <li><strong style="color:#ffffff;">Ticket Classification:</strong> 65% feature requests, 25% defects, 10% enhancements</li>
-              <li><strong style="color:#ffffff;">Theme Clusters:</strong> 12 distinct product areas identified</li>
-              <li><strong style="color:#ffffff;">Top Issues:</strong> Copy Site Pages workflow (310 tickets) &amp; User Re-boarding access (185 tickets)</li>
-              <li><strong style="color:#ffffff;">Trend Analysis:</strong> Recurring patterns vs. one-time issues</li>
-              <li><strong style="color:#ffffff;">Severity Assessment:</strong> High-impact vs. edge cases</li>
-              <li><strong style="color:#ffffff;">Feature Validation:</strong> User demand quantified with actual ticket volume</li>
-            </ul>
-            <p style="margin:12px 0 0;color:#ffffff;font-weight:600;font-size:14px;">Time Investment</p>
-            <p style="margin:6px 0 0;color:#cbd5e1;font-size:13px;"><strong>Manual approach:</strong> 4-6 weeks | <strong>AI-assisted:</strong> 6-8 hours (+ validation)</p>
-          </div>
-          
-          <!-- Stage 4: Feature Hypothesis & Validation -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(236,72,153,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#f9a8d4;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(236,72,153,.2);border-radius:50%;font-weight:700;color:#f9a8d4;font-size:14px;">4</span>
-              Feature Hypothesis &amp; Validation
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">Features Discovered</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:13px;line-height:1.6;">
-              <li><strong style="color:#ffffff;">Feature 1: Copy Site Pages Utility</strong><br/>310 tickets requesting bulk page cloning → Built custom utility</li>
-              <li><strong style="color:#ffffff;">Feature 2: User Re-boarding Automation</strong><br/>185 tickets on access delays → Automated cleanup flow</li>
-            </ul>
-            <p style="margin:12px 0 0;color:#ffffff;font-weight:600;font-size:14px;">Validation Method</p>
-            <ul style="margin:6px 0 0;padding-left:16px;color:#cbd5e1;font-size:12px;line-height:1.5;">
-              <li>Prioritized by ticket volume + user impact</li>
-              <li>Estimated effort vs. demand trade-offs</li>
-              <li>Phased delivery: MVP → enhancements</li>
-            </ul>
-          </div>
-          
-          <!-- Stage 5: Implementation & Outcome Tracking -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(255,107,107,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#fca5a5;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(255,107,107,.2);border-radius:50%;font-weight:700;color:#fca5a5;font-size:14px;">5</span>
-              Implementation &amp; Metrics
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">Delivery & Outcomes</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:12px;line-height:1.5;">
-              <li><strong style="color:#ffffff;">Copy Site Pages:</strong> Shipped custom utility; reduced page cloning time from hours to minutes</li>
-              <li><strong style="color:#ffffff;">User Re-boarding:</strong> Automated access provisioning; resolution time 3-5 days → minutes</li>
-              <li><strong style="color:#ffffff;">Adoption:</strong> Both features actively used; 85% ticket reduction in those categories</li>
-            </ul>
-            <p style="margin:12px 0 0;color:#ffffff;font-weight:600;font-size:14px;">Key Metrics</p>
-            <ul style="margin:6px 0 0;padding-left:16px;color:#cbd5e1;font-size:12px;line-height:1.5;">
-              <li>Incident recurrence: 65% reduction</li>
-              <li>Manual triage overhead: 80% cut</li>
-              <li>Feature discovery latency: weeks → hours</li>
-              <li>User satisfaction: improved through faster delivery</li>
-            </ul>
-          </div>
-          
-          <!-- Stage 6: Decision Enablement & AI Fluency -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(10,185,129,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#6ee7b7;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(16,185,129,.2);border-radius:50%;font-weight:700;color:#6ee7b7;font-size:14px;">6</span>
-              Decision Enablement
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">PO Capabilities Demonstrated</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:13px;line-height:1.6;">
-              <li><strong style="color:#ffffff;">Data-Driven Hypothesis:</strong> Replaced anecdotes with quantified user demand</li>
-              <li><strong style="color:#ffffff;">Rapid Discovery:</strong> Scaled analysis across large datasets (1,200+ tickets)</li>
-              <li><strong style="color:#ffffff;">Risk Awareness:</strong> Assessed effort and scale implications</li>
-              <li><strong style="color:#ffffff;">AI Judgment:</strong> Knew when to trust AI output &amp; when to validate</li>
-              <li><strong style="color:#ffffff;">Stakeholder Alignment:</strong> Communicated AI-driven insights with confidence</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Right Arrow -->
-        <button style="position:absolute;right:-50px;top:50%;transform:translateY(-50%);background:var(--carousel-arrow-bg);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:20px;z-index:10;display:flex;align-items:center;justify-content:center;transition:all .3s ease;box-shadow:0 0 20px rgba(99,102,241,.3);" onclick="document.getElementById('aiJourney').scrollBy({left:400,behavior:'smooth'})" title="Scroll Right">›</button>
-      </div>
-      <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:16px;">← Scroll right to see the complete AI-assisted discovery journey →</p>
-    </section>
-
-    <!-- GenAI-Based Ticket Understanding -->
+    <!-- How the analysis was actually done -->
     <section class="container two-col" style="margin-top:16px;">
       <div>
-        <h3 class="section-title">GenAI-Based Ticket Understanding</h3>
-        <p>Used Copilot to derive structured insights from unstructured ticket text.</p>
-        <h4 style="margin-top:16px;">Capabilities</h4>
-        <ul class="list">
-          <li>AI-driven categorization of ticket themes</li>
-          <li>Sentiment and urgency inference</li>
-          <li>Identification of feature-related vs defect-related tickets</li>
-        </ul>
-        <h4 style="margin-top:16px;">Sample GenAI Prompts</h4>
-        <div style="background:rgba(30,41,59,.6); border-left:3px solid var(--primary); padding:16px; border-radius:6px; margin-bottom:16px;">
-          <p style="margin:0; font-family:monospace; font-size:13px; color:var(--text);">Analyze the Description column in the Support_Tickets table and create a new Issue Category column grouping similar user problems.</p>
-        </div>
-        <div style="background:rgba(30,41,59,.6); border-left:3px solid var(--primary); padding:16px; border-radius:6px;">
-          <p style="margin:0; font-family:monospace; font-size:13px; color:var(--text);">Add a Sentiment column indicating user tone (Neutral, Frustrated, High Urgency).</p>
-        </div>
-        <p style="margin-top:16px;"><strong>Value:</strong> Reduces manual effort while improving consistency of ticket interpretation.</p>
+        <h3 class="section-title">How I Ran the Analysis</h3>
+        <p>I used Excel Copilot to classify and theme the raw ticket descriptions &mdash; 65% feature requests, 25% defects, 10% enhancements &mdash; and cluster them into 12 product areas. Two of those clusters were big enough to justify building: Copy Site Pages (310 tickets) and Re-boarding Automation (185 tickets). Every AI-generated category got a manual spot-check before I trusted it; the AI found the pattern, I made the call on what to build.</p>
+        <h4 style="margin-top:16px;">Two of the actual prompts I used</h4>
+        <div class="code-block">Analyze the Description column in the Support_Tickets table and create a new Issue Category column grouping similar user problems.</div>
+        <div class="code-block">Using the Issue Category column, identify trends and highlight issues that show sustained growth over time.</div>
       </div>
       <aside>
         <div class="card">
-          <h4>Trend, Risk, and Root-Cause Analysis</h4>
-          <p class="muted">Anchoring on AI-generated columns, Copilot was used to:</p>
-          <ul class="list">
-            <li>Track recurring issues across time periods</li>
-            <li>Identify spikes in high-severity tickets</li>
-            <li>Surface product modules with persistent friction</li>
-          </ul>
-          <h4 style="margin-top:16px;">Sample GenAI Prompts</h4>
-          <div style="background:rgba(30,41,59,.6); border-left:3px solid var(--accent); padding:12px; border-radius:6px; margin-bottom:12px;">
-            <p style="margin:0; font-family:monospace; font-size:12px; color:var(--text);">Using the Issue Category column, identify trends and highlight issues that show sustained growth over time.</p>
-          </div>
-          <div style="background:rgba(30,41,59,.6); border-left:3px solid var(--accent); padding:12px; border-radius:6px;">
-            <p style="margin:0; font-family:monospace; font-size:12px; color:var(--text);">Correlate high-severity tickets with specific product modules.</p>
-          </div>
-          <p style="margin-top:12px; font-size:13px;"><strong>Enterprise lens:</strong> Supports proactive risk management and post-release monitoring.</p>
+          <h4>Time Investment</h4>
+          <p class="muted">Manual read-through of 18 months of tickets would have taken 4-6 weeks. The Copilot-assisted pass took 6-8 hours plus validation time.</p>
         </div>
       </aside>
     </section>
 
-    <!-- Results Summary -->
+    <!-- Outcomes -->
     <section class="container">
-      <h3 class="section-title">Impact & Business Outcomes</h3>
+      <h3 class="section-title">Outcomes</h3>
       <div class="grid">
         <div class="card">
-          <h4>Manual Analysis Effort</h4>
-          <p class="impact-value">80% Reduction</p>
-          <div class="meter"><div class="fill" style="width: 80%;"></div></div>
-          <p class="impact-note">AI-assisted analysis replaced weeks of manual ticket review with hours of structured discovery.</p>
+          <p class="impact-value">80%</p>
+          <p class="muted">Cut in manual ticket-review time &mdash; 4-6 weeks of reading down to a 6-8 hour Copilot pass plus validation.</p>
         </div>
         <div class="card">
-          <h4>Discovery Speed</h4>
-          <p class="impact-value">4-6 Weeks → 6-8 Hours</p>
-          <p class="impact-note">Rapid pattern discovery from 1,200+ tickets enabled faster hypothesis validation and roadmap updates.</p>
+          <p class="impact-value">65%</p>
+          <p class="muted">Fewer recurring incidents in the two areas the analysis surfaced, after both features shipped.</p>
         </div>
         <div class="card">
-          <h4>Incident Recurrence</h4>
-          <p class="impact-value">65% Lower</p>
-          <div class="meter"><div class="fill" style="width: 65%;"></div></div>
-          <p class="impact-note">Proactive gap detection from AI analysis led to rapid feature delivery that addressed root causes.</p>
-        </div>
-        <div class="card">
-          <h4>Feature Adoption</h4>
-          <p class="impact-value">85% Ticket Reduction</p>
-          <p class="impact-note">Both AI-discovered features (Copy Site Pages, Re-boarding Automation) actively adopted by users.</p>
-        </div>
-        <div class="card">
-          <h4>Data-Driven Backlog</h4>
-          <p class="impact-value">2 Features Validated</p>
-          <p class="impact-note">Roadmap priorities now driven by evidence (1,200+ tickets) rather than anecdotes or assumptions.</p>
+          <p class="impact-value">2 shipped</p>
+          <p class="muted">Copy Site Pages (310 tickets) and Re-boarding Automation (185 tickets) &mdash; both built on ticket volume, not opinion.</p>
         </div>
       </div>
     </section>
 
-    <!-- PO Skills Demonstrated -->
-    <section class="container">
-      <h3 class="section-title">Core PO Capabilities Demonstrated</h3>
-      <div class="grid">
-        <article class="card">
-          <h4>🔍 Problem Discovery</h4>
-          <p class="muted">Recognized that 1,200+ unstructured tickets represented untapped insights into product gaps and user pain points.</p>
-          <div class="inline">
-            <span class="badge">User Research</span>
-            <span class="badge">Data Mining</span>
-            <span class="badge">Problem Framing</span>
-          </div>
-        </article>
-        <article class="card">
-          <h4>🤖 AI Tool Mastery</h4>
-          <p class="muted">Used Copilot for the pattern-finding it's good at, and kept the judgment calls — what to build, what to ignore — for myself. Every AI-generated category got spot-checked before I trusted it.</p>
-          <div class="inline">
-            <span class="badge">GenAI Fluency</span>
-            <span class="badge">Prompt Engineering</span>
-            <span class="badge">Tool Selection</span>
-          </div>
-        </article>
-        <article class="card">
-          <h4>📊 Data-Driven Decision Making</h4>
-          <p class="muted">Replaced roadmap hunches with quantified user demand: 310 Copy Site Pages tickets, 185 Re-boarding tickets justified feature investment.</p>
-          <div class="inline">
-            <span class="badge">Data Analysis</span>
-            <span class="badge">Evidence-Based</span>
-            <span class="badge">Metrics Literacy</span>
-          </div>
-        </article>
-        <article class="card">
-          <h4>🎯 Feature Prioritization</h4>
-          <p class="muted">Assessed effort vs. impact; phased delivery—not just "build the loudest ask."</p>
-          <div class="inline">
-            <span class="badge">Trade-off Analysis</span>
-            <span class="badge">Prioritization</span>
-            <span class="badge">Roadmapping</span>
-          </div>
-        </article>
-        <article class="card">
-          <h4>📈 Outcome Measurement</h4>
-          <p class="muted">Defined success metrics: incident reduction, ticket volume decrease, adoption rates—and tracked results post-launch.</p>
-          <div class="inline">
-            <span class="badge">KPI Definition</span>
-            <span class="badge">Success Metrics</span>
-            <span class="badge">Impact Measurement</span>
-          </div>
-        </article>
+    <!-- What I'd point to as product work -->
+    <section class="container two-col">
+      <div>
+        <h3 class="section-title">What I'd Point To as Product Work</h3>
+        <ul class="list">
+          <li>Choosing volume over opinion. Instead of debating who complained loudest, I let ticket counts settle which two features actually deserved a build slot.</li>
+          <li>Keeping the judgment call mine. Copilot did the pattern-finding across 1,200+ tickets; every AI-generated category still got a manual spot-check before I trusted it or put it in front of stakeholders.</li>
+          <li>Saying no to ten ideas to say yes to two. The analysis surfaced 12 distinct theme clusters &mdash; only two had the volume and clear enough scope to justify building.</li>
+          <li>Turning an unstructured backlog into a number a skeptic can't easily argue with. "310 tickets are asking for this" ended prioritization debates that "I think users want this" never could.</li>
+        </ul>
       </div>
-    </section>
-
-    <!-- Links to Related Work -->
-    <section class="container">
-      <h3 class="section-title">Related Work & Features Delivered</h3>
-      <div class="grid">
-        <a href="https://github.com" style="text-decoration: none; color: inherit; display: block;" class="card">
-          <h4>🔗 Copy Site Pages Utility</h4>
-          <p class="muted">Custom utility built from AI-identified demand (310 user tickets). Reduced page cloning time from hours to minutes.</p>
-          <p style="margin-top: 12px; color: var(--muted); font-size: 12px;"><strong>Status:</strong> Shipped & actively used | <strong>Impact:</strong> 85% ticket reduction in this category</p>
-        </a>
-        <a href="UserReboardingAutomation.html" style="text-decoration: none; color: inherit; display: block;" class="card">
-          <h4>🔗 User Re-boarding Access Automation</h4>
-          <p class="muted">Automated workflow from AI-discovered gap (185 user tickets). Resolved access issues from 3-5 days → minutes.</p>
-          <p style="margin-top: 12px; color: var(--muted); font-size: 12px;"><strong>Status:</strong> Shipped & adopted | <strong>Impact:</strong> 85% ticket reduction + 65% fewer re-joiner escalations</p>
-        </a>
-      </div>
+      <aside>
+        <div class="card">
+          <h4>Related Work</h4>
+          <p class="muted">Copy Site Pages Utility &mdash; internal tool, not public. Built from the 310-ticket signal; cut page-cloning time from hours to minutes.</p>
+        </div>
+        <div class="card" style="margin-top: 16px;">
+          <a href="UserReboardingAutomation.html" style="text-decoration:none;color:inherit;">
+            <h4>User Re-boarding Access Automation →</h4>
+            <p class="muted">Built from the 185-ticket signal. Access resolution dropped from 3-5 days to minutes.</p>
+          </a>
+        </div>
+      </aside>
     </section>
 
     <!-- Key Takeaway -->
     <section class="container">
-      <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.1)); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 12px; padding: 32px; text-align: center;">
-        <h3 style="margin: 0 0 16px; color: var(--primary);">Key Takeaways</h3>
-        <p style="margin: 0; color: var(--text); line-height: 1.8; font-size: 16px;">Honestly, when I started this I expected to spend weeks reading tickets and still miss things. A few hours with Copilot gave me structured themes, sentiment, and a clean split between feature requests and defects. The part that surprised me was how it changed the prioritization conversations. When I proposed Copy Site Pages, I wasn't arguing a hunch — I could point to 310 tickets. Re-boarding Automation had 185 behind it. It's hard to argue with that, and nobody really tried. The AI didn't decide anything; it just got me to the evidence fast enough for the evidence to matter.</p>
-      </div>
+      <h3 class="section-title">Key Takeaways</h3>
+      <article class="card">
+        <p>Honestly, when I started this I expected to spend weeks reading tickets and still miss things. A few hours with Copilot gave me structured themes, sentiment, and a clean split between feature requests and defects. The part that surprised me was how it changed the prioritization conversations. When I proposed Copy Site Pages, I wasn't arguing a hunch &mdash; I could point to 310 tickets. Re-boarding Automation had 185 behind it. It's hard to argue with that, and nobody really tried. The AI didn't decide anything; it just got me to the evidence fast enough for the evidence to matter.</p>
+      </article>
     </section>
 
     <section class="container">
-      <a class="btn" href="index.html#projects">← Back to Projects</a>
+      <a class="btn" href="index.html#work">← Back to Projects</a>
       <a class="btn secondary" href="index.html#contact">Get in Touch</a>
     </section>
   </main>

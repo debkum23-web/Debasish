@@ -22,7 +22,7 @@
       </div>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav-link"><i data-lucide="home"></i>Home</a>
-        <a href="index.html#projects" class="nav-link"><i data-lucide="folder"></i>Projects</a>
+        <a href="index.html#work" class="nav-link"><i data-lucide="folder"></i>Projects</a>
         <a href="index.html#about" class="nav-link"><i data-lucide="user"></i>About</a>
         <a href="index.html#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
       </nav>
@@ -74,179 +74,58 @@
       </aside>
     </section>
     
-    <!-- Product Owner Journey: Horizontal Scrollable Workflow -->
+    <!-- Decisions -->
     <section class="container">
-      <h3 class="section-title">Product Owner Journey: Discovery → Decision → Implementation → Impact</h3>
-      <div style="position:relative;margin-bottom:24px;">
-        <!-- Left Arrow -->
-        <button style="position:absolute;left:-50px;top:50%;transform:translateY(-50%);background:var(--carousel-arrow-bg);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:20px;z-index:10;display:flex;align-items:center;justify-content:center;transition:all .3s ease;box-shadow:0 0 20px rgba(99,102,241,.3);" onclick="document.getElementById('poJourney').scrollBy({left:-400,behavior:'smooth'})" title="Scroll Left">‹</button>
-        
-        <!-- Horizontal Scrollable Container -->
-        <div id="poJourney" style="display:flex;gap:20px;overflow-x:auto;scroll-behavior:smooth;padding:20px 0;scrollbar-width:none;-ms-overflow-style:none;">
-          <style>
-            #poJourney::-webkit-scrollbar { display: none; }
-          </style>
-          
-          <!-- Stage 1: Discovery -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(99,102,241,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#93c5fd;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(99,102,241,.2);border-radius:50%;font-weight:700;color:#93c5fd;font-size:14px;">1</span>
-              Discovery
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">The Problem</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:13px;line-height:1.6;">
-              <li>12+ months of inactive records cluttering views</li>
-              <li>Manual cleanup inconsistent &amp; deprioritized</li>
-              <li>Noise slows stakeholder decisions</li>
-              <li>Compliance audit challenges</li>
-              <li>Reports inflated with historical data</li>
-            </ul>
-            <p style="margin:16px 0 0;color:#ffffff;font-weight:600;font-size:14px;">The Goal</p>
-            <p style="margin:8px 0 0;color:#cbd5e1;font-size:13px;">Automate stale record detection, engage owners, decommission obsolete items for clean, actionable inventory.</p>
-          </div>
-          
-          <!-- Stage 2: Decisions -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(16,185,129,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#6ee7b7;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(16,185,129,.2);border-radius:50%;font-weight:700;color:#6ee7b7;font-size:14px;">2</span>
-              Decisions
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">Strategic Choices</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:13px;line-height:1.6;">
-              <li><strong style="color:#ffffff;">Threshold:</strong> 12 months vs. 6 months</li>
-              <li><strong style="color:#ffffff;">Engagement:</strong> Explicit approval vs. auto-delete</li>
-              <li><strong style="color:#ffffff;">Notification:</strong> 2 reminders + timeout</li>
-              <li><strong style="color:#ffffff;">Scope:</strong> MVP detection first, Phase 3 automation</li>
-              <li><strong style="color:#ffffff;">Audit:</strong> Mandatory logging for compliance</li>
-            </ul>
-          </div>
-          
-          <!-- Stage 3: Trade-offs -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(245,158,11,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#fcd34d;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(245,158,11,.2);border-radius:50%;font-weight:700;color:#fcd34d;font-size:14px;">3</span>
-              Trade-offs
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">Gained vs. Lost</p>
-            <div style="display:grid;gap:8px;">
-              <div style="background:rgba(99,102,241,.1);border-left:2px solid #93c5fd;padding:8px;border-radius:4px;">
-                <p style="margin:0;color:#ffffff;font-weight:600;font-size:12px;">Approval Loop</p>
-                <p style="margin:2px 0 0;color:#cbd5e1;font-size:11px;">✓ Trust &amp; accountability | ✗ 30-day delay</p>
-              </div>
-              <div style="background:rgba(16,185,129,.1);border-left:2px solid #6ee7b7;padding:8px;border-radius:4px;">
-                <p style="margin:0;color:#ffffff;font-weight:600;font-size:12px;">12-Month Threshold</p>
-                <p style="margin:2px 0 0;color:#cbd5e1;font-size:11px;">✓ Balanced approach | ✗ Slower cleanup</p>
-              </div>
-              <div style="background:rgba(245,158,11,.1);border-left:2px solid #fcd34d;padding:8px;border-radius:4px;">
-                <p style="margin:0;color:#ffffff;font-weight:600;font-size:12px;">Audit Trail</p>
-                <p style="margin:2px 0 0;color:#cbd5e1;font-size:11px;">✓ Full compliance | ✗ Storage overhead</p>
-              </div>
-              <div style="background:rgba(236,72,153,.1);border-left:2px solid #f9a8d4;padding:8px;border-radius:4px;">
-                <p style="margin:0;color:#ffffff;font-weight:600;font-size:12px;">Phased Rollout</p>
-                <p style="margin:2px 0 0;color:#cbd5e1;font-size:11px;">✓ Stakeholder buy-in | ✗ Delayed ROI</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Stage 4: Implementation -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(236,72,153,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#f9a8d4;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(236,72,153,.2);border-radius:50%;font-weight:700;color:#f9a8d4;font-size:14px;">4</span>
-              Implementation
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">Solution Components</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:13px;line-height:1.6;">
-              <li>Detect: Flag 12+ month inactive records</li>
-              <li>Notify: Targeted owner confirmations</li>
-              <li>Decommission: Auto-remove after approval</li>
-              <li>Audit: Log all decisions &amp; actions</li>
-              <li>Report: Feed clean data to dashboards</li>
-            </ul>
-            <p style="margin:12px 0 0;color:#ffffff;font-weight:600;font-size:14px;">Phased Delivery</p>
-            <p style="margin:6px 0 0;color:#cbd5e1;font-size:12px;"><strong>P1:</strong> Detection | <strong>P2:</strong> MVP + notifications | <strong>P3:</strong> Auto-decommission | <strong>P4:</strong> Reporting</p>
-          </div>
-          
-          <!-- Stage 5: Metrics &amp; Risks -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(255,107,107,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#fca5a5;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(255,107,107,.2);border-radius:50%;font-weight:700;color:#fca5a5;font-size:14px;">5</span>
-              Success &amp; Risks
-            </h4>
-            <p style="margin:0 0 8px;color:#ffffff;font-weight:600;font-size:14px;">Metrics to Track</p>
-            <ul style="margin:0 0 12px;padding-left:16px;color:#cbd5e1;font-size:12px;line-height:1.5;">
-              <li>85%+ stale records removed</li>
-              <li>70%+ owner approval rate</li>
-              <li>90%+ data freshness</li>
-              <li>40% faster decisions</li>
-              <li>30% ticket reduction</li>
-            </ul>
-            <p style="margin:0 0 8px;color:#ffffff;font-weight:600;font-size:14px;">Key Risks &amp; Mitigations</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:12px;line-height:1.5;">
-              <li><strong>Non-compliance:</strong> Reminders + timeout policy</li>
-              <li><strong>Data loss:</strong> Soft-delete + audit trail</li>
-              <li><strong>Low adoption:</strong> Phased rollout + comms</li>
-              <li><strong>Performance:</strong> Batch processing + indexing</li>
-            </ul>
-          </div>
-          
-          <!-- Stage 6: Outcomes -->
-          <div style="min-width:320px;background:rgba(30,41,59,.6);border:2px solid rgba(10,185,129,.3);border-radius:12px;padding:20px;flex-shrink:0;">
-            <h4 style="color:#6ee7b7;margin:0 0 12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(16,185,129,.2);border-radius:50%;font-weight:700;color:#6ee7b7;font-size:14px;">6</span>
-              Outcomes
-            </h4>
-            <p style="margin:0 0 12px;color:#ffffff;font-weight:600;font-size:14px;">Real Impact</p>
-            <ul style="margin:0;padding-left:16px;color:#cbd5e1;font-size:13px;line-height:1.6;">
-              <li><strong style="color:#ffffff;">Noise Reduction:</strong> Large backlog of stale records removed; improved data quality &amp; signal-to-noise</li>
-              <li><strong style="color:#ffffff;">Faster Decisions:</strong> Stakeholders act on cleaner data without wading through obsolete items</li>
-              <li><strong style="color:#ffffff;">Accountability:</strong> Owners became engaged stewards; trust in inventory increased</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Right Arrow -->
-        <button style="position:absolute;right:-50px;top:50%;transform:translateY(-50%);background:var(--carousel-arrow-bg);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:20px;z-index:10;display:flex;align-items:center;justify-content:center;transition:all .3s ease;box-shadow:0 0 20px rgba(99,102,241,.3);" onclick="document.getElementById('poJourney').scrollBy({left:400,behavior:'smooth'})" title="Scroll Right">›</button>
+      <h3 class="section-title">Decisions That Shaped It</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Explicit approval, not auto-delete</h4>
+          <p class="muted">Owners confirm before anything is removed &mdash; two reminders, then a timeout. It costs a 30-day delay versus auto-deleting, but nobody gets surprised by an automated process silently deciding what's obsolete.</p>
+        </article>
+        <article class="card">
+          <h4>12-month threshold, not 6</h4>
+          <p class="muted">Slower cleanup, but fewer false positives &mdash; a shorter window would have flagged records that were just quiet, not actually stale.</p>
+        </article>
+        <article class="card">
+          <h4>Detection first, automation later</h4>
+          <p class="muted">Phase 1 only finds and flags stale records. Auto-decommissioning after approval is Phase 3 &mdash; proving the detection logic was right mattered more than moving fast on deletion.</p>
+        </article>
+        <article class="card">
+          <h4>Audit trail on every action</h4>
+          <p class="muted">Storage overhead, but it's what let compliance sign off on an automated cleanup process instead of treating it as a black box.</p>
+        </article>
       </div>
-      <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:16px;">← Scroll right to see the complete product owner journey →</p>
     </section>
-    
-    <!-- Product Owner Approach & Responsibilities -->
+
+    <!-- What I'd point to as product work -->
     <section class="container two-col" style="margin-top:16px;">
       <div>
-        <h3 class="section-title">Product Owner Approach</h3>
+        <h3 class="section-title">What I'd Point To as Product Work</h3>
         <ul class="list">
-          <li><strong>Discovery &amp; Quantification:</strong> Analyzed inventory freshness; mapped impact on reporting accuracy and decision latency.</li>
-          <li><strong>Stakeholder Alignment:</strong> Ran workshops to agree on thresholds, approval flow, and decommission rules.</li>
-          <li><strong>Backlog &amp; Prioritization:</strong> Sequenced work: detection MVP → notifications → automation → dashboards.</li>
-          <li><strong>Incremental Delivery:</strong> Shipped MVP first; iterated once benefits proven.</li>
-          <li><strong>Metrics &amp; ROI:</strong> Tracked noise reduction, response times, and report accuracy.</li>
-          <li><strong>Change Management:</strong> Communicated policy, safeguards, and ensured audit compliance.</li>
+          <li>Quantifying the noise before proposing automation &mdash; mapped how much stale data was distorting reporting and decision latency, so the case for building this wasn't a hunch.</li>
+          <li>Choosing accountability over speed. An approval loop with owner confirmation is slower than auto-delete, but it's the difference between a tool people trust and one they route around.</li>
+          <li>Sequencing detection before deletion. Phase 1 proves what's actually stale before Phase 3 gets the power to remove anything automatically &mdash; a mistake in detection logic is cheap to fix before that point, expensive after.</li>
+          <li>Treating the audit trail as a design requirement, not an afterthought, because compliance sign-off decides whether an automated cleanup process gets to run at all.</li>
         </ul>
       </div>
       <aside>
         <div class="card">
-          <h4>Key Responsibilities</h4>
+          <h4>Success Criteria Defined Upfront</h4>
           <ul class="list">
-            <li>Frame the problem with data</li>
-            <li>Align policy with stakeholders</li>
-            <li>Prioritize MVPs to prove value</li>
-            <li>Define &amp; monitor success metrics</li>
-            <li>Ensure change management &amp; safeguards</li>
+            <li>85%+ of flagged stale records resolved</li>
+            <li>70%+ owner approval rate on confirmation requests</li>
+            <li>Full audit log on every detect / notify / decommission action</li>
           </ul>
-          <h4 style="margin-top:16px;">Skills Demonstrated</h4>
-          <div class="inline">
-            <span class="badge">Data-Driven Decisions</span>
-            <span class="badge">Stakeholder Management</span>
-            <span class="badge">Backlog Prioritization</span>
-            <span class="badge">Process Design</span>
-            <span class="badge">Change Management</span>
-            <span class="badge">Governance</span>
-          </div>
+        </div>
+        <div class="card" style="margin-top: 20px;">
+          <h4>Rollout</h4>
+          <p class="muted">P1: Detection &middot; P2: MVP + owner notifications &middot; P3: Auto-decommission on approval &middot; P4: Reporting feed</p>
         </div>
       </aside>
     </section>
+
     <section class="container">
-      <a class="btn" href="index.html#projects">← Back to Projects</a>
+      <a class="btn" href="index.html#work">← Back to Projects</a>
       <a class="btn secondary" href="index.html#contact">Get in Touch</a>
     </section>
   </main>
