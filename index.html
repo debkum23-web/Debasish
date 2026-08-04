@@ -24,12 +24,11 @@
         <p class="tagline">Helping enterprise SaaS teams ship AI copilots people actually use <span class="status-badge"><i data-lucide="circle" class="pulse-icon"></i>Open to AI PM Roles</span></p>
       </div>
       <nav class="nav" id="nav">
-        <a href="#work" class="nav-link"><i data-lucide="briefcase"></i>Office Work</a>
-        <a href="#capstone" class="nav-link"><i data-lucide="rocket"></i>Personal Projects</a>
-        <a href="#po-thinking" class="nav-link"><i data-lucide="brain"></i>Thought Process</a>
-        <a href="#experience" class="nav-link"><i data-lucide="calendar"></i>Experience</a>
-        <a href="#about" class="nav-link"><i data-lucide="user"></i>About</a>
-        <a href="#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#capabilities" class="nav-link">Capabilities</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#approach" class="nav-link">Approach</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <i data-lucide="moon" class="icon-moon"></i>
@@ -41,370 +40,296 @@
     </div>
   </header>
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <p class="eyebrow"><i data-lucide="map-pin"></i>Bengaluru, India · Open to relocation & remote</p>
+        <img src="assets/img/profile.jpg" alt="Debasish Kumar" class="hero-photo" onerror="this.style.display='none'" />
+        <p class="eyebrow"><i data-lucide="map-pin"></i>Bengaluru, India · Open to relocation &amp; remote</p>
         <h2>I help enterprise SaaS teams ship AI copilots people actually use.</h2>
-        <p class="lede">Fourteen years as a Principal Engineer, the last four owning the roadmap, backlog, and PRDs for an enterprise platform used firm-wide — now working as an AI-multiplier PM: using AI to compress the distance between an ambiguous ask and a shipped, adopted feature. That engineering depth is the edge — it earns trust in the room instantly and lets me prototype the case myself instead of waiting on a team. Everything below is split two ways: what I've shipped at the office, and the personal AI products I built on my own time to prove I can do it from a blank page.</p>
-        <div class="inline" style="margin:0 0 32px;">
-          <span class="badge">LLM Deployed to Production — Message Center Platform</span>
-          <span class="badge">AI-Assisted Analysis — 1,200+ Tickets Triaged</span>
-          <span class="badge">Building Agentic AI — Jira Agent</span>
+        <p class="lede">AI-multiplier Product Manager · 14+ years as a Principal Engineer, the last four owning the roadmap for an enterprise platform used firm-wide.</p>
+        <div class="stat-line">
+          <span class="stat"><strong>LLM deployed to production</strong> — Message Center Platform</span>
+          <span class="stat"><strong>1,200+ tickets</strong> AI-assisted, 2 features shipped</span>
+          <span class="stat"><strong>30–40K sites</strong> in governance programs</span>
+          <span class="stat"><strong>100%</strong> audit pass rate</span>
         </div>
-        <div class="stat-strip">
-          <div class="stat-tile">
-            <div class="value">14+ yrs</div>
-            <div class="label">Platform engineering &amp; delivery</div>
-          </div>
-          <div class="stat-tile">
-            <div class="value">3</div>
-            <div class="label">AI products — two live, one in build</div>
-          </div>
-          <div class="stat-tile">
-            <div class="value">30–40K</div>
-            <div class="label">Sites in my governance programs (~10TB)</div>
-          </div>
-          <div class="stat-tile">
-            <div class="value">100%</div>
-            <div class="label">Audit pass rate</div>
-          </div>
+        <div class="hero-contact">
+          <a href="mailto:debkum23@gmail.com">debkum23@gmail.com</a><span class="sep">·</span>
+          <a href="tel:+919686625225">+91-9686625225</a><span class="sep">·</span>
+          <a href="https://www.linkedin.com/in/debasish-kumar-4297b42a3/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span>
+          <span>Bengaluru, India — open to relocation &amp; remote</span>
+        </div>
+        <p class="muted" style="margin-top:10px;font-size:14px;">Fluent in English and Hindi</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="container" id="about">
+      <p class="section-kicker">About</p>
+      <h3 class="section-title">Hello, I'm Debasish.</h3>
+      <p style="max-width:760px;color:var(--text-light);font-size:16px;">I'm a Principal Engineer who spent 14+ years in platform engineering before finding my way into product ownership almost by accident — I started backing up our Product Owner in 2022, and by 2024 the roadmap was fully mine. These days I work as an AI-multiplier PM: I use AI to compress the distance between an ambiguous ask and a shipped, adopted feature. Because I spent so long as an engineer, engineering teams trust me in a room in a way they don't always trust product people — that trust is probably the most useful thing I bring.</p>
+
+      <div class="prose-grid" style="margin-top:36px;">
+        <div class="prose-block">
+          <h4>Builder</h4>
+          <p>I build from the real gap, not the stated request. When leadership asked for "a better email" for Microsoft 365 advisories, the actual problem was invisibility — nobody could tell if a deadline was open, overdue, or actioned — so I built a queryable platform instead. When 1,200+ support tickets sat unanalyzed, I used AI to classify them in hours instead of weeks and shipped two features off what the data actually showed.</p>
+        </div>
+        <div class="prose-block">
+          <h4>Bridge</h4>
+          <p>I navigate stakeholders without needing direct authority. I've aligned CPO-level sponsors, compliance, and engineering on a shared roadmap, run platform advisory engagements for other business units, and once reframed a single security incident into a company-wide detection program leadership signed off on. A consulting request is usually product discovery in disguise — "can you help us with this" is a problem statement nobody's framed yet.</p>
+        </div>
+        <div class="prose-block">
+          <h4>Principles</h4>
+          <p>AI amplifies judgment I already have — it doesn't fill gaps I don't have. In the Message Center platform, the LLM interprets a question but never touches the database directly; a separate API runs the query. In my capstone, ambiguous contract language returns a null with a rationale instead of an invented value. Same rule, every product: AI finds the pattern, a human makes the call.</p>
         </div>
       </div>
     </section>
 
-    <!-- Office vs Personal work -->
+    <!-- Capabilities -->
+    <section class="container" id="capabilities">
+      <p class="section-kicker">Capabilities</p>
+      <h3 class="section-title">Where I'm most useful.</h3>
+      <div class="prose-grid">
+        <div class="prose-block">
+          <h4>AI Product Discovery</h4>
+          <p>When a stalled backlog needs a real signal instead of anecdotes. I use AI to classify and theme raw data fast, then apply the judgment on what's actually worth building — 1,200+ tickets became two shipped features this way.</p>
+        </div>
+        <div class="prose-block">
+          <h4>Platform Ownership Under Governance</h4>
+          <p>When the product has to survive an audit, not just a demo. I've built the access-control, retention, and lifecycle guardrails that let a 30–40K-site platform pass every audit while still shipping features.</p>
+        </div>
+        <div class="prose-block">
+          <h4>Cross-Functional Delivery Without Authority</h4>
+          <p>When alignment, not build capacity, is the bottleneck. I've run consulting engagements across business units, aligned CPO-level stakeholders on roadmap trade-offs, and turned a single incident into a firm-wide program.</p>
+        </div>
+        <div class="prose-block">
+          <h4>AI-Assisted Execution</h4>
+          <p>When the ask is ambiguous and there's no team to prototype it for you. I write the PRD, design the schema, and build the first working version myself — AI compresses the time from problem to proof.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
     <section class="container" id="work">
-      <p class="section-kicker">The Work</p>
-      <h3 class="section-title">What I've built</h3>
-      <p class="section-intro">Two buckets, one toggle. Office is what I've shipped inside the firm. The personal projects are what I built alone, end to end, to sharpen the product side.</p>
-      <div class="work-tabs" role="tablist">
-        <button type="button" class="work-tab active" data-view="office" role="tab" aria-selected="true"><i data-lucide="briefcase"></i>Office Work</button>
-        <button type="button" class="work-tab" data-view="personal" role="tab" aria-selected="false"><i data-lucide="rocket"></i>Personal Projects</button>
-      </div>
+      <p class="section-kicker">Selected Work</p>
+      <h3 class="section-title">What this looks like in practice.</h3>
+      <p class="section-intro">What I've shipped inside the firm, and what I built alone to prove I can do it from a blank page.</p>
 
-      <div class="work-view active" id="view-office">
-        <div class="work-block" id="flagship">
-          <h4 class="block-label">Flagship — Owned End to End</h4>
-          <a href="message-center-platform.html" class="featured-card" aria-label="View Message Center Intelligence Platform project">
-        <div class="proj-tags" style="margin-bottom:16px;">
-          <span class="flag" style="margin-bottom:0;"><i data-lucide="star"></i>Flagship · Used Firm-Wide</span>
-          <span class="proj-tag ai"><i data-lucide="sparkles"></i>LLM Deployed to Production</span>
-        </div>
-        <h4>Message Center Intelligence Platform</h4>
-        <p>Our firm tracked Microsoft 365 advisories through a daily email digest, and the critical ones kept getting buried. I replaced it with a proper platform: scheduled ingestion from Microsoft's APIs into a SQL database I designed for historical queries, an API layer of 18 endpoints, and an Angular dashboard that puts flagged messages at the top. Later I added a natural-language search where an LLM interprets the question and asks a follow-up if it's ambiguous, but a separate search API does the actual database work. Flagged messages turn into Jira tickets in one click, and Azure AD decides who sees what.</p>
-        <div class="inline">
-          <span class="badge">LLM Search + Guardrails</span>
-          <span class="badge">18 API Endpoints</span>
-          <span class="badge">SQL Schema Design</span>
-          <span class="badge">Jira Automation</span>
-          <span class="badge">Azure AD Governance</span>
-        </div>
-        <div class="featured-stats">
-          <div><div class="value">30%</div><div class="label">Support demand reduced</div></div>
-          <div><div class="value">100%</div><div class="label">Audit compliance</div></div>
-          <div><div class="value">Firm-wide</div><div class="label">Adoption by SMs, POs &amp; leaders</div></div>
-        </div>
-      </a>
-        </div>
-
-        <div class="work-block" id="ai-learning">
-          <h4 class="block-label">AI Program Work</h4>
-          <div class="grid">
-        <a href="AITicketAnalysis.html" class="card" style="border: 1px solid rgba(99, 102, 241, 0.3);" aria-label="View GenAI-Assisted Ticket Analysis project">
-          <div class="proj-tags"><span class="proj-tag ai"><i data-lucide="sparkles"></i>AI-Assisted Analysis · Shipped</span></div>
-          <h4 style="color: var(--accent-hover); margin-top: 0;">GenAI-Assisted Ticket Analysis &amp; Feature Discovery</h4>
-          <p class="muted">We had 18 months of support tickets — over 1,200 of them — and no real picture of what they were telling us. I used Excel Copilot to classify and theme them, which surfaced two feature gaps big enough to build: Copy Site Pages (310 tickets asking for it) and Re-boarding Automation (185 tickets).</p>
-          <p class="muted">The analysis took hours instead of the weeks a manual review would have needed. Both features shipped, and recurring incidents in those areas dropped 65%.</p>
-          <div class="inline">
-            <span class="badge">GenAI / Excel Copilot</span>
-            <span class="badge">Product Discovery</span>
-            <span class="badge">Data-Driven Decisions</span>
-            <span class="badge">AI Fluency</span>
-          </div>
-        </a>
-        <article class="card" style="border: 1px dashed rgba(59, 130, 246, 0.45);">
-          <div class="proj-tags"><span class="proj-tag build"><i data-lucide="hammer"></i>Agentic AI · In Build</span></div>
-          <h4 style="color: var(--accent-hover); margin-top: 0;">Jira Agent: Change Request → PRD → Epics</h4>
-          <p class="muted">The one I'm building now. Users describe a change request in plain language; the agent asks the follow-up questions a BA would, then drafts the PRD and creates the epics, stories, and subtasks in Jira — everything linked and traceable.</p>
-          <p class="muted">Same working rule as my other AI products: the agent drafts, a human approves. Nothing lands in Jira without someone signing off on it.</p>
-          <div class="inline">
-            <span class="badge">Agentic Workflow</span>
-            <span class="badge">Jira API</span>
-            <span class="badge">PRD Automation</span>
-            <span class="badge">Human-in-the-Loop</span>
-          </div>
-        </article>
+      <div style="margin-top:12px;">
+        <div class="work-entry">
+          <div class="entry-mark">MC</div>
+          <div class="entry-body">
+            <div class="entry-meta">2024–Present · Flagship</div>
+            <h4>Replacing a daily email nobody trusted with a system the whole firm relies on</h4>
+            <p class="entry-company">Message Center Intelligence Platform — Product Owner &amp; Principal Engineer</p>
+            <p class="body">Our firm tracked Microsoft 365 advisories through a daily digest email, and the critical ones kept getting buried — there was no history, and nothing connected an advisory to a person responsible for acting on it. I replaced it with a queryable platform: a SQL schema built for history, an 18-endpoint API layer, and an Angular dashboard that surfaces flagged messages first. Later I added natural-language search — an LLM interprets the question, but a separate read-only API runs the actual query, so the LLM never touches the database directly. Flagged messages become Jira tickets in one click.</p>
+            <div class="stat-line">
+              <span class="stat"><strong>30%</strong> support demand reduced</span>
+              <span class="stat"><strong>100%</strong> audit compliance</span>
+              <span class="stat"><strong>Firm-wide</strong> adoption by SMs, POs &amp; leaders</span>
+            </div>
+            <a class="case-link" href="message-center-platform.html">Read the full case study <i data-lucide="arrow-right"></i></a>
           </div>
         </div>
 
-        <div class="work-block" id="programs">
-          <h4 class="block-label">Firm-Wide Programs — Running in Parallel with the Roadmap</h4>
-          <div class="grid">
-        <article class="card">
-          <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="shield-alert"></i>Program · Active</span></div>
-          <h4>Data Oversharing Remediation</h4>
-          <p class="muted">A firm-wide effort to find and fix oversharing across 30–40K SharePoint sites — roughly 10TB of content. At that scale you don't fix things by hand; the program is about detection patterns, owner accountability, and remediation that runs without me.</p>
-          <div class="inline">
-            <span class="badge">30–40K Sites</span><span class="badge">~10TB</span><span class="badge">Access Governance</span>
-          </div>
-        </article>
-        <article class="card">
-          <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="archive"></i>Program · Active</span></div>
-          <h4>Document Retention Optimization</h4>
-          <p class="muted">Rationalizing how long content lives and where — so retention policy reflects actual business and regulatory need instead of "keep everything forever."</p>
-          <div class="inline">
-            <span class="badge">Retention Policy</span><span class="badge">Lifecycle Management</span>
-          </div>
-        </article>
-        <article class="card">
-          <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="book-check"></i>Program · Active</span></div>
-          <h4>Records Management Governance</h4>
-          <p class="muted">I own the firm's records management governance framework — the standards and guardrails that the audits, the cleanup automation, and the retention work all hang off.</p>
-          <div class="inline">
-            <span class="badge">Governance Framework</span><span class="badge">Audit Readiness</span>
-          </div>
-        </article>
+        <div class="work-entry">
+          <div class="entry-mark">AI</div>
+          <div class="entry-body">
+            <div class="entry-meta">2024–Present · AI Program Work</div>
+            <h4>Turning 1,200 unread tickets into two shipped features</h4>
+            <p class="entry-company">GenAI-Assisted Ticket Analysis &amp; Feature Discovery · Jira Agent (in build)</p>
+            <p class="body">18 months of support tickets sat unanalyzed while the roadmap was driven by whoever complained loudest. I used Excel Copilot to classify and theme the backlog — a few hours instead of weeks — and it surfaced two feature gaps big enough to build: Copy Site Pages (310 tickets) and Re-boarding Automation (185 tickets). Both shipped, and recurring incidents in those areas dropped 65%. I'm now building a Jira agent that turns a plain-language change request into a drafted PRD and linked epics — the agent drafts, a human still approves everything before it lands in Jira.</p>
+            <div class="stat-line">
+              <span class="stat"><strong>65%</strong> fewer recurring incidents</span>
+              <span class="stat"><strong>2 features</strong> shipped from ticket volume, not opinion</span>
+              <span class="stat"><strong>In build</strong> — agentic, human-in-the-loop</span>
+            </div>
+            <a class="case-link" href="AITicketAnalysis.html">Read the full case study <i data-lucide="arrow-right"></i></a>
           </div>
         </div>
 
-        <div class="work-block" id="projects">
-          <h4 class="block-label">Platform Delivery — the Non-AI Track Record</h4>
-          <div class="grid">
-            <a href="LeadershipDashboard.html" class="card" aria-label="View Unified Leadership Dashboard project details">
-              <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span><span class="proj-tag platform" style="color:var(--accent-hover);border-color:rgba(59,130,246,0.35);"><i data-lucide="crown"></i>Executive</span></div>
-              <h4>Unified Leadership Dashboard</h4>
-              <p class="muted">L1 leaders were toggling across five platforms to assemble their day. One dashboard over API connections to all five sources — adopted by the executive team, rolled out firm-wide, scaled by config.</p>
-              <div class="inline">
-                <span class="badge">API Integrations</span><span class="badge">Config-Driven Scaling</span>
-              </div>
-            </a>
-            <a href="RMSDashboard.html" class="card" aria-label="View SharePoint Governance Insight Dashboard project details">
-              <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span></div>
-              <h4>SharePoint Governance Insight Dashboard</h4>
-              <p class="muted">Power BI dashboard for governance, storage planning, and operational decisions. 30% less manual reporting, 50% fewer capacity risks.</p>
-              <div class="inline">
-                <span class="badge">Power BI</span><span class="badge">Governance</span>
-              </div>
-            </a>
-            <a href="records-cleanup.html" class="card" aria-label="View Records Cleanup Automation project details">
-              <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span></div>
-              <h4>Records Cleanup Automation</h4>
-              <p class="muted">Detects stale records, gets owner approval, decommissions the noise — so the inventory only shows what people can act on.</p>
-              <div class="inline">
-                <span class="badge">Data Quality</span><span class="badge">Process Automation</span>
-              </div>
-            </a>
-            <a href="UserReboardingAutomation.html" class="card" aria-label="View User Re-boarding Access Automation project details">
-              <div class="proj-tags"><span class="proj-tag platform"><i data-lucide="layers"></i>Platform</span><span class="proj-tag ai"><i data-lucide="sparkles"></i>AI-Discovered</span></div>
-              <h4>User Re-boarding Access Automation</h4>
-              <p class="muted">Access fixes for re-joiners went from 3-5 days to minutes; 85% fewer tickets. Exists because the GenAI ticket analysis surfaced 185 requests for it.</p>
-              <div class="inline">
-                <span class="badge">Power Automate</span><span class="badge">Process Automation</span>
-              </div>
-            </a>
+        <div class="work-entry">
+          <div class="entry-mark">GOV</div>
+          <div class="entry-body">
+            <div class="entry-meta">2024–Present · Running in Parallel</div>
+            <h4>Building the governance a 30–40K-site platform needs to pass every audit</h4>
+            <p class="entry-company">Data Oversharing Remediation · Document Retention Optimization · Records Management Governance</p>
+            <p class="body">Three programs I run alongside the roadmap: a firm-wide effort to find and fix oversharing across 30–40K SharePoint sites (~10TB), a document retention effort that rationalizes how long content lives against actual business and regulatory need, and the records management governance framework the audits and cleanup automation all hang off.</p>
+            <div class="stat-line">
+              <span class="stat"><strong>30–40K sites</strong> · ~10TB scanned</span>
+              <span class="stat"><strong>100%</strong> audit pass rate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="entry-mark">EXEC</div>
+          <div class="entry-body">
+            <div class="entry-meta">Consulting Request → Firm-Wide Rollout</div>
+            <h4>Turning a consulting request into infrastructure the firm can keep extending without me</h4>
+            <p class="entry-company">Unified Leadership Dashboard</p>
+            <p class="body">L1 leaders were toggling across five platforms just to piece together their day. I built a dashboard connecting all five over APIs — no duplicate data stores — and pushed for a config-driven onboarding pattern so adding a new leader is configuration, not a rebuild. The executive team adopted it first, then it rolled out to every L1 leader firm-wide.</p>
+            <div class="stat-line">
+              <span class="stat"><strong>5 sources</strong> unified via API</span>
+              <span class="stat"><strong>Firm-wide</strong> rollout, config-driven</span>
+            </div>
+            <a class="case-link" href="LeadershipDashboard.html">Read the full case study <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="entry-mark">+3</div>
+          <div class="entry-body">
+            <div class="entry-meta">Also Shipped</div>
+            <h4>The non-AI track record behind the roadmap</h4>
+            <p class="body">A Power BI governance dashboard that cut manual reporting 30% and capacity risks 50%. A records cleanup automation that flags stale inventory and gets owner sign-off before anything is removed. And a re-boarding access fix — surfaced by the ticket analysis above — that took re-joiner access from 3-5 days to minutes and cut related tickets 85%.</p>
+            <div class="stat-line">
+              <a class="case-link" style="margin-top:0;" href="RMSDashboard.html">SharePoint Governance Dashboard <i data-lucide="arrow-right"></i></a>
+              <a class="case-link" style="margin-top:0;" href="records-cleanup.html">Records Cleanup Automation <i data-lucide="arrow-right"></i></a>
+              <a class="case-link" style="margin-top:0;" href="UserReboardingAutomation.html">User Re-boarding Automation <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="entry-mark">'16</div>
+          <div class="entry-body">
+            <div class="entry-meta">Dec 2016 – Dec 2024 · SharePoint Platform Lead</div>
+            <h4>From engineer to product owner, almost by accident</h4>
+            <p class="body">My move into product started in 2022 — I began helping our Product Owner with backlog refinement and stakeholder calls, then covered as backup PO; by 2024 the roadmap was fully mine. Along the way I found the biggest driver of our support load was avoidable dependency on engineering, repointed the roadmap at self-service and automation, and cut tickets 30%. I built the data governance and compliance frameworks with Audit and ISO — 100% pass rate throughout — and was the primary stakeholder and offshore point of contact through major migrations, including MOSS 2007 to SharePoint Online.</p>
           </div>
         </div>
       </div>
 
-      <div class="work-view" id="view-personal">
-        <div class="work-block">
-          <h4 class="block-label">Personal Projects — Built End to End on My Own Time</h4>
-          <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(340px,1fr));">
-          <a href="schema-first-extraction.html" class="featured-card personal" aria-label="View the Schema-First Extraction capstone project">
-            <div class="proj-tags" style="margin-bottom:16px;">
-              <span class="flag" style="margin-bottom:0;"><i data-lucide="rocket"></i>Personal Capstone · v1 Complete</span>
-              <span class="proj-tag ai"><i data-lucide="sparkles"></i>AI Product</span>
-            </div>
-            <h4>Schema-First Extraction: Contract Intelligence Feed</h4>
-            <p>Legal and Sourcing teams have contract documents but no searchable view of the terms that drive renewals and risk review. I built a document intelligence prototype that turns unstructured contracts into records with confidence scores, rationale, nullable values, and review flags — designed schema-first, starting from the decisions users make rather than everything a contract contains, and evaluated honestly against CUAD ground truth.</p>
-            <div class="inline">
-              <span class="badge">Schema-First Design</span>
-              <span class="badge">Gemini Structured Output</span>
-              <span class="badge">Confidence &amp; Review Routing</span>
-              <span class="badge">CUAD Evaluation</span>
-            </div>
-            <div class="featured-stats">
-              <div><div class="value">76.67%</div><div class="label">Auto-pass at 0.70 confidence</div></div>
-              <div><div class="value">100%</div><div class="label">Precision — zero invented clauses</div></div>
-              <div><div class="value">96.55%</div><div class="label">F1 on evaluated presence signals</div></div>
-            </div>
-          </a>
-          <a href="hireradar.html" class="featured-card personal" aria-label="View the HireRadar personal project">
-            <div class="proj-tags" style="margin-bottom:16px;">
-              <span class="flag" style="margin-bottom:0;"><i data-lucide="radar"></i>Personal Project · Phase 1 Live</span>
-              <span class="proj-tag ai"><i data-lucide="sparkles"></i>AI Product</span>
-            </div>
-            <h4>HireRadar: A Job-Search Pipeline That Remembers</h4>
-            <p>My own job search was the product problem: four boards, inconsistent AI-PM titles, no tracking. I built a pipeline that searches four sources, scores roles semantically against my parsed resume, and makes one Gemini call that reads my application history — including why I rejected companies — before deciding what deserves a Telegram alert. The best decision in it: I built the full agentic orchestration loop, tested it, and set it aside for a leaner design that makes the same decisions at a fraction of the API cost.</p>
-            <div class="inline">
-              <span class="badge">Memory-Aware Pipeline</span>
-              <span class="badge">Semantic Scoring</span>
-              <span class="badge">Gemini Decision Layer</span>
-              <span class="badge">Honest "Agentic" Framing</span>
-            </div>
-            <div class="featured-stats">
-              <div><div class="value">4</div><div class="label">Job sources, deduped &amp; scored</div></div>
-              <div><div class="value">1</div><div class="label">Gemini decision call/run — down from 5-8</div></div>
-              <div><div class="value">Daily</div><div class="label">My own driver since June 2026</div></div>
-            </div>
-          </a>
-          </div>
-          <p class="muted" style="margin-top:18px;font-size:14px;">Why these exist: the office work shows I can run AI programs inside an enterprise. These show I can define, build, and honestly evaluate AI products from a blank page — schema, extraction, evaluation, memory, decision layers, all of it. Code for both is public: <a href="https://github.com/debkum23-web/schema-first-extraction" target="_blank" rel="noopener" style="color:var(--accent-hover);">schema-first-extraction</a> · <a href="https://github.com/debkum23-web/Agent-JObSearch" target="_blank" rel="noopener" style="color:var(--accent-hover);">Agent-JObSearch</a>.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Thought process -->
-    <section class="container" id="po-thinking">
-      <p class="section-kicker">Thought Process</p>
-      <h3 class="section-title">How I think as a product owner</h3>
-      <p class="section-intro">The same rules show up in the office work and the capstone — that's how you can tell they're real.</p>
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:18px;">
-        <article class="card">
-          <h4>Start from the decision, not the request</h4>
-          <p class="muted">Leadership asked for a better email; the real spec was history, urgency, and ownership. The capstone schema began the same way — from the questions Legal and Sourcing ask, not from everything a contract contains.</p>
-        </article>
-        <article class="card">
-          <h4>The LLM never touches the data directly</h4>
-          <p class="muted">In the Message Center platform, the LLM interprets the question but a separate search API runs the query. That wall was in the first design, and it's why security and compliance conversations went smoothly.</p>
-        </article>
-        <article class="card">
-          <h4>Ask, don't guess</h4>
-          <p class="muted">An ambiguous search query gets a clarifying follow-up, not a best guess. In the capstone, ambiguous contract language gets a null with a rationale, not an invented value. Same rule, two products.</p>
-        </article>
-        <article class="card">
-          <h4>AI finds the signal, people make the call</h4>
-          <p class="muted">Copilot classified 1,200 tickets in hours — but which features to build was human judgment. The capstone routes 23% of its results to human review by design. I keep that boundary deliberate.</p>
-        </article>
-        <article class="card">
-          <h4>Ship into an existing workflow</h4>
-          <p class="muted">Every AI product I've shipped replaced something people already did — a daily email, a manual review. Nobody had to adopt a new habit, which is most of why adoption happened at all.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Experience timeline (from resume) -->
-    <section class="container" id="experience">
-      <p class="section-kicker">Career</p>
-      <h3 class="section-title">Experience</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <p class="period">Dec 2024 — Present</p>
-          <p class="role">Principal Engineer · Technical Program Owner</p>
-          <p class="org">Platform Delivery &amp; AI-Native Execution</p>
-          <ul>
-            <li>Own product vision, roadmap, and backlog for an enterprise SharePoint Online platform — PRDs and specs included — working directly with the CPO and senior stakeholders on what's next.</li>
-            <li>Run delivery end to end across engineering, compliance, and operations, and own the governance and guardrails for document lifecycle, access, and automation that auditors check.</li>
-            <li>When a critical audit violation surfaced, led the cross-team remediation back to a clean compliance posture.</li>
-          </ul>
-        </div>
-        <div class="timeline-item">
-          <p class="period">Dec 2016 — Dec 2024</p>
-          <p class="role">SharePoint Platform Lead</p>
-          <p class="org">Engineering → Product Ownership transition (2022–2024)</p>
-          <ul>
-            <li>Moved into product almost by accident in 2022 — started with backlog refinement and stakeholder calls, then backup PO; by 2024 owned the roadmap and backlog outright.</li>
-            <li>Found the biggest driver of support load was avoidable dependency on engineering; repointed the roadmap at self-service and automation and cut tickets 30%.</li>
-            <li>Built the data governance and compliance frameworks with Audit and ISO — 100% audit pass rate throughout.</li>
-            <li>Primary stakeholder and offshore point of contact through major migrations, including MOSS 2007 → SharePoint Online: requirements through adoption.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- About + education -->
-    <section class="container two-col" id="about">
+      <h4 class="block-label" style="margin-top:12px;">Personal Projects — Built on My Own Time</h4>
       <div>
-        <p class="section-kicker">Profile</p>
-        <h3 class="section-title">About</h3>
-        <p>I'm Debasish, an <strong>AI-multiplier PM</strong> — 14+ years as a Principal Engineer on SharePoint, the Power Platform, and automation, the last four owning product ownership for an enterprise platform (LLMs, RAG, agents included). What I'm best at is finding the real problem underneath what users are asking for, getting stakeholders to agree on it, and then shipping something that fixes it — using AI to compress that whole loop. And because I spent so long as an engineer, engineering teams tend to trust me in a way they don't always trust product people. That trust is probably the most useful thing I bring.</p>
-        <div class="inline">
-          <span class="badge">AI Product Strategy</span>
-          <span class="badge">Agentic Systems (RAG, Tools, Guardrails)</span>
-          <span class="badge">PRD Writing</span>
-          <span class="badge">Product Ownership</span>
-          <span class="badge">Stakeholder Management</span>
-          <span class="badge">Data-Driven Decisions</span>
-          <span class="badge">SharePoint &amp; Automation</span>
+        <div class="work-entry">
+          <div class="entry-mark">SFE</div>
+          <div class="entry-body">
+            <div class="entry-meta">Personal Capstone · v1 Complete</div>
+            <h4>Building — and honestly evaluating — an AI product from a blank page</h4>
+            <p class="entry-company">Schema-First Extraction: Contract Intelligence Feed</p>
+            <p class="body">Legal and Sourcing teams have contract documents but no searchable view of the terms that drive renewals and risk. I built a document intelligence prototype that turns unstructured contracts into records with confidence scores, rationale, and review flags — schema-first, starting from the decisions users make rather than everything a contract contains — and evaluated it honestly against CUAD ground truth instead of reporting a big vague number.</p>
+            <div class="stat-line">
+              <span class="stat"><strong>76.67%</strong> auto-pass at 0.70 confidence</span>
+              <span class="stat"><strong>100%</strong> precision, zero invented clauses</span>
+              <span class="stat"><strong>96.55%</strong> F1 on evaluated signals</span>
+            </div>
+            <a class="case-link" href="schema-first-extraction.html">Read the full case study <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="entry-mark">HR</div>
+          <div class="entry-body">
+            <div class="entry-meta">Personal Project · Daily Driver Since June 2026</div>
+            <h4>The part I'm proudest of is the agentic loop I turned off</h4>
+            <p class="entry-company">HireRadar: A Job-Search Pipeline That Remembers</p>
+            <p class="body">My own AI-PM job search was the product problem: four boards, inconsistent titles, no tracking. I built a pipeline that searches four sources, scores roles semantically, and makes one Gemini call that reads my application history before deciding what deserves an alert. I built the full agentic orchestration loop first — it worked — then set it aside for a leaner design that makes the same decisions at a fraction of the API cost, because reliability beat spectacle for a tool I depend on daily.</p>
+            <div class="stat-line">
+              <span class="stat"><strong>4 sources</strong> deduped &amp; scored</span>
+              <span class="stat"><strong>1 Gemini call</strong>/run, down from 5-8</span>
+              <span class="stat"><strong>Daily driver</strong> since June 2026</span>
+            </div>
+            <a class="case-link" href="hireradar.html">Read the full case study <i data-lucide="arrow-right"></i></a>
+          </div>
         </div>
       </div>
-      <aside>
-        <div class="card">
-          <h4>Education</h4>
-          <ul class="list">
+      <p class="muted" style="margin-top:8px;font-size:14px;">Code for both is public: <a href="https://github.com/debkum23-web/schema-first-extraction" target="_blank" rel="noopener" style="color:var(--accent-hover);">schema-first-extraction</a> · <a href="https://github.com/debkum23-web/Agent-JObSearch" target="_blank" rel="noopener" style="color:var(--accent-hover);">Agent-JObSearch</a></p>
+    </section>
+
+    <!-- Approach -->
+    <section class="container" id="approach">
+      <p class="section-kicker">Approach</p>
+      <h3 class="section-title">How I work.</h3>
+      <div style="margin-top:8px;">
+        <div class="approach-step">
+          <div class="step-num">Step 01</div>
+          <div>
+            <h4>Start From the Decision, Not the Request</h4>
+            <p>Leadership asked for a better email; the real spec was history, urgency, and ownership. My capstone schema began the same way — from the questions Legal and Sourcing actually ask, not from everything a contract contains.</p>
+          </div>
+        </div>
+        <div class="approach-step">
+          <div class="step-num">Step 02</div>
+          <div>
+            <h4>Wall the AI Off From the Data</h4>
+            <p>In the Message Center platform, the LLM interprets the question but a separate search API runs it — that guardrail was in the first design, not bolted on, which is why security and compliance conversations went smoothly.</p>
+          </div>
+        </div>
+        <div class="approach-step">
+          <div class="step-num">Step 03</div>
+          <div>
+            <h4>Ask, Don't Guess</h4>
+            <p>An ambiguous search query gets a clarifying follow-up, not a best guess. Ambiguous contract language gets a null with a rationale, not an invented value. Same rule, every product I build.</p>
+          </div>
+        </div>
+        <div class="approach-step">
+          <div class="step-num">Step 04</div>
+          <div>
+            <h4>Let AI Find the Signal, Keep the Call Human</h4>
+            <p>Copilot classified 1,200 tickets in hours, but which features to build was my judgment. The capstone routes 23% of results to human review by design. I keep that boundary deliberate, and I ship into workflows people already use so adoption isn't a separate fight.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background -->
+    <section class="container" id="background">
+      <p class="section-kicker">Background</p>
+      <h3 class="section-title">Education, tools, and good to know.</h3>
+      <div class="bg-grid">
+        <div>
+          <h5>Education</h5>
+          <ul>
             <li><strong>M.B.A.</strong> (General Management)<br /><span class="muted">Pondicherry University</span></li>
-            <li><strong>B.Tech</strong> in Computer Engineering<br /><span class="muted">Sinhgad College of Engineering, Pune University</span></li>
+            <li><strong>B.Tech</strong>, Computer Engineering<br /><span class="muted">Sinhgad College of Engineering, Pune University</span></li>
           </ul>
         </div>
-        <div class="card" style="margin-top: 20px;">
-          <h4>Good to Know</h4>
-          <ul class="list">
+        <div>
+          <h5>Tools</h5>
+          <p class="tools-text">Power BI, Power Automate, SharePoint Online, SQL, Angular, Azure AD, Jira, Confluence, Excel Copilot, Gemini API, ChromaDB</p>
+        </div>
+        <div>
+          <h5>Good to Know</h5>
+          <ul>
             <li>Based in Bengaluru, Karnataka, India</li>
             <li>Available for relocation or remote roles</li>
             <li>Fluent in English and Hindi</li>
           </ul>
         </div>
-      </aside>
+      </div>
+    </section>
+
+    <!-- Fun Facts -->
+    <section class="container">
+      <p class="section-kicker">Fun Facts</p>
+      <h3 class="section-title">A few things you might not guess.</h3>
+      <ul class="fact-list">
+        <li>I'm Bengali, studied in Pune, Maharashtra, and I'm now building my life in Bangalore. 🏙️</li>
+        <li>My favorite way to unwind is driving somewhere with my wife and our 2-year-old. 🚗</li>
+        <li>Free evenings usually mean Netflix or a good web series. 📺</li>
+      </ul>
     </section>
 
     <!-- Contact -->
     <section class="container" id="contact">
       <p class="section-kicker">Contact</p>
-      <h3 class="section-title">Get in Touch</h3>
-      <div class="grid">
-        <div class="card">
-          <h4><i data-lucide="mail" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Email</h4>
-          <p><a href="mailto:debkum23@gmail.com">debkum23@gmail.com</a></p>
-        </div>
-        <div class="card">
-          <h4><i data-lucide="phone" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Phone</h4>
-          <p><a href="tel:+919686625225">+91-9686625225</a></p>
-        </div>
-        <div class="card">
-          <h4><i data-lucide="map-pin" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Location</h4>
-          <p>Bengaluru, India — open to relocation &amp; remote</p>
-        </div>
+      <h3 class="section-title">Let's connect.</h3>
+      <div class="hero-contact" style="margin-top:0;">
+        <a href="mailto:debkum23@gmail.com">debkum23@gmail.com</a><span class="sep">·</span>
+        <a href="tel:+919686625225">+91-9686625225</a><span class="sep">·</span>
+        <a href="https://www.linkedin.com/in/debasish-kumar-4297b42a3/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span>
+        <span>Bengaluru, India — open to relocation &amp; remote</span>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
+      <small>&copy; <span id="year"></span> Debasish Kumar · Bengaluru, India</small>
     </div>
   </footer>
   <script src="assets/js/site.js"></script>
-  <script>
-    (function () {
-      var tabs = document.querySelectorAll('.work-tab');
-      var views = document.querySelectorAll('.work-view');
-      function activate(view) {
-        tabs.forEach(function (t) {
-          var on = t.getAttribute('data-view') === view;
-          t.classList.toggle('active', on);
-          t.setAttribute('aria-selected', on ? 'true' : 'false');
-        });
-        views.forEach(function (v) {
-          v.classList.toggle('active', v.id === 'view-' + view);
-        });
-      }
-      tabs.forEach(function (t) {
-        t.addEventListener('click', function () {
-          activate(t.getAttribute('data-view'));
-        });
-      });
-      function handleHash() {
-        if (location.hash === '#capstone') {
-          activate('personal');
-          var w = document.getElementById('work');
-          if (w) w.scrollIntoView();
-        } else if (location.hash === '#work' || location.hash === '#projects' || location.hash === '#flagship') {
-          activate('office');
-        }
-      }
-      window.addEventListener('hashchange', handleHash);
-      handleHash();
-    })();
-  </script>
 </body>
 </html>
