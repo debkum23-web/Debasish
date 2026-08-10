@@ -106,6 +106,25 @@
       </div>
     </section>
 
+    <section class="container" id="engineering-tradeoff">
+      <h3 class="section-title">Talking Trade-Offs With Engineering: The Meeting-Ordering Rebuild</h3>
+      <p>Assistants prioritize each leader's Key Meetings by dragging them into order on the input page; the dashboard has to reflect that exact order, or the prioritization an assistant just did becomes invisible. Engineering's first pass was a straightforward sequential <code>SortOrder</code> column — functionally correct, and the version I didn't sign off on.</p>
+      <div class="grid" style="margin-top: 16px;">
+        <article class="card">
+          <h4><i data-lucide="alert-triangle" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> The Cost I Pushed On</h4>
+          <p class="muted">Sequential numbering meant one dragged meeting forced a rewrite of every row below it — 10 SharePoint writes for a single drag on a 10-meeting day. I asked what this cost at scale before we built it, not after.</p>
+        </article>
+        <article class="card">
+          <h4><i data-lucide="git-branch" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> The Trade-Off Conversation</h4>
+          <p class="muted">Walked engineering through it together: does every drag need to touch every row, how do Jira and Trello solve this, do we need new infrastructure (SignalR, timer jobs) or can the existing refresh model absorb it. Ruled out new infrastructure deliberately — no risk to build for that didn't exist yet.</p>
+        </article>
+        <article class="card">
+          <h4><i data-lucide="check-circle" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> The Outcome</h4>
+          <p class="muted">Moved to gap numbering (100, 200, 300...) — only the dragged row changes. <strong>~90% reduction in writes</strong> for the common case, zero new services, and a renumbering edge case caught and handed to QA to verify before it could silently reorder what a leader sees.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="container">
       <h3 class="section-title">Key Takeaways</h3>
       <article class="card">
