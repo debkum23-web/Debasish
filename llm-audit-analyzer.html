@@ -21,10 +21,10 @@
         <p class="tagline">Helping enterprise SaaS teams ship AI copilots people actually use</p>
       </div>
       <nav class="nav" id="nav">
-        <a href="index.html" class="nav-link"><i data-lucide="home"></i>Home</a>
-        <a href="index.html#projects" class="nav-link"><i data-lucide="folder"></i>Projects</a>
-        <a href="index.html#about" class="nav-link"><i data-lucide="user"></i>About</a>
-        <a href="index.html#contact" class="nav-link"><i data-lucide="mail"></i>Contact</a>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#work" class="nav-link">Work</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <i data-lucide="moon" class="icon-moon"></i>
@@ -58,12 +58,12 @@
     <section class="container two-col">
       <div>
         <h3 class="section-title">The Problem</h3>
-        <p>An employee accidentally accessed a confidential SharePoint site and modified a file. HR and leadership needed answers immediately: who accessed the site, what was changed, when did it happen, and what was the impact? Traditionally, this investigation falls on the technical team—a process that demands deep expertise in SharePoint audit logs, JSON parsing, and technical event codes. Even for a seemingly straightforward incident, analysis takes 4-6 hours of manual log review.</p>
-        
-        <p>But here's the friction: every time a potential breach occurs, HR and leadership must wait. They can't investigate themselves because audit logs are too technical. They depend entirely on a small technical team to stop their current work and dive into logs. Incidents that should be resolved in minutes stretch into hours. Critical information doesn't reach decision-makers when they need it. The organization is left vulnerable, slow to respond, and unable to empower its leadership team to take ownership of security incidents that directly affect their business.</p>
+        <p>An employee accidentally accessed a confidential SharePoint site and modified a file. HR and leadership wanted answers fast: who touched it, what changed, when, and how bad was it. In practice that meant handing it to whoever on the technical team could read SharePoint audit logs — raw JSON, cryptic event codes — and even a simple incident like this one took 4-6 hours of manual log review to answer.</p>
+
+        <p>The real problem was the dependency, not any one investigation. HR and leadership couldn't read the logs themselves, so every incident meant pulling someone off their actual work to go dig through JSON. What should have taken minutes stretched into hours, and the people who needed the answer fastest were the ones furthest from being able to get it on their own.</p>
 
         <h3 class="section-title">The Goal</h3>
-        <p>What if HR and leadership could investigate incidents themselves? No technical expertise required. No waiting for the technical team. No JSON parsing or complex log analysis. Just straightforward questions: "Who accessed this file on Friday?" "What changes were made?" "Which accounts touched this site?" And get answers in minutes, not hours. Enable non-technical leaders to be their first line of incident response, reducing bottlenecks and accelerating organizational response to potential breaches.</p>
+        <p>Let HR and leadership investigate incidents themselves — no JSON, no waiting on the technical team. Just plain questions: "Who accessed this file on Friday?" "What changed?" "Which accounts touched this site?" — answered in minutes instead of hours, with non-technical leaders as the first line of response instead of the last.</p>
       </div>
       <aside>
         <div class="card">
@@ -92,7 +92,7 @@
         </article>
         <article class="card">
           <h4>Ship What Matters First</h4>
-          <p class="muted">I prioritized ruthlessly. MVP 1: natural language chat interface. That solves the core pain (hours to minutes). Everything else—trend analysis, anomaly detection, incident correlation—goes in later, after I see how teams actually use it. Speed to value matters more than feature completeness.</p>
+          <p class="muted">I prioritized ruthlessly. MVP 1 was just the natural-language chat interface, because that alone solves the core pain — hours to minutes. Trend analysis, anomaly detection, incident correlation, all of it waits until I see how teams actually use the first thing.</p>
         </article>
         <article class="card">
           <h4>Measure Everything</h4>
@@ -104,18 +104,18 @@
         </article>
         <article class="card">
           <h4>Be Honest About Limitations</h4>
-          <p class="muted">Vector search isn't perfect—it captures meaning beautifully but might miss edge cases. Embeddings are semantic, not syntactic. I told the security team exactly that upfront. No overselling, no false confidence. Build trust through transparency, and they'll give you the benefit of the doubt when something needs iteration.</p>
+          <p class="muted">Vector search captures meaning well but isn't perfect — it's semantic, not syntactic, and it can miss edge cases. I told the security team that upfront, no overselling. When something later needed fixing, they came to me with the feedback instead of quietly losing trust in the tool.</p>
         </article>
       </div>
     </section>
 
     <section class="container">
       <h3 class="section-title">How It Works</h3>
-      <p>The system combines three key pieces working together seamlessly:</p>
+      <p>Three pieces, each doing one job:</p>
       <div class="grid">
         <article class="card">
           <h4>Understand the Data</h4>
-          <p class="muted">First, we load your SharePoint audit logs from CSV and parse the nested JSON data inside. This gets messy fast—lots of technical codes and nested fields. We extract what matters: who did what, when, and where. All the metadata that helps answer questions.</p>
+          <p class="muted">It loads SharePoint audit logs from CSV and parses the nested JSON inside — which gets messy fast, all technical codes and buried fields — and pulls out what actually matters: who did what, when, and where.</p>
         </article>
         <article class="card">
           <h4>Convert to Semantic Understanding</h4>
@@ -145,7 +145,7 @@
         </article>
         <article class="card">
           <h4>Trust the Results</h4>
-          <p class="muted">When everyone uses the same tool, they get the same answers. No more inconsistent investigations where one team finds something another missed. And because answers are grounded in real audit data (not AI hallucination), you can actually trust the results.</p>
+          <p class="muted">Everyone using the same tool means everyone gets the same answer — no more one team catching something another missed. And because every answer is grounded in the actual audit data instead of guesswork, the results hold up to scrutiny.</p>
         </article>
         <article class="card">
           <h4>Never Outgrow It</h4>
@@ -202,14 +202,13 @@
     <section class="container">
       <h3 class="section-title">What I Learned</h3>
       <article class="card">
-        <p>Building products in the AI era taught me something important: the fundamentals haven't changed, they've just gotten harder. You still need to truly understand your users' pain. You still need to prioritize ruthlessly. You still need to measure what matters. But now you also need to be thoughtful about when and how AI helps, and brutally honest about when it doesn't.</p>
-        <p style="margin-top: 1rem;">This project wasn't about building an impressive demo. It was about turning 4-6 hour investigations into 5-minute conversations. That only happens when you obsess over what users actually need, validate your approach before over-committing, and stay flexible enough to iterate when reality differs from your assumptions. The AI part—RAG, embeddings, LLM generation—that's the technique. The hard part is product strategy: knowing what to build, why it matters, who it serves, and how to measure if it's working.</p>
-        <p style="margin-top: 1rem;">The other thing I'd carry forward: being upfront about limitations paid off more than any feature did. I told the security team exactly where vector search falls short and built verification into the high-stakes paths. Because of that, when something did need iteration they came to me with feedback instead of quietly abandoning the tool. That's the difference between a tool people are told to use and one they keep using.</p>
+        <p>The AI part of this — RAG, embeddings, an LLM answering from real data instead of guessing — turned out to be the easy part. It's well-trodden ground by now. The harder part was the same product work it always is: sitting with security analysts long enough to see what they actually got stuck on, saying no to features that would've looked impressive on a slide but didn't move the 4-6-hour number, and being straight with people about where the AI falls short instead of letting them find out the hard way.</p>
+        <p style="margin-top: 1rem;">Being upfront about limitations paid off more than any single feature did. I told the security team exactly where vector search falls short and built verification into the high-stakes paths. Because of that, when something did need fixing later, they brought it to me instead of quietly deciding not to trust the tool. That's the difference between people using something because they were told to and using it because it actually works for them.</p>
       </article>
     </section>
 
     <section class="container">
-      <a class="btn" href="index.html#projects">← Back to Projects</a>
+      <a class="btn" href="index.html#work">← Back to Work</a>
       <a class="btn secondary" href="index.html#contact">Get in Touch</a>
     </section>
   </main>
