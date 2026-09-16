@@ -1,0 +1,5 @@
+# Impeccable local/runtime state — not shared project config
+.impeccable/config.local.json
+.impeccable/live/sessions/
+.impeccable/live/roots.json
+.impeccable/live/inject-journal.json

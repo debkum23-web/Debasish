@@ -5,11 +5,11 @@
   <title>Schema-First Extraction: Contract Intelligence Feed – Debasish Kumar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Personal capstone: a schema-first document intelligence prototype that turns unstructured contracts into reviewable, evidence-backed records — with confidence scores, review routing, and honest CUAD-bounded evaluation." />
-  <script>(function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <script>(function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Source+Serif+4:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -18,7 +18,7 @@
     <div class="container header-content">
       <div class="header-left">
         <h1><a href="index.html">Debasish Kumar</a></h1>
-        <p class="tagline">Helping enterprise SaaS teams ship AI copilots people actually use</p>
+        <p class="tagline">Principal Engineer turned AI Product Manager · Helping enterprise SaaS teams ship AI feature products people actually use</p>
       </div>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav-link">Home</a>
@@ -39,7 +39,7 @@
   <main>
     <section class="hero">
       <div class="container">
-        <p class="eyebrow"><i data-lucide="rocket"></i>Personal Capstone — Built on My Own Time</p>
+        <div class="hero-status"><span class="status-chip live"><span class="dot"></span>Live</span><span class="entry-meta">Personal Capstone — Built on My Own Time</span></div>
         <h2>Building — and honestly evaluating — an AI product from a blank page</h2>
         <p class="tagline" style="color: var(--text); font-size: 18px; margin-top: 12px;">Schema-First Extraction: Contract Intelligence Feed</p>
         <div class="hero-actions" style="margin-top: 24px;">
@@ -69,7 +69,8 @@
 
         <h3 class="section-title" style="margin-top: 32px;">The Product Decision</h3>
         <p>I wrote this rule down before writing any code, and it drove everything after:</p>
-        <div class="card" style="border-left: 3px solid var(--accent); margin-top: 12px;">
+        <div class="prose-block" style="margin-top: 12px;">
+          <h4>Directive</h4>
           <p style="font-style: italic; margin: 0;">"Start with the decisions users need to make, define the smallest reliable data contract that supports those decisions, and expand only when real usage and evaluation justify it."</p>
         </div>
         <p style="margin-top: 16px;">So the goal was never to capture every sentence of every contract. It was a small set of high-value signals — renewals, liability, jurisdiction, indemnification — made visible at portfolio scale, with uncertainty explicit enough that a human knows what to trust and what to review.</p>
