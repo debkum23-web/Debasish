@@ -52,9 +52,9 @@
           </div>
           <p class="lede">Principal Engineer turned AI-Multiplier Product Manager · 15+ years total experience, deep technical roots · Enterprise SaaS, M365/SharePoint, LLM Products</p>
           <div class="stat-strip" aria-label="Headline results, at a glance">
-            <div class="stat-tile"><span class="value">30%</span><span class="label">support demand<br/>reduced</span></div>
-            <div class="stat-tile"><span class="value">100%</span><span class="label">audit pass<br/>rate</span></div>
-            <div class="stat-tile"><span class="value">1,200+</span><span class="label">tickets analyzed<br/>into 2 shipped features</span></div>
+            <div class="stat-tile"><span class="value">65%</span><span class="label">fewer recurring<br/>incidents</span></div>
+            <div class="stat-tile"><span class="value">30%</span><span class="label">fewer support tickets<br/>from 1,200+ analyzed</span></div>
+            <div class="stat-tile"><span class="value">1,000+</span><span class="label">exposure risks remediated<br/>across 30–40K sites</span></div>
           </div>
         </div>
         <img src="assets/img/profile.png" alt="Debasish Kumar" class="hero-photo" onerror="this.style.display='none'" />
@@ -73,7 +73,7 @@
         </div>
         <div class="prose-block">
           <h4>Bridge</h4>
-          <p>A lot of my work involves getting people aligned without having formal authority over them. I've brought CPO-level sponsors, compliance, and engineering onto the same roadmap, run advisory work for other business units, and once contained a high-risk data-exposure incident the same day it surfaced — coordinating Legal, HR, Audit, and Engineering, none of whom reported to me, while running the access-log forensics that pinned down root cause — then turned that single incident into a company-wide detection program that leadership backed. What I've noticed is that a consulting request is usually product discovery wearing a different hat. Someone asking "can you help with this" almost always means there's a real problem nobody's put into words yet.</p>
+          <p>A lot of my work involves getting people aligned without having formal authority over them. I've brought senior leadership, compliance, and engineering onto the same roadmap, run advisory work for other business units, and once contained a high-risk data-exposure incident the same day it surfaced — coordinating Legal, HR, Audit, and Engineering, none of whom reported to me, while running the access-log forensics that pinned down root cause — then turned that single incident into a company-wide detection program that leadership backed. What I've noticed is that a consulting request is usually product discovery wearing a different hat. Someone asking "can you help with this" almost always means there's a real problem nobody's put into words yet.</p>
         </div>
         <div class="prose-block">
           <h4>Principles</h4>
@@ -96,7 +96,7 @@
         </div>
         <div class="prose-block">
           <h4>Cross-Functional Delivery Without Authority</h4>
-          <p>Some problems are really about getting people to agree, more than about the build itself, and that's usually where I step in. I've run consulting engagements across business units, worked roadmap trade-offs with CPO-level stakeholders, and turned a single incident into a firm-wide program.</p>
+          <p>Some problems are really about getting people to agree, more than about the build itself, and that's usually where I step in. I've run consulting engagements across business units, worked roadmap trade-offs with senior leadership, and turned a single incident into a firm-wide program.</p>
         </div>
         <div class="prose-block">
           <h4>AI-Assisted Execution</h4>
@@ -108,7 +108,7 @@
     <!-- Work -->
     <section class="container" id="work">
       <h3 class="section-title"><span class="rubric">Selected Work — </span>What this looks like in practice.</h3>
-      <p class="section-intro">What I've shipped inside the firm, and what I built alone to prove I can do it from a blank page.</p>
+      <p class="section-intro">What I've shipped inside the firm, and what I built alone to prove I can do it from a blank page. The three lead case studies follow the same six steps: problem, product decision, stakeholder alignment, technical approach, outcome, ongoing ownership.</p>
 
       <div style="margin-top:12px;">
         <div class="work-entry">
@@ -118,13 +118,20 @@
           </div>
           <div class="entry-body">
             <div class="entry-meta">2024–Present · Flagship</div>
-            <h4>Replacing a daily email nobody trusted with a system the whole firm relies on</h4>
+            <h4>Making sure no critical Microsoft advisory goes untracked</h4>
             <p class="entry-company">Message Center Intelligence Platform — Product Owner, built end to end</p>
-            <p class="body">Our firm tracked Microsoft 365 advisories through a daily digest email, and the critical ones kept getting buried — there was no history, and nothing connected an advisory to a person responsible for acting on it. I replaced it with a queryable platform: a SQL schema built for history, an 18-endpoint API layer, and an Angular dashboard that surfaces flagged messages first. Later I added natural-language search — an LLM interprets the question, but a separate read-only API runs the actual query, so the LLM never touches the database directly. Flagged messages become Jira tickets in one click.</p>
+            <dl class="frame">
+              <div class="frame-row"><dt>Problem</dt><dd>Microsoft 365 advisories reached us as a daily digest email. Critical ones were buried, there was no history, and nothing tied an advisory to someone accountable, so a compliance risk could go untracked.</dd></div>
+              <div class="frame-row"><dt>Product decision</dt><dd>Didn't build a better email. Named the three real gaps (history, urgency, ownership) and shipped in order of usefulness, with the LLM walled off from the database from day one.</dd></div>
+              <div class="frame-row"><dt>Stakeholder alignment</dt><dd>Leadership approved on the risk. M365 admin leads and product managers came on board after seeing a working prototype: dashboard vs. email, where advisories can't be lost.</dd></div>
+              <div class="frame-row"><dt>Technical approach</dt><dd>SQL schema built for history, an 18-endpoint API layer, an Angular dashboard that surfaces flagged items first, LLM natural-language search over a read-only API, and one-click Jira tickets.</dd></div>
+              <div class="frame-row"><dt>Outcome</dt><dd>65% fewer recurring incidents, launched firm-wide, with identity-governed access.</dd></div>
+              <div class="frame-row"><dt>Ongoing ownership</dt><dd>I own the MVP 2 priorities and the success measures the platform is held to after launch.</dd></div>
+            </dl>
             <div class="stat-line">
-              <span class="stat"><strong>30%</strong> support demand reduced</span>
+              <span class="stat"><strong>65%</strong> fewer recurring incidents</span>
+              <span class="stat"><strong>Firm-wide</strong> launch</span>
               <span class="stat"><strong>100%</strong> audit compliance</span>
-              <span class="stat"><strong>Firm-wide</strong> adoption by SMs, POs &amp; leaders</span>
             </div>
             <a class="case-link" href="message-center-platform.html">Read the full case study <i data-lucide="arrow-right"></i></a>
           </div>
@@ -136,12 +143,19 @@
             <span class="rail-code">AI</span>
           </div>
           <div class="entry-body">
-            <div class="entry-meta">2024–Present · Shipped</div>
+            <div class="entry-meta">Shipped as Lead Engineer · Support-ticket reduction</div>
             <h4>Turning 1,200 unread tickets into two shipped features</h4>
             <p class="entry-company">GenAI-Assisted Ticket Analysis &amp; Feature Discovery</p>
-            <p class="body">18 months of support tickets sat unanalyzed while the roadmap was driven by whoever complained loudest. I used Excel Copilot to classify and theme the backlog — a few hours instead of weeks — and it surfaced two feature gaps big enough to build: Copy Site Pages (310 tickets) and Re-boarding Automation (185 tickets). Both shipped, and recurring incidents in those areas dropped 65%.</p>
+            <dl class="frame">
+              <div class="frame-row"><dt>Problem</dt><dd>18 months of support tickets sat unread while the roadmap was driven by whoever complained loudest and support demand kept coming.</dd></div>
+              <div class="frame-row"><dt>Product decision</dt><dd>Let ticket volume settle prioritization, and point investment at self-service and automation. AI finds the pattern; I make the call.</dd></div>
+              <div class="frame-row"><dt>Stakeholder alignment</dt><dd>"310 tickets are asking for this" ended debates that "I think users want this" never could. Every AI category was spot-checked before anyone saw it.</dd></div>
+              <div class="frame-row"><dt>Technical approach</dt><dd>Excel Copilot classified and themed 1,200+ tickets into 12 clusters in hours instead of weeks. Two had the volume to build: Copy Site Pages (310) and Re-boarding Automation (185).</dd></div>
+              <div class="frame-row"><dt>Outcome</dt><dd>Support tickets down 30%, and both features shipped.</dd></div>
+              <div class="frame-row"><dt>Ongoing ownership</dt><dd>The data-driven process replaced opinion-driven prioritization and stayed with the roadmap I own.</dd></div>
+            </dl>
             <div class="stat-line">
-              <span class="stat"><strong>65%</strong> fewer recurring incidents</span>
+              <span class="stat"><strong>30%</strong> fewer support tickets</span>
               <span class="stat"><strong>2 features</strong> shipped from ticket volume, not opinion</span>
             </div>
             <a class="case-link" href="AITicketAnalysis.html">Read the full case study <i data-lucide="arrow-right"></i></a>
@@ -172,14 +186,22 @@
           </div>
           <div class="entry-body">
             <div class="entry-meta">2024–Present · Running in Parallel</div>
-            <h4>Building the governance a 30–40K-site platform needs to pass every audit</h4>
-            <p class="entry-company">Data Oversharing Remediation · Document Retention Optimization · Records Management Governance</p>
-            <p class="body">Three programs I run alongside the roadmap, born out of that incident containment: a firm-wide effort to find and fix oversharing across 30–40K SharePoint sites (~10TB) that has triaged and remediated 1,000+ previously undetected use cases with a full assurance trail and zero silent escalations since launch, a document retention effort that rationalizes how long content lives against actual business and regulatory need, and the records management governance framework the audits and cleanup automation all hang off.</p>
+            <h4>Turning one data-exposure incident into a framework instead of a case-by-case scramble</h4>
+            <p class="entry-company">Data Oversharing Remediation — security-risk detection across a 30–40K-site platform</p>
+            <dl class="frame">
+              <div class="frame-row"><dt>Problem</dt><dd>A high-severity exposure incident, contained the same day. The harder question was where else it was happening, and the only way to find out was to wait for the next one.</dd></div>
+              <div class="frame-row"><dt>Product decision</dt><dd>Build a repeatable framework in-house instead of handling it case by case, with site owners confirming sensitivity before anything is removed.</dd></div>
+              <div class="frame-row"><dt>Stakeholder alignment</dt><dd>Coordinated Legal, HR, Audit, and Engineering on containment, got leadership to back a company-wide program, and designed who does what between M365 admins and the comms team.</dd></div>
+              <div class="frame-row"><dt>Technical approach</dt><dd>An in-house scan of all sites; M365 admins identify over-exposure and report; the comms team reaches out to owners, who remove the exposure or take the item down.</dd></div>
+              <div class="frame-row"><dt>Outcome</dt><dd>1,000+ previously undetected exposure risks remediated across 30–40K sites (~10TB), with zero silent escalations since launch.</dd></div>
+              <div class="frame-row"><dt>Ongoing ownership</dt><dd>The comms team keeps validating each report. Scanning and reporting have since been improved to run closer to real time.</dd></div>
+            </dl>
             <div class="stat-line">
               <span class="stat"><strong>30–40K sites</strong> · ~10TB scanned</span>
-              <span class="stat"><strong>1,000+</strong> use cases triaged &amp; remediated</span>
+              <span class="stat"><strong>1,000+</strong> exposure risks remediated</span>
               <span class="stat"><strong>100%</strong> audit pass rate</span>
             </div>
+            <a class="case-link" href="data-oversharing-remediation.html">Read the full case study <i data-lucide="arrow-right"></i></a>
           </div>
         </div>
 

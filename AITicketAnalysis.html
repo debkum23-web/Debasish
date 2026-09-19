@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>GenAI-Assisted Ticket Analysis & Feature Discovery – Debasish Kumar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI-powered ticket analysis to uncover product gaps, identify feature vs. defect patterns, and drive data-driven product decisions at scale." />
+  <meta name="description" content="GenAI analysis of 1,200+ support tickets replaced opinion-driven roadmap prioritization with a data-driven process, redirected investment to self-service and automation, and cut support tickets by 30%." />
   <script>(function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,6 +40,11 @@
       <div class="container">
         <h2>Turning 1,200 unread tickets into two shipped features</h2>
         <p class="tagline" style="color: var(--text); font-size: 18px; margin-top: 12px;">GenAI-Assisted Ticket Analysis &amp; Feature Discovery</p>
+        <div class="stat-strip" aria-label="Headline results, at a glance">
+          <div class="stat-tile"><span class="value">30%</span><span class="label">fewer support<br/>tickets</span></div>
+          <div class="stat-tile"><span class="value">1,200+</span><span class="label">tickets analyzed,<br/>18 months of backlog</span></div>
+          <div class="stat-tile"><span class="value">2</span><span class="label">features shipped from<br/>ticket volume, not opinion</span></div>
+        </div>
       </div>
     </section>
     <section class="container">
@@ -48,130 +53,137 @@
         <span class="badge">Product Discovery</span>
         <span class="badge">Data-Driven Decisions</span>
         <span class="badge">Feature Prioritization</span>
-        <span class="badge">Incident Reduction</span>
+        <span class="badge">Support Demand Reduction</span>
+      </div>
+      <nav class="stage-nav" aria-label="Case study stages">
+        <a href="#problem"><span>01</span>Problem</a>
+        <a href="#decision"><span>02</span>Product Decision</a>
+        <a href="#alignment"><span>03</span>Stakeholder Alignment</a>
+        <a href="#approach"><span>04</span>Technical Approach</a>
+        <a href="#outcome"><span>05</span>Outcome</a>
+        <a href="#ownership"><span>06</span>Ongoing Ownership</a>
+      </nav>
+    </section>
+
+    <!-- 01 Problem -->
+    <section class="container stage-section" id="problem">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">01</span><h3>Problem</h3></div>
+        <div class="stage-body">
+          <p>We were sitting on 18 months of support tickets, more than 1,200, and the roadmap was still being driven by whoever complained loudest. Reading it all by hand would have taken 4&ndash;6 weeks, so it went unread.</p>
+          <p>The cost was twofold. Much of the support demand traced back to avoidable dependency on engineering, and roadmap conversations were debates between opinions with nothing to settle them.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Executive Summary -->
-    <section class="container two-col">
-      <div>
-        <h3 class="section-title">Executive Summary</h3>
-        <p>We were sitting on 18 months of support tickets — more than 1,200 — and our roadmap was still being driven by whoever complained loudest. I used Excel Copilot to classify and theme the whole backlog. What would have taken weeks of manual reading took a few hours, and it surfaced two feature gaps big enough to build.</p>
-        <p>Both features shipped. More importantly, the roadmap conversation changed: instead of debating anecdotes, we were looking at ticket counts.</p>
+    <!-- 02 Product Decision -->
+    <section class="container stage-section" id="decision">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">02</span><h3>Product Decision</h3></div>
+        <div class="stage-body">
+          <p>I decided to let ticket volume settle prioritization, and to redirect investment toward self-service and automation, where the tickets pointed, instead of towards engineering-dependent fixes.</p>
+          <div class="register">
+            <div class="register-row"><span class="reg-id">01</span><div><h4>Volume over opinion</h4><p>Ticket counts, not who complained loudest, decide which features get a build slot.</p></div></div>
+            <div class="register-row"><span class="reg-id">02</span><div><h4>AI finds the pattern, I make the call</h4><p>Copilot did the classification. Every AI-generated category still got a manual spot-check, and the decision on what to build stayed mine.</p></div></div>
+            <div class="register-row"><span class="reg-id">03</span><div><h4>Saying no to ten to say yes to two</h4><p>The analysis surfaced 12 theme clusters. Only two had the volume and a clear enough scope to justify building.</p></div></div>
+          </div>
+        </div>
       </div>
-      <aside>
-        <div class="card">
-          <h4>At a Glance</h4>
-          <ul class="list">
-            <li>1,200+ tickets, 18 months of backlog</li>
-            <li>12 theme clusters identified</li>
-            <li>2 features validated by ticket volume, not opinion</li>
+    </section>
+
+    <!-- 03 Stakeholder Alignment -->
+    <section class="container stage-section" id="alignment">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">03</span><h3>Stakeholder Alignment</h3></div>
+        <div class="stage-body">
+          <p>Turning an unstructured backlog into a number a skeptic can't easily argue with was the alignment strategy. &ldquo;310 tickets are asking for this&rdquo; ended prioritization debates that &ldquo;I think users want this&rdquo; never could.</p>
+          <p>Before anything went in front of stakeholders, every AI-generated category had been spot-checked by hand, so nobody was being asked to trust a model's output. When I proposed Copy Site Pages I could point to 310 tickets, and Re-boarding Automation had 185 behind it. The roadmap conversation changed from debating anecdotes to reading counts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Technical Approach -->
+    <section class="container stage-section" id="approach">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">04</span><h3>Technical Approach</h3></div>
+        <div class="stage-body">
+          <div class="diagram-card">
+            <p class="diagram-label">From raw tickets to shipped features</p>
+            <svg viewBox="0 0 900 200" role="img" aria-label="Diagram: 1,200+ support tickets flow into GenAI classification and theming, which splits into two validated feature gaps — Copy Site Pages with 310 tickets, and Re-boarding Automation with 185 tickets.">
+              <defs>
+                <marker id="arrow-ticket" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" class="flow-arrowhead"/>
+                </marker>
+              </defs>
+
+              <rect class="node-box" x="20" y="70" width="200" height="60" rx="8"/>
+              <text class="node-text" x="120" y="96" text-anchor="middle">1,200+ Support Tickets</text>
+              <text class="node-subtext" x="120" y="112" text-anchor="middle">18 months of raw data</text>
+
+              <rect class="node-box" x="270" y="70" width="260" height="60" rx="8"/>
+              <text class="node-text" x="400" y="96" text-anchor="middle">GenAI Classification &amp; Theming</text>
+              <text class="node-subtext" x="400" y="112" text-anchor="middle">Excel Copilot — hours, not weeks</text>
+
+              <rect class="node-box accent" x="620" y="15" width="250" height="60" rx="8"/>
+              <text class="node-text" x="745" y="41" text-anchor="middle">Copy Site Pages</text>
+              <text class="node-subtext" x="745" y="57" text-anchor="middle">310 tickets → shipped</text>
+
+              <rect class="node-box accent" x="620" y="125" width="250" height="60" rx="8"/>
+              <text class="node-text" x="745" y="151" text-anchor="middle">Re-boarding Automation</text>
+              <text class="node-subtext" x="745" y="167" text-anchor="middle">185 tickets → shipped</text>
+
+              <line class="flow-line" x1="220" y1="100" x2="268" y2="100" marker-end="url(#arrow-ticket)"/>
+              <path class="flow-line" d="M530,90 L618,45" marker-end="url(#arrow-ticket)"/>
+              <path class="flow-line" d="M530,110 L618,155" marker-end="url(#arrow-ticket)"/>
+            </svg>
+          </div>
+          <p>I used Excel Copilot to classify and theme the raw ticket descriptions &mdash; 65% feature requests, 25% defects, 10% enhancements &mdash; and cluster them into 12 product areas. Copilot did the pattern-finding; a manual spot-check gated every category before I relied on it.</p>
+          <h4 class="sub-label">Two of the actual prompts I used</h4>
+          <div class="code-block" style="margin-top:0;">Analyze the Description column in the Support_Tickets table and create a new Issue Category column grouping similar user problems.</div>
+          <div class="code-block">Using the Issue Category column, identify trends and highlight issues that show sustained growth over time.</div>
+          <h4 class="sub-label">Time investment</h4>
+          <p class="muted" style="font-size:15px;">A manual read-through of 18 months of tickets would have taken 4&ndash;6 weeks. The Copilot-assisted pass took 6&ndash;8 hours plus validation time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Outcome -->
+    <section class="container stage-section" id="outcome">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">05</span><h3>Outcome</h3></div>
+        <div class="stage-body">
+          <div class="grid">
+            <article class="card">
+              <p class="impact-value">30%</p>
+              <p class="muted">Fewer support tickets, as investment moved toward self-service and automation instead of engineering-dependent fixes.</p>
+            </article>
+            <article class="card">
+              <p class="impact-value">2 shipped</p>
+              <p class="muted">Copy Site Pages (310 tickets) and Re-boarding Automation (185 tickets), both built on ticket volume, not opinion.</p>
+            </article>
+            <article class="card">
+              <p class="impact-value">80%</p>
+              <p class="muted">Cut in manual ticket-review time: 4&ndash;6 weeks of reading down to a 6&ndash;8 hour Copilot pass plus validation.</p>
+            </article>
+          </div>
+          <h4 class="sub-label">What each feature delivered</h4>
+          <ul class="list" style="margin-top:0;">
+            <li><strong>Copy Site Pages Utility</strong> (internal tool, not public): built from the 310-ticket signal, it cut page-cloning time from hours to minutes.</li>
+            <li><strong><a href="UserReboardingAutomation.html" style="color:var(--signal-ink);">User Re-boarding Access Automation</a></strong>: built from the 185-ticket signal, it cut access resolution from 3&ndash;5 days to minutes.</li>
           </ul>
         </div>
-      </aside>
-    </section>
-
-    <!-- Funnel diagram: raw tickets -> AI classification -> shipped features -->
-    <section class="container">
-      <div class="diagram-card">
-        <p class="diagram-label">From raw tickets to shipped features</p>
-        <svg viewBox="0 0 900 200" role="img" aria-label="Diagram: 1,200+ support tickets flow into GenAI classification and theming, which splits into two validated feature gaps — Copy Site Pages with 310 tickets, and Re-boarding Automation with 185 tickets.">
-          <defs>
-            <marker id="arrow-ticket" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,0 L10,5 L0,10 z" class="flow-arrowhead"/>
-            </marker>
-          </defs>
-
-          <rect class="node-box" x="20" y="70" width="200" height="60" rx="8"/>
-          <text class="node-text" x="120" y="96" text-anchor="middle">1,200+ Support Tickets</text>
-          <text class="node-subtext" x="120" y="112" text-anchor="middle">18 months of raw data</text>
-
-          <rect class="node-box" x="270" y="70" width="260" height="60" rx="8"/>
-          <text class="node-text" x="400" y="96" text-anchor="middle">GenAI Classification &amp; Theming</text>
-          <text class="node-subtext" x="400" y="112" text-anchor="middle">Excel Copilot — hours, not weeks</text>
-
-          <rect class="node-box accent" x="620" y="15" width="250" height="60" rx="8"/>
-          <text class="node-text" x="745" y="41" text-anchor="middle">Copy Site Pages</text>
-          <text class="node-subtext" x="745" y="57" text-anchor="middle">310 tickets → shipped</text>
-
-          <rect class="node-box accent" x="620" y="125" width="250" height="60" rx="8"/>
-          <text class="node-text" x="745" y="151" text-anchor="middle">Re-boarding Automation</text>
-          <text class="node-subtext" x="745" y="167" text-anchor="middle">185 tickets → shipped</text>
-
-          <line class="flow-line" x1="220" y1="100" x2="268" y2="100" marker-end="url(#arrow-ticket)"/>
-          <path class="flow-line" d="M530,90 L618,45" marker-end="url(#arrow-ticket)"/>
-          <path class="flow-line" d="M530,110 L618,155" marker-end="url(#arrow-ticket)"/>
-        </svg>
       </div>
     </section>
 
-    <!-- How the analysis was actually done -->
-    <section class="container two-col" style="margin-top:16px;">
-      <div>
-        <h3 class="section-title">How I Ran the Analysis</h3>
-        <p>I used Excel Copilot to classify and theme the raw ticket descriptions &mdash; 65% feature requests, 25% defects, 10% enhancements &mdash; and cluster them into 12 product areas. Two of those clusters were big enough to justify building: Copy Site Pages (310 tickets) and Re-boarding Automation (185 tickets). Every AI-generated category got a manual spot-check before I trusted it; the AI found the pattern, I made the call on what to build.</p>
-        <h4 style="margin-top:16px;">Two of the actual prompts I used</h4>
-        <div class="code-block">Analyze the Description column in the Support_Tickets table and create a new Issue Category column grouping similar user problems.</div>
-        <div class="code-block">Using the Issue Category column, identify trends and highlight issues that show sustained growth over time.</div>
-      </div>
-      <aside>
-        <div class="card">
-          <h4>Time Investment</h4>
-          <p class="muted">Manual read-through of 18 months of tickets would have taken 4-6 weeks. The Copilot-assisted pass took 6-8 hours plus validation time.</p>
-        </div>
-      </aside>
-    </section>
-
-    <!-- Outcomes -->
-    <section class="container">
-      <h3 class="section-title">Outcomes</h3>
-      <div class="grid">
-        <div class="card">
-          <p class="impact-value">80%</p>
-          <p class="muted">Cut in manual ticket-review time &mdash; 4-6 weeks of reading down to a 6-8 hour Copilot pass plus validation.</p>
-        </div>
-        <div class="card">
-          <p class="impact-value">65%</p>
-          <p class="muted">Fewer recurring incidents in the two areas the analysis surfaced, after both features shipped.</p>
-        </div>
-        <div class="card">
-          <p class="impact-value">2 shipped</p>
-          <p class="muted">Copy Site Pages (310 tickets) and Re-boarding Automation (185 tickets) &mdash; both built on ticket volume, not opinion.</p>
+    <!-- 06 Ongoing Ownership -->
+    <section class="container stage-section" id="ownership">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">06</span><h3>Ongoing Ownership</h3></div>
+        <div class="stage-body">
+          <p>This wasn't a one-off analysis. It replaced opinion-driven prioritization with a data-driven process, and that process stayed with the roadmap as I moved from refining the backlog to owning it end to end.</p>
+          <p>The rule I kept is the same one that ran the first pass: AI surfaces the pattern, the evidence has to be checked before it's trusted, and the decision on what gets built stays with a person.</p>
         </div>
       </div>
-    </section>
-
-    <!-- What I'd point to as product work -->
-    <section class="container two-col">
-      <div>
-        <h3 class="section-title">What I'd Point To as Product Work</h3>
-        <ul class="list">
-          <li>Choosing volume over opinion. Instead of debating who complained loudest, I let ticket counts settle which two features actually deserved a build slot.</li>
-          <li>Keeping the judgment call mine. Copilot did the pattern-finding across 1,200+ tickets; every AI-generated category still got a manual spot-check before I trusted it or put it in front of stakeholders.</li>
-          <li>Saying no to ten ideas to say yes to two. The analysis surfaced 12 distinct theme clusters &mdash; only two had the volume and clear enough scope to justify building.</li>
-          <li>Turning an unstructured backlog into a number a skeptic can't easily argue with. "310 tickets are asking for this" ended prioritization debates that "I think users want this" never could.</li>
-        </ul>
-      </div>
-      <aside>
-        <div class="card">
-          <h4>Related Work</h4>
-          <p class="muted">Copy Site Pages Utility &mdash; internal tool, not public. Built from the 310-ticket signal; cut page-cloning time from hours to minutes.</p>
-        </div>
-        <div class="card" style="margin-top: 16px;">
-          <a href="UserReboardingAutomation.html" style="text-decoration:none;color:inherit;">
-            <h4>User Re-boarding Access Automation →</h4>
-            <p class="muted">Built from the 185-ticket signal. Access resolution dropped from 3-5 days to minutes.</p>
-          </a>
-        </div>
-      </aside>
-    </section>
-
-    <!-- Key Takeaway -->
-    <section class="container">
-      <h3 class="section-title">Key Takeaways</h3>
-      <article class="card">
-        <p>Honestly, when I started this I expected to spend weeks reading tickets and still miss things. A few hours with Copilot gave me structured themes, sentiment, and a clean split between feature requests and defects. The part that surprised me was how it changed the prioritization conversations. When I proposed Copy Site Pages, I wasn't arguing a hunch &mdash; I could point to 310 tickets. Re-boarding Automation had 185 behind it. It's hard to argue with that, and nobody really tried. The AI didn't decide anything; it just got me to the evidence fast enough for the evidence to matter.</p>
-      </article>
     </section>
 
     <section class="container">

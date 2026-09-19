@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>Message Center Intelligence Platform – Debasish Kumar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="End-to-end product ownership of a Message Center intelligence platform: Microsoft API ingestion, SQL schema, custom API layer, LLM-driven search, Jira automation, and Azure AD governance — adopted firm-wide." />
+  <meta name="description" content="Message Center intelligence platform, owned end to end: identified an untracked compliance risk in Microsoft advisories, won approval to build, cut recurring incidents by 65%, launched firm-wide, and still own the roadmap." />
   <script>(function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,8 +40,13 @@
     <section class="hero">
       <div class="container">
         <div class="hero-status"><span class="status-chip live"><span class="dot"></span>Live</span><span class="entry-meta">Flagship Project — Owned End-to-End</span></div>
-        <h2>Replacing a daily email nobody trusted with a system the whole firm relies on</h2>
+        <h2>Making sure no critical Microsoft advisory goes untracked</h2>
         <p class="tagline" style="color: var(--text); font-size: 18px; margin-top: 12px;">Message Center Intelligence Platform — Product Owner, built end to end</p>
+        <div class="stat-strip" aria-label="Headline results, at a glance">
+          <div class="stat-tile"><span class="value">65%</span><span class="label">fewer recurring<br/>incidents</span></div>
+          <div class="stat-tile"><span class="value">Firm-wide</span><span class="label">launch, replacing<br/>the daily email</span></div>
+          <div class="stat-tile"><span class="value">1 click</span><span class="label">from flagged advisory<br/>to owned Jira ticket</span></div>
+        </div>
       </div>
     </section>
 
@@ -55,224 +60,233 @@
         <span class="badge">Jira Automation</span>
         <span class="badge">Azure AD Governance</span>
       </div>
+      <nav class="stage-nav" aria-label="Case study stages">
+        <a href="#problem"><span>01</span>Problem</a>
+        <a href="#decision"><span>02</span>Product Decision</a>
+        <a href="#alignment"><span>03</span>Stakeholder Alignment</a>
+        <a href="#approach"><span>04</span>Technical Approach</a>
+        <a href="#outcome"><span>05</span>Outcome</a>
+        <a href="#ownership"><span>06</span>Ongoing Ownership</a>
+      </nav>
     </section>
 
-    <section class="container two-col">
-      <div>
-        <h3 class="section-title">Context</h3>
-        <p>Microsoft 365 Message Center advisories create real work: deprecations, security changes, compliance deadlines. Scrum masters, product owners, and leaders across our firm all need to catch the right ones in time.</p>
-
-        <h3 class="section-title" style="margin-top: 32px;">Problem</h3>
-        <p>What we had was a scheduled script that sent one email a day summarizing the last 24 hours. There was no history, and a critical advisory looked exactly like routine noise. People missed things. The messages that mattered most were the easiest to lose in an inbox.</p>
-
-        <h3 class="section-title" style="margin-top: 32px;">The Product Decision</h3>
-        <p>The obvious ask was "make the email better." I didn't think that was the fix. When I talked to the people reading it, the actual gaps were different: they couldn't look anything up after the fact, they couldn't tell at a glance what was urgent, and nothing connected an advisory to a person responsible for acting on it. Those three gaps became the spec.</p>
+    <!-- 01 Problem -->
+    <section class="container stage-section" id="problem">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">01</span><h3>Problem</h3></div>
+        <div class="stage-body">
+          <p>Microsoft 365 Message Center advisories create real work: deprecations, security changes, compliance deadlines. Scrum masters, product owners, and leaders across our firm all need to catch the right ones in time.</p>
+          <p>What we had was a scheduled script that sent one email a day summarizing the last 24 hours. There was no history, and a critical advisory looked exactly like routine noise. Nothing connected an advisory to a person responsible for acting on it.</p>
+          <p>That was the untracked compliance risk. A deprecation or a security change could land, get buried in an inbox, and surface later as an incident. The messages that mattered most were the easiest to lose.</p>
+        </div>
       </div>
-      <aside>
-        <div class="card">
-          <h4>Users & Stakeholders</h4>
+    </section>
+
+    <!-- 02 Product Decision -->
+    <section class="container stage-section" id="decision">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">02</span><h3>Product Decision</h3></div>
+        <div class="stage-body">
+          <p>The obvious ask was "make the email better." I didn't think that was the fix. When I talked to the people reading it, the actual gaps were different, and those gaps became the spec: they couldn't look anything up after the fact, they couldn't tell at a glance what was urgent, and nothing tied an advisory to someone accountable for it.</p>
+          <div class="register">
+            <div class="register-row"><span class="reg-id">01</span><div><h4>Saying no to the stated request</h4><p>Everyone wanted a better email. The job was to work out why the email could never work, and build for that instead.</p></div></div>
+            <div class="register-row"><span class="reg-id">02</span><div><h4>Sequencing by usefulness</h4><p>Queryable history first, then visual triage, then natural-language search, then Jira integration. Each release stood on its own, so if the project had stopped at any point people would still have had something better than before.</p></div></div>
+            <div class="register-row"><span class="reg-id">03</span><div><h4>A wall between the LLM and the data</h4><p>The LLM would never query the database. That guardrail was in the first design, not added after a security review.</p></div></div>
+            <div class="register-row"><span class="reg-id">04</span><div><h4>Governance as a feature, not a checkbox</h4><p>Access comes from identity, not a bolt-on login screen, so auditors can verify who saw what without asking us.</p></div></div>
+            <div class="register-row"><span class="reg-id">05</span><div><h4>Closing the loop to an owner</h4><p>"Advisory noticed" had to end in "ticket with an owner." That is the part that changes behavior, not just visibility.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Stakeholder Alignment -->
+    <section class="container stage-section" id="alignment">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">03</span><h3>Stakeholder Alignment</h3></div>
+        <div class="stage-body">
+          <p>Two things had to be true before this could ship: leadership had to approve building it, and the people who would live in it had to want it. I took a different route to each.</p>
+          <div class="register">
+            <div class="register-row"><span class="reg-id">01</span><div><h4>Leadership — approval to build</h4><p>I brought them the risk rather than a feature request: critical advisories could go untracked, and the only safeguard was a daily email. I secured their approval for an LLM-driven Message Center with natural-language search and one-click Jira remediation.</p></div></div>
+            <div class="register-row"><span class="reg-id">02</span><div><h4>M365 admin leads and product managers — a working prototype</h4><p>I showed them the prototype and walked through the dashboard against the email: flagged advisories at the top, full history, and no way for an advisory to be lost the way it can be in an inbox.</p></div></div>
+            <div class="register-row"><span class="reg-id">03</span><div><h4>Security, compliance, and audit partners — designed in, not argued in</h4><p>Because the LLM was walled off from the database and access came from identity from the first design, those conversations were short. Nothing had to be retrofitted.</p></div></div>
+          </div>
+          <h4 class="sub-label">Who it serves</h4>
+          <div class="inline" style="margin-top:0;">
+            <span class="badge">Scrum masters</span>
+            <span class="badge">Product owners</span>
+            <span class="badge">Platform &amp; engineering leaders</span>
+            <span class="badge">Compliance &amp; audit partners</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Technical Approach -->
+    <section class="container stage-section" id="approach">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">04</span><h3>Technical Approach</h3></div>
+        <div class="stage-body">
+          <p>I owned the vision and roadmap, the data model, the API layer, the dashboard UX, the LLM search design, and access governance, and built the first working version myself.</p>
+          <div class="diagram-card">
+            <p class="diagram-label">Architecture — from API polling to a ticket with an owner</p>
+            <svg viewBox="0 0 920 260" role="img" aria-label="Architecture diagram: Microsoft 365 APIs feed scheduled ingestion into a SQL database, which powers an API layer and a read-only search API; the API layer drives the Angular dashboard, gated by Azure AD, and flagged messages become Jira tickets. A separate LLM interprets natural-language questions and calls the read-only search API, never the database directly.">
+              <defs>
+                <marker id="arrow-mc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" class="flow-arrowhead"/>
+                </marker>
+              </defs>
+
+              <rect class="node-box" x="20" y="20" width="140" height="60" rx="8"/>
+              <text class="node-text" x="90" y="46" text-anchor="middle">Microsoft 365 APIs</text>
+              <text class="node-subtext" x="90" y="62" text-anchor="middle">Message Center source</text>
+
+              <rect class="node-box" x="190" y="20" width="140" height="60" rx="8"/>
+              <text class="node-text" x="260" y="46" text-anchor="middle">Scheduled Ingestion</text>
+              <text class="node-subtext" x="260" y="62" text-anchor="middle">.NET console app</text>
+
+              <rect class="node-box" x="360" y="20" width="130" height="60" rx="8"/>
+              <text class="node-text" x="425" y="46" text-anchor="middle">SQL Database</text>
+              <text class="node-subtext" x="425" y="62" text-anchor="middle">schema built for history</text>
+
+              <rect class="node-box accent" x="520" y="20" width="150" height="60" rx="8"/>
+              <text class="node-text" x="595" y="46" text-anchor="middle">API Layer</text>
+              <text class="node-subtext" x="595" y="62" text-anchor="middle">18 REST endpoints</text>
+
+              <rect class="node-box accent" x="700" y="20" width="200" height="60" rx="8"/>
+              <text class="node-text" x="800" y="46" text-anchor="middle">Angular Dashboard</text>
+              <text class="node-subtext" x="800" y="62" text-anchor="middle">flags surfaced first</text>
+
+              <rect class="node-box" x="20" y="170" width="140" height="60" rx="8"/>
+              <text class="node-text" x="90" y="196" text-anchor="middle">Azure AD</text>
+              <text class="node-subtext" x="90" y="212" text-anchor="middle">UPN → permissions</text>
+
+              <rect class="node-box" x="360" y="170" width="130" height="60" rx="8"/>
+              <text class="node-text" x="425" y="196" text-anchor="middle">LLM (NL Search)</text>
+              <text class="node-subtext" x="425" y="212" text-anchor="middle">asks a follow-up if unclear</text>
+
+              <rect class="node-box accent" x="520" y="170" width="150" height="60" rx="8"/>
+              <text class="node-text" x="595" y="196" text-anchor="middle">Search API</text>
+              <text class="node-subtext" x="595" y="212" text-anchor="middle">read-only query execution</text>
+
+              <rect class="node-box accent" x="700" y="170" width="200" height="60" rx="8"/>
+              <text class="node-text" x="800" y="196" text-anchor="middle">Jira Ticket</text>
+              <text class="node-subtext" x="800" y="212" text-anchor="middle">one-click, pre-filled</text>
+
+              <line class="flow-line" x1="160" y1="50" x2="188" y2="50" marker-end="url(#arrow-mc)"/>
+              <line class="flow-line" x1="330" y1="50" x2="358" y2="50" marker-end="url(#arrow-mc)"/>
+              <line class="flow-line" x1="490" y1="50" x2="518" y2="50" marker-end="url(#arrow-mc)"/>
+              <line class="flow-line" x1="670" y1="50" x2="698" y2="50" marker-end="url(#arrow-mc)"/>
+              <line class="flow-line" x1="800" y1="80" x2="800" y2="168" marker-end="url(#arrow-mc)"/>
+
+              <path class="flow-line" d="M90,170 V145 H800 V82" marker-end="url(#arrow-mc)"/>
+              <text class="node-subtext" x="445" y="140" text-anchor="middle">auth gate — governs who sees what</text>
+
+              <line class="flow-line" x1="490" y1="200" x2="518" y2="200" marker-end="url(#arrow-mc)"/>
+              <text class="node-subtext" x="505" y="160" text-anchor="middle">guardrail</text>
+
+              <path class="flow-line" d="M595,170 V120 H425 V82" marker-end="url(#arrow-mc)"/>
+              <text class="node-subtext" x="510" y="115" text-anchor="middle">read-only — LLM never touches the database directly</text>
+            </svg>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <h4><i data-lucide="database" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Scheduled Ingestion &amp; Queryable Schema</h4>
+              <p class="muted">A console app pulls Message Center data from Microsoft's APIs into SQL on a schedule. I designed the schema around the questions people actually ask ("when did this change?", "what else affected this service?") rather than just archiving raw payloads, so every past advisory stays searchable.</p>
+            </article>
+            <article class="card">
+              <h4><i data-lucide="layout-dashboard" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> API Layer + Angular Dashboard</h4>
+              <p class="muted">An 18-endpoint API layer feeds an Angular dashboard. Flagged messages sit at the top, visually separated from everything else. That one design choice fixed the thing the daily email never could.</p>
+            </article>
+            <article class="card">
+              <h4><i data-lucide="sparkles" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> LLM Search with Clarifying Follow-ups</h4>
+              <p class="muted">Once people had history, filters stopped being enough. An LLM interprets a natural-language question, and if it's ambiguous it asks a follow-up instead of guessing. A separate search API runs the actual query, so the LLM never touches the database.</p>
+            </article>
+            <article class="card">
+              <h4><i data-lucide="ticket" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> One-Click Jira Creation</h4>
+              <p class="muted">Any flagged message becomes a Jira ticket in one click, pre-filled from the message data, with the ticket number shown back in the dashboard. Before this, tracking an advisory meant copy-pasting into Jira by hand, or more often not tracking it at all.</p>
+            </article>
+            <article class="card">
+              <h4><i data-lucide="shield-check" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Identity-Governed Access</h4>
+              <p class="muted">Login goes through Azure AD, and a UPN-to-permissions mapping decides what each person sees. Access control comes from identity, so audits can verify it.</p>
+            </article>
+          </div>
+
+          <h4 class="sub-label">What the dashboard puts at the top</h4>
+          <p class="muted" style="font-size:15px;">Not a screenshot, since the underlying data is internal. This is the layout decision that mattered: flagged advisories separated from routine ones, at a glance.</p>
+          <div class="mock-browser" style="margin-top:14px;">
+            <div class="mock-chrome">
+              <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+              <span class="mock-url">message-center.internal/dashboard</span>
+            </div>
+            <div class="mock-body">
+              <div class="mock-row flagged">
+                <span class="mock-dot-flag"></span>
+                <span class="mock-line short"></span>
+                <span class="mock-line"></span>
+                <span class="mock-pill">Flagged</span>
+              </div>
+              <div class="mock-row flagged">
+                <span class="mock-dot-flag"></span>
+                <span class="mock-line short"></span>
+                <span class="mock-line"></span>
+                <span class="mock-pill">Jira #4821</span>
+              </div>
+              <div class="mock-row">
+                <span class="mock-dot-flag ok"></span>
+                <span class="mock-line short"></span>
+                <span class="mock-line"></span>
+                <span class="mock-pill">Routine</span>
+              </div>
+              <div class="mock-row">
+                <span class="mock-dot-flag ok"></span>
+                <span class="mock-line short"></span>
+                <span class="mock-line"></span>
+                <span class="mock-pill">Routine</span>
+              </div>
+            </div>
+          </div>
+          <p class="muted" style="font-size:13px;margin-top:10px;">Illustrative mockup.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Outcome -->
+    <section class="container stage-section" id="outcome">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">05</span><h3>Outcome</h3></div>
+        <div class="stage-body">
+          <div class="grid">
+            <article class="card">
+              <p class="impact-value">65%</p>
+              <p class="muted">Fewer recurring incidents, by closing the gap where critical advisories went untracked.</p>
+            </article>
+            <article class="card">
+              <p class="impact-value">Firm-wide</p>
+              <p class="muted">Launched to the whole firm for scrum masters, product owners, and leaders, replacing the daily email.</p>
+            </article>
+            <article class="card">
+              <p class="impact-value">100%</p>
+              <p class="muted">Audit compliance maintained, with identity-governed access and traceable action items.</p>
+            </article>
+          </div>
+          <p style="margin-top:20px;">The number I care about most is the first one. The rest of the design exists so that a critical advisory always ends in a ticket with an owner.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Ongoing Ownership -->
+    <section class="container stage-section" id="ownership">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">06</span><h3>Ongoing Ownership</h3></div>
+        <div class="stage-body">
+          <p>Launch was the start of owning this, not the end of the project. I still own the product after launch, and what I hold myself to is below.</p>
           <ul class="list">
-            <li>Scrum masters</li>
-            <li>Product owners</li>
-            <li>Platform & engineering leaders</li>
-            <li>Compliance & audit partners</li>
+            <li>MVP 2 priorities. The roadmap after launch is mine to sequence, using the same rule as before: every release has to stand on its own.</li>
+            <li>The success measures. I defined how this platform is judged once it was live, so "did it work" isn't a matter of opinion.</li>
+            <li>The guardrails as it grows. Any new capability keeps the LLM away from the database and access tied to identity.</li>
           </ul>
         </div>
-        <div class="card" style="margin-top: 20px;">
-          <h4>Scope Owned</h4>
-          <ul class="list">
-            <li>Product vision & roadmap</li>
-            <li>Data model & SQL schema</li>
-            <li>API layer — 18 endpoints</li>
-            <li>Dashboard UX</li>
-            <li>LLM search design</li>
-            <li>Access governance</li>
-          </ul>
-        </div>
-      </aside>
-    </section>
-
-    <section class="container">
-      <h3 class="section-title">How It Was Built</h3>
-      <div class="diagram-card">
-        <p class="diagram-label">Architecture — from API polling to a ticket with an owner</p>
-        <svg viewBox="0 0 920 260" role="img" aria-label="Architecture diagram: Microsoft 365 APIs feed scheduled ingestion into a SQL database, which powers an API layer and a read-only search API; the API layer drives the Angular dashboard, gated by Azure AD, and flagged messages become Jira tickets. A separate LLM interprets natural-language questions and calls the read-only search API, never the database directly.">
-          <defs>
-            <marker id="arrow-mc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,0 L10,5 L0,10 z" class="flow-arrowhead"/>
-            </marker>
-          </defs>
-
-          <rect class="node-box" x="20" y="20" width="140" height="60" rx="8"/>
-          <text class="node-text" x="90" y="46" text-anchor="middle">Microsoft 365 APIs</text>
-          <text class="node-subtext" x="90" y="62" text-anchor="middle">Message Center source</text>
-
-          <rect class="node-box" x="190" y="20" width="140" height="60" rx="8"/>
-          <text class="node-text" x="260" y="46" text-anchor="middle">Scheduled Ingestion</text>
-          <text class="node-subtext" x="260" y="62" text-anchor="middle">.NET console app</text>
-
-          <rect class="node-box" x="360" y="20" width="130" height="60" rx="8"/>
-          <text class="node-text" x="425" y="46" text-anchor="middle">SQL Database</text>
-          <text class="node-subtext" x="425" y="62" text-anchor="middle">schema built for history</text>
-
-          <rect class="node-box accent" x="520" y="20" width="150" height="60" rx="8"/>
-          <text class="node-text" x="595" y="46" text-anchor="middle">API Layer</text>
-          <text class="node-subtext" x="595" y="62" text-anchor="middle">18 REST endpoints</text>
-
-          <rect class="node-box accent" x="700" y="20" width="200" height="60" rx="8"/>
-          <text class="node-text" x="800" y="46" text-anchor="middle">Angular Dashboard</text>
-          <text class="node-subtext" x="800" y="62" text-anchor="middle">flags surfaced first</text>
-
-          <rect class="node-box" x="20" y="170" width="140" height="60" rx="8"/>
-          <text class="node-text" x="90" y="196" text-anchor="middle">Azure AD</text>
-          <text class="node-subtext" x="90" y="212" text-anchor="middle">UPN → permissions</text>
-
-          <rect class="node-box" x="360" y="170" width="130" height="60" rx="8"/>
-          <text class="node-text" x="425" y="196" text-anchor="middle">LLM (NL Search)</text>
-          <text class="node-subtext" x="425" y="212" text-anchor="middle">asks a follow-up if unclear</text>
-
-          <rect class="node-box accent" x="520" y="170" width="150" height="60" rx="8"/>
-          <text class="node-text" x="595" y="196" text-anchor="middle">Search API</text>
-          <text class="node-subtext" x="595" y="212" text-anchor="middle">read-only query execution</text>
-
-          <rect class="node-box accent" x="700" y="170" width="200" height="60" rx="8"/>
-          <text class="node-text" x="800" y="196" text-anchor="middle">Jira Ticket</text>
-          <text class="node-subtext" x="800" y="212" text-anchor="middle">one-click, pre-filled</text>
-
-          <line class="flow-line" x1="160" y1="50" x2="188" y2="50" marker-end="url(#arrow-mc)"/>
-          <line class="flow-line" x1="330" y1="50" x2="358" y2="50" marker-end="url(#arrow-mc)"/>
-          <line class="flow-line" x1="490" y1="50" x2="518" y2="50" marker-end="url(#arrow-mc)"/>
-          <line class="flow-line" x1="670" y1="50" x2="698" y2="50" marker-end="url(#arrow-mc)"/>
-          <line class="flow-line" x1="800" y1="80" x2="800" y2="168" marker-end="url(#arrow-mc)"/>
-
-          <path class="flow-line" d="M90,170 V145 H800 V82" marker-end="url(#arrow-mc)"/>
-          <text class="node-subtext" x="445" y="140" text-anchor="middle">auth gate — governs who sees what</text>
-
-          <line class="flow-line" x1="490" y1="200" x2="518" y2="200" marker-end="url(#arrow-mc)"/>
-          <text class="node-subtext" x="505" y="160" text-anchor="middle">guardrail</text>
-
-          <path class="flow-line" d="M595,170 V120 H425 V82" marker-end="url(#arrow-mc)"/>
-          <text class="node-subtext" x="510" y="115" text-anchor="middle">read-only — LLM never touches the database directly</text>
-        </svg>
       </div>
-      <div class="grid">
-        <article class="card">
-          <h4><i data-lucide="database" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Scheduled Ingestion & Queryable Schema</h4>
-          <p class="muted">A console app pulls Message Center data from Microsoft's APIs into SQL on a schedule. I designed the schema around the questions people actually ask ("when did this change?", "what else affected this service?") rather than just archiving raw payloads, so every past advisory stays searchable.</p>
-        </article>
-        <article class="card">
-          <h4><i data-lucide="layout-dashboard" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> API Layer + Angular Dashboard</h4>
-          <p class="muted">I built an API layer — 18 endpoints — feeding an Angular dashboard. Flagged messages sit at the top, visually separated from everything else. That one design choice fixed the thing the daily email never could.</p>
-        </article>
-        <article class="card">
-          <h4><i data-lucide="sparkles" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> LLM Search with Clarifying Follow-ups</h4>
-          <p class="muted">Once people had history, filters stopped being enough. So I added natural-language search: an LLM interprets the question, and if it's ambiguous it asks a follow-up instead of guessing. The LLM never touches the database — a separate search API runs the actual query. I wanted that separation from the start.</p>
-        </article>
-        <article class="card">
-          <h4><i data-lucide="ticket" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> One-Click Jira Creation</h4>
-          <p class="muted">Any flagged message can become a Jira ticket in one click, pre-filled from the message data, with the ticket number shown back in the dashboard. Before this, tracking an advisory meant copy-pasting into Jira by hand — or more often, not tracking it at all.</p>
-        </article>
-        <article class="card">
-          <h4><i data-lucide="shield-check" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Identity-Governed Access</h4>
-          <p class="muted">Login goes through Azure AD, and a UPN-to-permissions mapping decides what each person sees. I didn't want a bolt-on login screen; access control had to come from identity so audits could verify it.</p>
-        </article>
-        <article class="card">
-          <h4><i data-lucide="users" style="width:18px;height:18px;color:var(--accent);vertical-align:-3px;"></i> Firm-Wide Adoption</h4>
-          <p class="muted">Scrum masters, product owners, and leaders across the firm use it now. The daily email is gone, and nobody has asked for it back.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="container">
-      <h3 class="section-title">What the dashboard puts at the top</h3>
-      <p class="section-intro">Not a screenshot — the underlying data is internal — but this is the layout decision that mattered: flagged advisories separated from routine ones, at a glance.</p>
-      <div class="mock-browser">
-        <div class="mock-chrome">
-          <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-          <span class="mock-url">message-center.internal/dashboard</span>
-        </div>
-        <div class="mock-body">
-          <div class="mock-row flagged">
-            <span class="mock-dot-flag"></span>
-            <span class="mock-line short"></span>
-            <span class="mock-line"></span>
-            <span class="mock-pill">Flagged</span>
-          </div>
-          <div class="mock-row flagged">
-            <span class="mock-dot-flag"></span>
-            <span class="mock-line short"></span>
-            <span class="mock-line"></span>
-            <span class="mock-pill">Jira #4821</span>
-          </div>
-          <div class="mock-row">
-            <span class="mock-dot-flag ok"></span>
-            <span class="mock-line short"></span>
-            <span class="mock-line"></span>
-            <span class="mock-pill">Routine</span>
-          </div>
-          <div class="mock-row">
-            <span class="mock-dot-flag ok"></span>
-            <span class="mock-line short"></span>
-            <span class="mock-line"></span>
-            <span class="mock-pill">Routine</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h3 class="section-title">Outcomes</h3>
-      <div class="grid">
-        <article class="card">
-          <p class="impact-value">30%</p>
-          <p class="muted">Reduction in support demand as self-service intelligence replaced engineering triage.</p>
-        </article>
-        <article class="card">
-          <p class="impact-value">100%</p>
-          <p class="muted">Audit compliance maintained, with identity-governed access and traceable action items.</p>
-        </article>
-        <article class="card">
-          <p class="impact-value">Firm-wide</p>
-          <p class="muted">Adoption across scrum masters, product owners, and leadership — replacing the daily email entirely.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="container two-col">
-      <div>
-        <h3 class="section-title">What I'd Point To as Product Work</h3>
-        <ul class="list">
-          <li>Saying no to the stated request. Everyone wanted a better email; the job was to figure out why the email could never work and build for that instead.</li>
-          <li>Sequencing by usefulness. Queryable data shipped first, then visual triage, then the NL search, then Jira integration. Each release stood on its own — if the project had stopped at any point, people would still have had something better than before.</li>
-          <li>Deciding early that the LLM would never query the database. That guardrail was in the first design, and it made every later conversation with security and compliance easier.</li>
-          <li>Treating governance as a feature rather than a checkbox. Identity-based access meant auditors could verify who saw what without asking us.</li>
-          <li>Closing the loop from "advisory noticed" to "ticket with an owner." That's the part that changed behavior, not just visibility.</li>
-        </ul>
-      </div>
-      <aside>
-        <div class="card">
-          <h4>Tech & Practices</h4>
-          <div class="inline">
-            <span class="badge">Microsoft 365 APIs</span>
-            <span class="badge">SQL</span>
-            <span class="badge">.NET Console App</span>
-            <span class="badge">REST APIs</span>
-            <span class="badge">Angular</span>
-            <span class="badge">LLM Orchestration</span>
-            <span class="badge">Guardrails</span>
-            <span class="badge">Azure AD</span>
-            <span class="badge">Jira API</span>
-            <span class="badge">Iterative Delivery</span>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <section class="container">
-      <h3 class="section-title">Key Takeaways</h3>
-      <article class="card">
-        <p>The biggest lesson from this project wasn't technical. It was that the request people bring you ("fix the email") is usually a symptom, and the real product work is naming the actual gaps and building for those. The AI part came last, and only where it earned its place — language understanding for search, with a hard wall between the LLM and the data. What we ended up with replaced an email nobody trusted with a system the whole firm relies on, cut support demand by 30%, and kept us at 100% on audits. I'm more proud of the fact that nobody wants the old email back than of any single feature in it.</p>
-      </article>
     </section>
 
     <section class="container">

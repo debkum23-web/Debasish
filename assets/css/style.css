@@ -354,6 +354,31 @@ p.impact-note,.impact-note{font-size:13px;color:var(--ink-muted);margin-top:10px
 .fact-list li{color:var(--ink-muted);font-size:15.5px;line-height:1.6}
 
 /* --------------------------------------------------------------------------
+   Case-study frame — every firm case study runs the same six stages:
+   problem → product decision → stakeholder alignment → technical approach → outcome → ongoing ownership
+   -------------------------------------------------------------------------- */
+.stage-nav{display:flex;flex-wrap:wrap;gap:6px 22px;padding:14px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--hairline);font-family:var(--font-sans);font-size:12.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase}
+.stage-nav a[href^="#"]:not(.btn){color:var(--ink-muted);text-decoration:none}
+.stage-nav a[href^="#"]:not(.btn):hover{color:var(--signal-ink)}
+.stage-nav a span{font-family:var(--font-display);font-style:italic;text-transform:none;letter-spacing:0;color:var(--ink-faint);margin-right:6px}
+section.stage-section{padding:26px 0;scroll-margin-top:96px}
+.stage{display:grid;grid-template-columns:220px 1fr;gap:14px 44px;padding-top:28px;border-top:1px solid var(--hairline)}
+.stage-num{display:block;font-family:var(--font-display);font-style:italic;font-size:15px;font-weight:600;color:var(--ink-faint);margin-bottom:4px}
+.stage-head h3{font-size:clamp(1.45rem,1.25rem + 0.8vw,2rem);color:var(--ink);font-weight:600;letter-spacing:-0.01em;line-height:1.15;margin:0}
+.stage-body>p{margin:0 0 14px;font-size:16.5px}
+.stage-body>p:last-child{margin-bottom:0}
+.stage-body>.register,.stage-body>.grid,.stage-body>.diagram-card,.stage-body>.mock-browser,.stage-body>.list{margin-top:20px}
+.stage-body>.diagram-card:first-child,.stage-body>.register:first-child,.stage-body>.grid:first-child{margin-top:0}
+.stage-body h4.sub-label{font-family:var(--font-sans);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);margin:26px 0 10px}
+
+/* Compact six-row summary of a case study, used on the homepage Work entries */
+.frame{margin:14px 0 0;max-width:74ch;font-family:var(--font-sans)}
+.frame-row{display:grid;grid-template-columns:148px 1fr;gap:14px;padding:9px 0;border-top:1px solid var(--hairline)}
+.frame-row:last-child{border-bottom:1px solid var(--hairline)}
+.frame dt{font-size:11.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--signal-ink);padding-top:2px}
+.frame dd{color:var(--ink-muted);font-size:14.5px;line-height:1.55;margin:0}
+
+/* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
 .site-footer{background:var(--ground-raised);border-top:1px solid var(--hairline);padding:28px 0;margin-top:52px}
@@ -385,4 +410,6 @@ p.impact-note,.impact-note{font-size:13px;color:var(--ink-muted);margin-top:10px
   .approach-step{flex-direction:column;gap:8px}
   .step-num{width:auto}
   .register-row{grid-template-columns:28px 1fr}
+  .stage{grid-template-columns:1fr;gap:10px}
+  .frame-row{grid-template-columns:1fr;gap:2px}
 }

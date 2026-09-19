@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8" />
+  <title>Data Oversharing Remediation – Debasish Kumar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Turned a single high-severity data-exposure incident into a company-wide detection and remediation framework: 1,000+ previously undetected exposure risks remediated across 30–40K SharePoint sites, with a process that is still owned and improving." />
+  <script>(function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Source+Serif+4:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="container header-content">
+      <div class="header-left">
+        <h1><a href="index.html">Debasish Kumar</a></h1>
+        <p class="tagline">Principal Engineer turned AI Product Manager · Helping enterprise SaaS teams ship AI feature products people actually use</p>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#work" class="nav-link">Work</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun"></i>
+      </button>
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-status"><span class="status-chip live"><span class="dot"></span>Live</span><span class="entry-meta">Ongoing Program — Process Designed End-to-End</span></div>
+        <h2>Turning one data-exposure incident into a framework instead of a case-by-case scramble</h2>
+        <p class="tagline" style="color: var(--text); font-size: 18px; margin-top: 12px;">Data Oversharing Remediation — security-risk detection and remediation across a 30–40K-site platform</p>
+        <div class="stat-strip" aria-label="Headline results, at a glance">
+          <div class="stat-tile"><span class="value">1,000+</span><span class="label">previously undetected<br/>exposure risks remediated</span></div>
+          <div class="stat-tile"><span class="value">30–40K</span><span class="label">SharePoint sites<br/>in scope</span></div>
+          <div class="stat-tile"><span class="value">Same day</span><span class="label">containment of the<br/>triggering incident</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="inline" style="margin-bottom: 24px;">
+        <span class="badge">Security &amp; Compliance</span>
+        <span class="badge">Data Governance</span>
+        <span class="badge">Process Design</span>
+        <span class="badge">Cross-Functional Alignment</span>
+        <span class="badge">Incident Response</span>
+        <span class="badge">SharePoint Online</span>
+      </div>
+      <nav class="stage-nav" aria-label="Case study stages">
+        <a href="#problem"><span>01</span>Problem</a>
+        <a href="#decision"><span>02</span>Product Decision</a>
+        <a href="#alignment"><span>03</span>Stakeholder Alignment</a>
+        <a href="#approach"><span>04</span>Technical Approach</a>
+        <a href="#outcome"><span>05</span>Outcome</a>
+        <a href="#ownership"><span>06</span>Ongoing Ownership</a>
+      </nav>
+    </section>
+
+    <!-- 01 Problem -->
+    <section class="container stage-section" id="problem">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">01</span><h3>Problem</h3></div>
+        <div class="stage-body">
+          <p>A high-severity data incident surfaced: content on our SharePoint platform was exposed to far more people than it should have been. I led the same-day containment, coordinating Legal, HR, Audit, and Engineering, none of whom reported to me, and ran the root-cause analysis.</p>
+          <p>Containing the incident was the easy part to explain. The harder question came right after it: if this happened once, where else was it happening? On a platform of 30&ndash;40K sites and roughly 10TB of content, nobody could answer that, and the only way we knew how to find exposure was to wait for an incident and handle it case by case.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 Product Decision -->
+    <section class="container stage-section" id="decision">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">02</span><h3>Product Decision</h3></div>
+        <div class="stage-body">
+          <p>A one-off incident triggered one question: what if this happens again, and how can it be detected and resolved as part of a framework rather than by teams handling it case by case? I decided to build the framework, not just close the incident.</p>
+          <div class="register">
+            <div class="register-row"><span class="reg-id">01</span><div><h4>A repeatable framework, not another incident response</h4><p>Find exposure proactively across every site, instead of waiting for the next one to be reported.</p></div></div>
+            <div class="register-row"><span class="reg-id">02</span><div><h4>Built in-house</h4><p>We designed our own solution that scans all sites and identifies overexposure, so detection fit how our platform is actually set up.</p></div></div>
+            <div class="register-row"><span class="reg-id">03</span><div><h4>Site owners confirm before anything is removed</h4><p>The owner is the person who knows whether an exposed item holds sensitive content. So the process asks them, and if it does, they either remove the over-exposure or take the confidential item down.</p></div></div>
+            <div class="register-row"><span class="reg-id">04</span><div><h4>Design who does what, not just what gets scanned</h4><p>Detection is only useful if someone acts on it. I designed the process end to end: who identifies, who reaches out, who confirms, and who validates.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Stakeholder Alignment -->
+    <section class="container stage-section" id="alignment">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">03</span><h3>Stakeholder Alignment</h3></div>
+        <div class="stage-body">
+          <p>Nobody in this process reported to me. It worked because each team had a clearly defined part in it, designed with them in partnership.</p>
+          <div class="register">
+            <div class="register-row"><span class="reg-id">01</span><div><h4>Legal, HR, Audit, and Engineering — the incident</h4><p>Same-day containment meant getting four functions moving together on a problem none of them owned alone, while I ran the root-cause analysis.</p></div></div>
+            <div class="register-row"><span class="reg-id">02</span><div><h4>Leadership — the program</h4><p>I turned the incident into a case for a company-wide detection program, and leadership backed it.</p></div></div>
+            <div class="register-row"><span class="reg-id">03</span><div><h4>M365 admins — identification</h4><p>They own running the identification and producing the report.</p></div></div>
+            <div class="register-row"><span class="reg-id">04</span><div><h4>Comms team — outreach and validation</h4><p>They take the report, reach out to the site owners, and validate that the next steps were taken. I designed the hand-off between the M365 admins and this team.</p></div></div>
+            <div class="register-row"><span class="reg-id">05</span><div><h4>Site owners — the sensitivity call</h4><p>They confirm whether exposed items hold sensitive content, and act if they do.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Technical Approach -->
+    <section class="container stage-section" id="approach">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">04</span><h3>Technical Approach</h3></div>
+        <div class="stage-body">
+          <p>An in-house solution scans all sites and identifies overexposed items. The M365 admins run the identification and share the report with the comms team, who take it from there.</p>
+          <div class="diagram-card">
+            <p class="diagram-label">From scan to a confirmed, validated fix</p>
+            <svg viewBox="0 0 920 260" role="img" aria-label="Flow diagram: an in-house scanner covers all 30 to 40 thousand sites; M365 admins identify over-exposed items and share a report with the comms team; the comms team reaches out to site owners; owners confirm whether exposed items are sensitive; if so, they remove the over-exposure or take the item down; the comms team then validates.">
+              <defs>
+                <marker id="arrow-os" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" class="flow-arrowhead"/>
+                </marker>
+              </defs>
+
+              <rect class="node-box" x="20" y="20" width="260" height="60" rx="8"/>
+              <text class="node-text" x="150" y="46" text-anchor="middle">In-house scan</text>
+              <text class="node-subtext" x="150" y="62" text-anchor="middle">all sites · 30–40K · ~10TB</text>
+
+              <rect class="node-box accent" x="330" y="20" width="260" height="60" rx="8"/>
+              <text class="node-text" x="460" y="46" text-anchor="middle">Identify over-exposure</text>
+              <text class="node-subtext" x="460" y="62" text-anchor="middle">run by M365 admins</text>
+
+              <rect class="node-box" x="640" y="20" width="260" height="60" rx="8"/>
+              <text class="node-text" x="770" y="46" text-anchor="middle">Report</text>
+              <text class="node-subtext" x="770" y="62" text-anchor="middle">shared with the comms team</text>
+
+              <rect class="node-box" x="640" y="170" width="260" height="60" rx="8"/>
+              <text class="node-text" x="770" y="196" text-anchor="middle">Comms team reaches out</text>
+              <text class="node-subtext" x="770" y="212" text-anchor="middle">to the owner of each site</text>
+
+              <rect class="node-box accent" x="330" y="170" width="260" height="60" rx="8"/>
+              <text class="node-text" x="460" y="196" text-anchor="middle">Owner confirms</text>
+              <text class="node-subtext" x="460" y="212" text-anchor="middle">is the exposed item sensitive?</text>
+
+              <rect class="node-box" x="20" y="170" width="260" height="60" rx="8"/>
+              <text class="node-text" x="150" y="196" text-anchor="middle">Remediate, then validate</text>
+              <text class="node-subtext" x="150" y="212" text-anchor="middle">remove exposure or take item down</text>
+
+              <line class="flow-line" x1="280" y1="50" x2="328" y2="50" marker-end="url(#arrow-os)"/>
+              <line class="flow-line" x1="590" y1="50" x2="638" y2="50" marker-end="url(#arrow-os)"/>
+              <line class="flow-line" x1="770" y1="80" x2="770" y2="168" marker-end="url(#arrow-os)"/>
+              <line class="flow-line" x1="640" y1="200" x2="592" y2="200" marker-end="url(#arrow-os)"/>
+              <line class="flow-line" x1="330" y1="200" x2="282" y2="200" marker-end="url(#arrow-os)"/>
+              <text class="node-subtext" x="306" y="192" text-anchor="middle">if yes</text>
+            </svg>
+          </div>
+          <h4 class="sub-label">The boundary I designed in</h4>
+          <p class="muted" style="font-size:15px;">Detection is automated and centralized. Judging whether content is actually sensitive is not. That call sits with the person who owns the site, and the comms team checks that what was agreed actually happened.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Outcome -->
+    <section class="container stage-section" id="outcome">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">05</span><h3>Outcome</h3></div>
+        <div class="stage-body">
+          <div class="grid">
+            <article class="card">
+              <p class="impact-value">1,000+</p>
+              <p class="muted">Previously undetected exposure risks remediated across the platform.</p>
+            </article>
+            <article class="card">
+              <p class="impact-value">30&ndash;40K sites</p>
+              <p class="muted">Scanned, about 10TB of content, instead of waiting for the next incident to reveal a gap.</p>
+            </article>
+            <article class="card">
+              <p class="impact-value">One incident</p>
+              <p class="muted">Became a repeatable framework: exposure is found, confirmed by the owner, fixed, and validated, no longer handled team by team.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Ongoing Ownership -->
+    <section class="container stage-section" id="ownership">
+      <div class="stage">
+        <div class="stage-head"><span class="stage-num">06</span><h3>Ongoing Ownership</h3></div>
+        <div class="stage-body">
+          <p>This is a running program, not a closed project. The report still goes to the comms team, and they continue to validate that owners took the agreed action.</p>
+          <ul class="list">
+            <li>The process is mine. I designed who does what and how the teams hand off to each other, and I keep it working.</li>
+            <li>We've since improved how scanning and reporting work so that they are closer to real time, which shortens the gap between exposure and discovery.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <a class="btn" href="index.html#work">← Back to Work</a>
+      <a class="btn secondary" href="index.html#contact">Get in Touch</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Debasish Kumar · Built with GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+<script
+  src="https://www.asksila.com/widget.js"
+  data-slug="debasish-kumar"
+  data-position="bottom-right"
+  async
+></script>
+</body>
+</html>
